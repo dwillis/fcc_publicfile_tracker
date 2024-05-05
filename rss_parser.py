@@ -62,7 +62,6 @@ station_names = [
     "WAMJ",
     "WRNB",
     "WGPR",
-
     # Add more station names here if needed
 ]
 
@@ -74,6 +73,22 @@ for station_name in station_names:
     entries_list = parse_feed(station_name)
     all_entries_list.extend(entries_list)
 
-# Write the list of dictionaries to a JSON file
+# Load existing data from radio_ads.json if it exists
+try:
+    with open('radio_ads.json', 'r') as json_file:
+        existing_data = json.load(json_file)
+except FileNotFoundError:
+    existing_data = []
+
+# Check if each entry's id is already present in the existing data
+for entry in all_entries_list:
+    entry_id = entry['id']
+    # Check if the entry_id already exists in the existing data
+    id_exists = any(existing_entry['id'] == entry_id for existing_entry in existing_data)
+    # If the entry_id is not present, append the entry to existing data
+    if not id_exists:
+        existing_data.append(entry)
+
+# Write the combined data to radio_ads.json
 with open('radio_ads.json', 'w') as json_file:
-    json.dump(all_entries_list, json_file, indent=4)
+    json.dump(existing_data, json_file, indent=4)
