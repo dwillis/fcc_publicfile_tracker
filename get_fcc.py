@@ -27,6 +27,8 @@ def search_station_on_fcc(station_name):
     """Search the FCC API for a given station name and return the response."""
     if "/" in station_name:
         station_name = station_name.split('/')[0]
+    elif "-" in station_name:
+        station_name = station_name.split('-')[0]
     response = requests.get(api_url + station_name)
     if response.status_code == 200:
         return response.json()
