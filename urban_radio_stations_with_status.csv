@@ -8,13 +8,13 @@ Alabama,Birmingham,WMJJ-HD2,104.1 The Beat,Yes,Yes,https://publicfiles.fcc.gov/f
 Alabama,Birmingham,WUHT,Hot 107.7,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/WUHT/rss,200
 Alabama,Birmingham,WERC-HD2 ,Hallelujah 105.1,Yes,Yes,https://publicfiles.fcc.gov/am-profile/WERC/rss,200
 Alabama,Birmingham,WERC-HD3 ,B106.5,Yes,Yes,https://publicfiles.fcc.gov/am-profile/WERC/rss,200
-Alabama,Birmingham,WDXB-HD2/W224CK - Birmingham's BIN 92.7 - Black-oriented news,Unknown Format,No,No,,N/A
+Alabama,Birmingham,WDXB-HD2/W224CK - Birmingham's BIN 92.7 - Black-oriented news,Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/WDXB/rss,200
 Alabama,Mobile,WGOK,Gospel 900,Yes,Yes,https://publicfiles.fcc.gov/am-profile/WGOK/rss,200
 Alabama,Mobile,WBLX-FM,93BLX,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/WBLX-FM/rss,200
 Alabama,Mobile,WDLT-FM,104.1 WDLT,No,Yes,https://publicfiles.fcc.gov/fm-profile/WDLT-FM/rss,200
 Alabama,Mobile,WRGV - 107.3 The Beat - Mainstream urban,Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/WRGV/rss,200
 Alabama,Mobile,WMXC-HD2 - 100.3 Hallelujah FM - Urban Gospel,Unknown Format,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/WMXC/rss,200
-Alabama,Mobile,WZEW HD-3 - 92.5 The Soul Of Mobile - Urban Oldies,Unknown Format,No,No,,N/A
+Alabama,Mobile,WZEW HD-3 - 92.5 The Soul Of Mobile - Urban Oldies,Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/WZEW/rss,200
 Alabama,Mobile,WASG - AM 540 - Urban gospel,Unknown Format,No,Yes,https://publicfiles.fcc.gov/am-profile/WASG/rss,200
 Alabama,Mobile,WERM - Gospel 1220 - Urban gospel,Unknown Format,No,Yes,https://publicfiles.fcc.gov/am-profile/WERM/rss,200
 Alabama,Huntsville,WDJL,Gospel Explosions 1000 AM,Yes,Yes,https://publicfiles.fcc.gov/am-profile/WDJL/rss,200
@@ -33,7 +33,6 @@ Alabama,Montgomery,WWMG,Magic 97.1,No,Yes,https://publicfiles.fcc.gov/fm-profile
 Alabama,Montgomery,WZHT,Hot 105.7,No,Yes,https://publicfiles.fcc.gov/fm-profile/WZHT/rss,200
 Alabama,Montgomery,WQKS-HD2,Yo! 100.5,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/WQKS-FM/rss,200
 Alabama,Montgomery,WMRK-HD3 - Praise 96.5 - Urban Gospel,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/WMRK-FM/rss,200
-Alabama,Montgomery,WMRK-HD2/W257DS - Montgomery's BIN 99.3 - Black-oriented news,Unknown Format,No,No,,N/A
 Alabama,Tuscaloosa,WTSK,Praise 93.3 - Urban contemporary gospel,Yes,Yes,https://publicfiles.fcc.gov/am-profile/WTSK/rss,200
 Alabama,Tuscaloosa,WMXB,Mix 107.3,Yes,Yes,https://publicfiles.fcc.gov/am-profile/WMXB/rss,200
 Alabama,Tuscaloosa,WWPG,Q104,No,Yes,https://publicfiles.fcc.gov/fm-profile/WWPG/rss,200
@@ -47,12 +46,12 @@ Alabama,Dothan,WARB - V105.9 - Urban contemporary,Unknown Format,Yes,Yes,https:/
 Alabama,Florence/Muscle Shoals,"WZZA - AM 1410 The Soul Of The Shoals - Urban Adult Contemporary, Blues",Unknown Format,No,Yes,https://publicfiles.fcc.gov/am-profile/WZZA/rss,200
 Alabama,Florence/Muscle Shoals,WMXV-HD3 - 105.1 and 101.5 HD3 Music Muscle of the Shoals - Urban Contemporary,Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/WMXV/rss,200
 Alabama,Selma,WJAM - Jammin' 94.7 FM & 1340 AM - Urban Adult Contemporary,Unknown Format,Yes,Yes,https://publicfiles.fcc.gov/am-profile/WJAM/rss,200
-Alabama,Selma,WBFZ - Z-105.3 - Urban Contemporary/Urban Gospel,Unknown Format,No,No,,N/A
+Alabama,Selma,WBFZ - Z-105.3 - Urban Contemporary/Urban Gospel,Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/WBFZ/rss,200
 Alabama,Anniston/Oxford,WFZX - 99.1 & 99.3 The Vibe - Urban contemporary,Unknown Format,No,Yes,https://publicfiles.fcc.gov/am-profile/WFZX/rss,200
 Alabama,Anniston/Oxford,WHOG - 93.5 The Hog - Urban adult contemporary,Unknown Format,No,Yes,https://publicfiles.fcc.gov/am-profile/WHOG/rss,200
 Alabama,Pine Hill,WKXK - The Big KD - Urban adult contemporary,Unknown Format,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/WKXK/rss,200
 Alabama,Gadsden,WMGJ - Magic 1240 AM - Urban contemporary,Unknown Format,Yes,Yes,https://publicfiles.fcc.gov/am-profile/WMGJ/rss,200
-Alabama,Demopolis,WZNJ - 106.5 The River - Urban contemporary/Urban oldies,Unknown Format,No,No,,N/A
+Alabama,Demopolis,WZNJ - 106.5 The River - Urban contemporary/Urban oldies,Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/WZNJ/rss,200
 Alabama,Livingston,WYLS - Rejoice WYLS - Black gospel,Unknown Format,No,Yes,https://publicfiles.fcc.gov/am-profile/WYLS/rss,200
 Alabama,Brantley,WXKD - The Big KD - Urban adult contemporary,Unknown Format,Yes,Yes,https://publicfiles.fcc.gov/am-profile/WXKD/rss,200
 Alabama,Russellville,WKAX - WKAX 1500 AM - Urban Gospel,Unknown Format,Yes,Yes,https://publicfiles.fcc.gov/am-profile/WKAX/rss,200
@@ -67,13 +66,12 @@ Arizona,Tucson,KTGV,106.3 The Groove,No,Yes,https://publicfiles.fcc.gov/fm-profi
 Arizona,Tucson,KOHT,Hot 98.3,No,Yes,https://publicfiles.fcc.gov/fm-profile/KOHT/rss,200
 Arizona,Tucson,KSZR - 97.5 The Vibe - Classic hip hop,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/KSZR/rss,200
 Arizona,Tucson,KMMA - Mega 97.1 - Spanish CHR,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/KMMA/rss,200
-Arizona,Tucson,KZLZ-HD2/KLPX-HD3 - 92.5 Urbana - Spanish rhythmic,Unknown Format,No,No,,N/A
+Arizona,Tucson,KZLZ-HD2/KLPX-HD3 - 92.5 Urbana - Spanish rhythmic,Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/KZLZ/rss,200
 Arkansas,Little Rock,KIPR/KFOG,Power 92 Jams,No,Yes,https://publicfiles.fcc.gov/fm-profile/KIPR/rss,200
 Arkansas,Little Rock,KHTE-FM - 96.5 The Box - Urban contemporary,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/KHTE-FM/rss,200
 Arkansas,Little Rock,KOKY,102.1 KOKY,No,Yes,https://publicfiles.fcc.gov/fm-profile/KOKY/rss,200
 Arkansas,Little Rock,KPZK,Praise 102.5,No,Yes,https://publicfiles.fcc.gov/fm-profile/KPZK-FM/rss,200
-Arkansas,Little Rock,KZTS - Rejoice 1380/105.5/103.3 - Urban Gospel,Unknown Format,No,No,,N/A
-Arkansas,Little Rock,KWCP-LP - KWCP-LP 98.9 The Mix - Urban Adult Contemporary/Classic Hip Hop,Unknown Format,No,No,,N/A
+Arkansas,Little Rock,KZTS - Rejoice 1380/105.5/103.3 - Urban Gospel,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/KZTS/rss,200
 Arkansas,Pine Bluff,KPBA - 99.3 The Beat - Mainstream Urban,Unknown Format,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/KPBA/rss,200
 Arkansas,Pine Bluff,KCAT,The Cat 92.7 FM & 1340 AM,Yes,Yes,https://publicfiles.fcc.gov/am-profile/KCAT/rss,200
 Arkansas,Pine Bluff,KUAP,Hot 89.7,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/KUAP/rss,200
@@ -81,13 +79,11 @@ Arkansas,Texarkana,KTOY,104.7 KTOY,Yes,Yes,https://publicfiles.fcc.gov/fm-profil
 Arkansas,Texarkana,KZRB,B-103.5,No,No,https://publicfiles.fcc.gov/fm-profile/KZRB/rss,200
 Arkansas,Texarkana,KMJI,Majic 93.3,No,Yes,https://publicfiles.fcc.gov/fm-profile/KMJI/rss,200
 Arkansas,Blytheville,KAMJ,K Jam 93-9,No,Yes,https://publicfiles.fcc.gov/fm-profile/KAMJ/rss,200
-Arkansas,Fayetteville,KQIS - Kiss 105.3/1340 - Mainstream Urban,Unknown Format,No,No,,N/A
-Arkansas,Fayetteville,KDIV-LP - KDIV 98.7 - Urban Contemporary/Community Radio,Unknown Format,No,No,,N/A
-Arkansas,Fayetteville,KXVB - 101.5 The Vibe - Rhythmic Contemporary/Classic Hip Hop,Unknown Format,No,No,,N/A
+Arkansas,Fayetteville,KQIS - Kiss 105.3/1340 - Mainstream Urban,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/KQIS/rss,200
+Arkansas,Fayetteville,KXVB - 101.5 The Vibe - Rhythmic Contemporary/Classic Hip Hop,Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/KXVB/rss,200
 Arkansas,El Dorado/Camden,KMLK,"""FM 98.7""",No,Yes,https://publicfiles.fcc.gov/fm-profile/KMLK/rss,200
 Arkansas,El Dorado/Camden,KMGC,"""Magic 104.5""",No,Yes,https://publicfiles.fcc.gov/fm-profile/KMGC/rss,200
 Arkansas,Jonesboro,"KDXY-HD2 - ""Hot 107.5"" - Rhythmic Top 40",Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/KDXY/rss,200
-Arkansas,Jonesboro,"KLEK-LP - ""KLEK 102.5 FM"" - Urban contemporary",Unknown Format,No,No,,N/A
 California,Los Angeles,KPWR,Power 106,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/KPWR/rss,200
 California,Los Angeles,KRRL,Real 92.3,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/KRRL/rss,200
 California,Los Angeles,KRRL-HD2 - Black Information Network - Black-oriented news,Unknown Format,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/KRRL/rss,200
@@ -96,23 +92,16 @@ California,Los Angeles,KTWV-HD2,Wave Classics,Yes,Yes,https://publicfiles.fcc.go
 California,Los Angeles,KJLH,102.3 KJLH,No,Yes,https://publicfiles.fcc.gov/fm-profile/KJLH/rss,200
 California,Los Angeles,KDAY,93.5 KDAY,No,Yes,https://publicfiles.fcc.gov/fm-profile/KDAY/rss,200
 California,Los Angeles,KLLI - Cali 93.9 - Spanish rhythmic,Unknown Format,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/KLLI/rss,200
-California,Los Angeles,KBLA - 1580 KBLA - Urban/Progressive Talk,Unknown Format,No,No,,N/A
+California,Los Angeles,KBLA - 1580 KBLA - Urban/Progressive Talk,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/KBLA/rss,200
 California,Los Angeles,KXOL-FM - Mega 96.3 - Spanish CHR,Unknown Format,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/KXOL-FM/rss,200
 California,San Francisco/Oakland/San Jose,KDYA,Gospel 1190 the Light,No,Yes,https://publicfiles.fcc.gov/am-profile/KDYA/rss,200
 California,San Francisco/Oakland/San Jose,KBLX,102.9 KBLX,No,Yes,https://publicfiles.fcc.gov/fm-profile/KBLX-FM/rss,200
-California,San Francisco/Oakland/San Jose,KBLX HD-2 - Old School 102.9 HD-2 - Urban Oldies,Unknown Format,No,No,,N/A
-California,San Francisco/Oakland/San Jose,KBLX HD-3 - Praise Bay Area - Urban Gospel,Unknown Format,No,No,,N/A
 California,San Francisco/Oakland/San Jose,KMEL,106.1 KMEL,No,Yes,https://publicfiles.fcc.gov/fm-profile/KMEL/rss,200
 California,San Francisco/Oakland/San Jose,KKSF - The Bay Area's BIN 910 - Black-oriented news,Unknown Format,No,Yes,https://publicfiles.fcc.gov/am-profile/KKSF/rss,200
 California,San Francisco/Oakland/San Jose,KRBQ,102.1 JAMS,No,Yes,https://publicfiles.fcc.gov/fm-profile/KRBQ/rss,200
 California,San Francisco/Oakland/San Jose,KVVF/KVVZ - Latino Mix 105.7/100.7 - Spanish rhythmic,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/KVVF/rss,200
 California,San Francisco/Oakland/San Jose,"KPOO - 89.5 KPOO - Jazz, Blues, R&B, Variety",Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/KPOO/rss,200
-California,San Diego,XHRM-FM,Magic 92.5,No,No,,N/A
-California,San Diego,KSSX - Jam'n 95.7,"Rhythmic contemporary
-KSSX-HD2 - Black Information Network - Black-oriented news",No,Yes,https://publicfiles.fcc.gov/fm-profile/KSSX/rss,200
-California,San Diego,KSSX-HD2 - Black Information Network - Black-oriented news,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/KSSX/rss,200
-California,San Diego,XHRST-FM - Mas Flo 107.7 - Latin urban,Unknown Format,No,No,,N/A
-California,Sacramento,KDEE-LP,97.5,No,No,,N/A
+California,San Diego,KSSX - Jam'n 95.7,"Rhythmic contemporary KSSX-HD2 - Black Information Network - Black-oriented news",No,Yes,https://publicfiles.fcc.gov/fm-profile/KSSX/rss,200
 California,Sacramento,KHYL,V101,No,Yes,https://publicfiles.fcc.gov/fm-profile/KHYL/rss,200
 California,Sacramento,KSFM,102.5 KSFM,No,Yes,https://publicfiles.fcc.gov/fm-profile/KSFM/rss,200
 California,Sacramento,KHHM - Fuego 101.9 - Bilingual Rhythmic CHR,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/KHHM/rss,200
@@ -138,26 +127,23 @@ California,Santa Barbara/Santa Maria/San Luis Obispo,KRTO - Fuego 97.1 - Hispani
 California,Santa Barbara/Santa Maria/San Luis Obispo,KOSJ - Old School 94.1 & 1490 - Rhythmic oldies,Unknown Format,No,Yes,https://publicfiles.fcc.gov/am-profile/KOSJ/rss,200
 California,Oxnard/Ventura County,KCAQ,Q95.9,No,Yes,https://publicfiles.fcc.gov/fm-profile/KCAQ/rss,200
 California,Oxnard/Ventura County,KOCP - Old School 104.7 - Rhythmic Oldies,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/KOCP/rss,200
-California,Oxnard/Ventura County,KJBU-LP - 99.3 The Rhythm Of The Coast - Urban Contemporary/Community Radio,Unknown Format,No,No,,N/A
 California,Monterey/Salinas,KDON,102.5 K-Don,No,Yes,https://publicfiles.fcc.gov/fm-profile/KDON-FM/rss,200
 California,Monterey/Salinas,KOCN,K-Ocean 105.1,No,Yes,https://publicfiles.fcc.gov/fm-profile/KOCN/rss,200
 California,Fresno,KBOS,B95,No,Yes,https://publicfiles.fcc.gov/fm-profile/KBOS-FM/rss,200
 California,Fresno,KMGV,Mega 97.9,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/KMGV/rss,200
 California,Fresno,KFBT,103.7 The Beat,No,Yes,https://publicfiles.fcc.gov/fm-profile/KFBT/rss,200
 California,Fresno,KSEQ,Q97.1,No,Yes,https://publicfiles.fcc.gov/fm-profile/KSEQ/rss,200
-California,Fresno,KOKO-FM - Jammin' 94.3 - Rhythmic/Urban Oldies,Unknown Format,No,No,,N/A
+California,Fresno,KOKO-FM - Jammin' 94.3 - Rhythmic/Urban Oldies,Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/KOKO-FM/rss,200
 California,Fresno,KBHH - Forge 95.3 - Rhythmic contemporary hit radio,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/KBHH/rss,200
 California,Fresno,KZLA - Old School 98.3 - Rhythmic Oldies,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/KZLA/rss,200
-California,Victorville,KATJ HD-2 - HD-96.3 - Rhythmic Contemporary/Hip Hop,Unknown Format,No,No,,N/A
+California,Victorville,KATJ HD-2 - HD-96.3 - Rhythmic Contemporary/Hip Hop,Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/KATJ-FM/rss,200
 California,Barstow,KWIE - Old School 101.3 - Rhythmic oldies,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/KWIE/rss,200
 California,Chico,KZSZ-HD2 - 93.3 Urbana - Spanish rhythmic,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/KZSZ/rss,200
 California,Santa Rosa,KSXY - Latino 100.9 - Spanish CHR,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/KSXY/rss,200
 Colorado,Denver,KQKS,KS107.5,No,Yes,https://publicfiles.fcc.gov/fm-profile/KQKS/rss,200
-Colorado,Denver,KUVO HD-2 - The Drop 104.7 & 89.3 HD-2 - Urban Contemporary,Unknown Format,No,No,,N/A
+Colorado,Denver,KUVO HD-2 - The Drop 104.7 & 89.3 HD-2 - Urban Contemporary,Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/KUVO/rss,200
 Colorado,Denver,KFCO - KFCO 107.1 - Christian Hip Hop,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/KFCO/rss,200
 Colorado,Colorado Springs,KIBT,96.1 The Beat,No,Yes,https://publicfiles.fcc.gov/fm-profile/KIBT/rss,200
-Colorado,Colorado Springs,KIBT HD-2 - Urban Oldies,Unknown Format,No,No,,N/A
-Colorado,Fort Collins,KARS-FM - Power 102.9 - Rhythmic Top 40/Hip Hop,Unknown Format,No,No,,N/A
 Colorado,Fort Collins,KJMP - Jump 104.5 - Classic Hip Hop,Unknown Format,No,Yes,https://publicfiles.fcc.gov/am-profile/KJMP/rss,200
 Connecticut,Hartford/New Haven,WQTQ - Qute 89.9 - Urban Contemporary (Hartford),Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/WQTQ/rss,200
 Connecticut,Hartford/New Haven,WYBC-FM,94.3 WYBC,No,Yes,https://publicfiles.fcc.gov/am-profile/WYBC/rss,200
@@ -165,11 +151,9 @@ Connecticut,Hartford/New Haven,WKCI-HD2 - 100.9 The Beat - Mainstream urban (New
 Connecticut,Hartford/New Haven,WZMX,Hot 93.7,No,Yes,https://publicfiles.fcc.gov/fm-profile/WZMX/rss,200
 Connecticut,Hartford/New Haven,WBOM - 102.5 Hartford's R&B Station - Urban Adult Contemporary (Meriden/Hartford),Unknown Format,No,No,,N/A
 Connecticut,Hartford/New Haven,WLAT/WKND - Mega 101.7 & 97.5 - Spanish tropical,Unknown Format,No,Yes,https://publicfiles.fcc.gov/am-profile/WLAT/rss,200
-Connecticut,Hartford/New Haven,WMRQ-HD2 - Bomba FM - Spanish tropical (Hartford/Meriden),Unknown Format,No,No,,N/A
+Connecticut,Hartford/New Haven,WMRQ-HD2 - Bomba FM - Spanish tropical (Hartford/Meriden),Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/WMRQ-FM/rss,200
 Connecticut,Hartford/New Haven,WRYM/WWCO/WCUM - Viva Radio - Latin pop/Tropical music/Reggaeton (Hartford/New Haven),Unknown Format,No,Yes,https://publicfiles.fcc.gov/am-profile/WRYM/rss,200
 Connecticut,New London,WWRX,Jammin' 107.7 Rhythmic contemporary hit radio,No,Yes,https://publicfiles.fcc.gov/fm-profile/WWRX/rss,200
-Connecticut,New London,WDUP-LP - 92.9 FM WDUP Timeless Hip Hop and R&B - Urban Adult Contemporary,Unknown Format,No,No,,N/A
-Connecticut,Bloomfield,WGZO-LP - Heartbeat 98.7 - Urban gospel,Unknown Format,No,No,,N/A
 Delaware,Wilmington,WXHL-FM - Reach Gospel Radio 89.1 - Urban gospel,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/WXHL-FM/rss,200
 Delaware,Wilmington,WOCQ - Maxima 104.1 - Spanish CHR,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WOCQ/rss,200
 District of Columbia,Washington,WOL,News Talk 1450 - Urban News/Talk,No,No,https://publicfiles.fcc.gov/am-profile/KVCK/rss,200
