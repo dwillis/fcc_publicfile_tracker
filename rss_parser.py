@@ -62,6 +62,10 @@ station_names = [
     "WAMJ",
     "WRNB",
     "WGPR",
+    "WMXD",
+    "WJLB",
+    "WMGC-FM",
+    
     # Add more station names here if needed
 ]
 
