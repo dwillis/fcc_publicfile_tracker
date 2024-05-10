@@ -1,20 +1,22 @@
+import csv
 import feedparser
 import json
 
-def parse_feed(station_name):
-    # Determine the URL structure based on the station name
-    if station_name.endswith("AM"):
-        feed_url = f"https://publicfiles.fcc.gov/am-profile/{station_name.split('-')[0]}/rss"
-    else:
-        feed_url = f"https://publicfiles.fcc.gov/fm-profile/{station_name.split('-')[0]}/rss"
+# Input CSV file containing station URLs, states, and cities
+csv_file = 'urban_radio_stations_with_status.csv'
+# JSON file to save collected data
+json_file = 'radio_ads.json'
 
-    # Parse the feed
-    feed = feedparser.parse(feed_url)
 
-    # List to store extracted information
+def parse_feed(station_url, state, city):
+    """Parse the RSS feed from the given station URL and include state and city."""
+    # Parse the feed using feedparser
+    feed = feedparser.parse(station_url)
+    
+    # List to store extracted entries information
     entries_list = []
 
-    # Iterate over entries
+    # Iterate over each entry in the RSS feed
     for entry in feed.entries:
         title = entry.title
 
@@ -30,12 +32,18 @@ def parse_feed(station_name):
         sponsor = title.split('/')[-1]
 
         # Extract facility ID (uploader) from the title
-        facility_id = int(title.split('Entity ')[1].split(' ')[0])
+        try:
+            facility_id = int(title.split('Entity ')[1].split(' ')[0])
+        except (IndexError, ValueError):
+            facility_id = None
 
         # Extract relevant information from the content
-        file_info = title.split(' in ')[1].split(' on ')
-        file_segments = file_info[0].split('/')
-        office = file_segments[-2]
+        try:
+            file_info = title.split(' in ')[1].split(' on ')
+            file_segments = file_info[0].split('/')
+            office = file_segments[-2]
+        except (IndexError, ValueError):
+            office = None
 
         # Create a dictionary to store the entry information
         entry_dict = {
@@ -46,7 +54,9 @@ def parse_feed(station_name):
             "facility_id": facility_id,
             "office": office,
             "sponsor": sponsor,
-            "station": station_name
+            "station_url": station_url,
+            "state": state,
+            "city": city
         }
 
         # Append the dictionary to the list
@@ -54,45 +64,38 @@ def parse_feed(station_name):
 
     return entries_list
 
-# List of station names
-station_names = [
-    "WALR-FM",
-    "WAOK-AM",
-    "WPZE",
-    "WAMJ",
-    "WRNB",
-    "WGPR",
-    "WMXD",
-    "WJLB",
-    "WMGC-FM",
-    
-    # Add more station names here if needed
-]
 
-# List to store extracted information from all feeds
-all_entries_list = []
+def fetch_rss_entries(csv_file):
+    """Fetch RSS entries for each station URL in the provided CSV file."""
+    # Load the existing data from radio_ads.json if it exists
+    try:
+        with open(json_file, 'r') as file:
+            existing_data = json.load(file)
+    except FileNotFoundError:
+        existing_data = []
 
-# Iterate over station names and parse each feed
-for station_name in station_names:
-    entries_list = parse_feed(station_name)
-    all_entries_list.extend(entries_list)
+    # Read the CSV file to get the URLs, state, and city information
+    with open(csv_file, newline='', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            station_url = row.get('FCC URL')
+            state = row.get('State')
+            city = row.get('City')
+            if station_url:
+                # Parse the RSS feed for the current URL, passing state and city
+                entries_list = parse_feed(station_url, state, city)
+                
+                # Add only new entries to the existing data
+                for entry in entries_list:
+                    entry_id = entry['id']
+                    if not any(existing_entry['id'] == entry_id for existing_entry in existing_data):
+                        existing_data.append(entry)
 
-# Load existing data from radio_ads.json if it exists
-try:
-    with open('radio_ads.json', 'r') as json_file:
-        existing_data = json.load(json_file)
-except FileNotFoundError:
-    existing_data = []
+    # Write the combined data to radio_ads.json
+    with open(json_file, 'w') as file:
+        json.dump(existing_data, file, indent=4)
 
-# Check if each entry's id is already present in the existing data
-for entry in all_entries_list:
-    entry_id = entry['id']
-    # Check if the entry_id already exists in the existing data
-    id_exists = any(existing_entry['id'] == entry_id for existing_entry in existing_data)
-    # If the entry_id is not present, append the entry to existing data
-    if not id_exists:
-        existing_data.append(entry)
 
-# Write the combined data to radio_ads.json
-with open('radio_ads.json', 'w') as json_file:
-    json.dump(existing_data, json_file, indent=4)
+# Main execution
+if __name__ == "__main__":
+    fetch_rss_entries(csv_file)
