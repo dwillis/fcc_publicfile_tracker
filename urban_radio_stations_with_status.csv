@@ -617,7 +617,7 @@ North Carolina,Greensboro/Winston-Salem/High Point,WKEW/WPOL,The Light 1340 & 14
 North Carolina,Greensboro/Winston-Salem/High Point,WBLO - Latina 106.9 - Spanish tropical,Unknown Format,No,Yes,https://publicfiles.fcc.gov/am-profile/WBLO/rss,200
 North Carolina,Greensboro/Winston-Salem/High Point,"WNAA - The Voice 90.1 - R&B, Blues, Jazz, Urban Gospel, Variety",Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/WNAA/rss,200
 North Carolina,Raleigh/Durham,WAUG,Hot 97.9 FM/750 AM,No,Yes,https://publicfiles.fcc.gov/am-profile/WAUG/rss,200
-North Carolina,Raleigh/Durham,WDCG-HD2 - 95.1/95.3 The Beat - Classic Hip Hop,Unknown Format,No,No,,N/A
+North Carolina,Raleigh/Durham,WDCG-HD2 - 95.1/95.3 The Beat - Classic Hip Hop,Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/WDCG/rss,200
 North Carolina,Raleigh/Durham,WQOK,K 97.5,No,Yes,https://publicfiles.fcc.gov/fm-profile/WQOK/rss,200
 North Carolina,Raleigh/Durham,WFXC/WFXK,Foxy 107.1/104.3,No,Yes,https://publicfiles.fcc.gov/fm-profile/WFXC/rss,200
 North Carolina,Raleigh/Durham,WNNL - The Light 103.9 - Urban Gospel,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/WNNL/rss,200
@@ -625,9 +625,9 @@ North Carolina,Fayetteville/Lumberton/Fairmont,WCCG,104.5,No,Yes,https://publicf
 North Carolina,Fayetteville/Lumberton/Fairmont,WZFX,Foxy 99.1,No,Yes,https://publicfiles.fcc.gov/fm-profile/WZFX/rss,200
 North Carolina,Fayetteville/Lumberton/Fairmont,WMGU,Magic 106.9,No,Yes,https://publicfiles.fcc.gov/fm-profile/WMGU/rss,200
 North Carolina,Fayetteville/Lumberton/Fairmont,WUKS,107.7 The Bounce,No,Yes,https://publicfiles.fcc.gov/fm-profile/WUKS/rss,200
-North Carolina,Fayetteville/Lumberton/Fairmont,WIDU - 99.7 FM/1600 AM - Urban Gospel,Unknown Format,No,No,,N/A
-North Carolina,Fayetteville/Lumberton/Fairmont,WAGR - 97.1 FM/98.5FM/1340 AM - Urban Gospel,Unknown Format,No,No,,N/A
-North Carolina,Fayetteville/Lumberton/Fairmont,WFMO - The Light 97.5 FM/860 AM - Urban Gospel,Unknown Format,No,No,,N/A
+North Carolina,Fayetteville/Lumberton/Fairmont,WIDU - 99.7 FM/1600 AM - Urban Gospel,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WIDU/rss,200
+North Carolina,Fayetteville/Lumberton/Fairmont,WAGR - 97.1 FM/98.5FM/1340 AM - Urban Gospel,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WAGR/rss,200
+North Carolina,Fayetteville/Lumberton/Fairmont,WFMO - The Light 97.5 FM/860 AM - Urban Gospel,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WFMO/rss,200
 North Carolina,Wilmington,WMNX,Coast 97.3,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/WMNX/rss,200
 North Carolina,Wilmington,WKXB,Jammin 99.9,No,Yes,https://publicfiles.fcc.gov/fm-profile/WKXB/rss,200
 North Carolina,New Bern/Greenville/Jacksonville/Moorehead City,WIKS,101.9 Kiss FM,No,Yes,https://publicfiles.fcc.gov/fm-profile/WIKS/rss,200
@@ -637,43 +637,40 @@ North Carolina,New Bern/Greenville/Jacksonville/Moorehead City,WNCT,Beach Boogie
 North Carolina,New Bern/Greenville/Jacksonville/Moorehead City,WNBU - Groovin’ Oldies 94.1 & 97.9 - Rhythmic Oldies,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/WNBU/rss,200
 North Carolina,Rocky Mount/Wilson,WRSV - Choice FM 92.1 - Mainstream Urban,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/WRSV/rss,200
 North Carolina,Rocky Mount/Wilson,WPWZ - Power 95.5 - Mainstream Urban,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/WPWZ/rss,200
-North Carolina,Rocky Mount/Wilson,"WYLT-LP - Smooth Radio 100.3 - Urban oldies, Southern soul",Unknown Format,No,No,,N/A
-North Carolina,Rocky Mount/Wilson,WAJA-LP - 102.5 The Promise - Urban Gospel,Unknown Format,No,No,,N/A
-North Carolina,Rocky Mount/Wilson,WCPS - Power 96.3 FM/760 AM,"Urban Gospel, Urban Oldies, Southern Soul",No,No,,N/A
-North Carolina,Rocky Mount/Wilson,WRMT - Step 98.1 FM/1490 AM - Urban Gospel,Unknown Format,No,No,,N/A
+North Carolina,Rocky Mount/Wilson,WCPS - Power 96.3 FM/760 AM,"Urban Gospel, Urban Oldies, Southern Soul",No,No,https://publicfiles.fcc.gov/am-profile/WCPS/rss,200
+North Carolina,Rocky Mount/Wilson,WRMT - Step 98.1 FM/1490 AM - Urban Gospel,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WRMT/rss,200
 North Carolina,Rocky Mount/Wilson,WEED - Jammin Gospel 1390 AM,Urban Gospel,No,Yes,https://publicfiles.fcc.gov/am-profile/WEED/rss,200
-North Carolina,Rocky Mount/Wilson,WUBN-LP - 106.9 The Spirit,Urban Gospel,No,No,,N/A
 North Carolina,Rocky Mount/Wilson,WZAX - 99.3 The Beach - Beach music,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/WZAX/rss,200
-North Carolina,Warrenton,WARR 103.5 FM/1520 AM,"Urban Gospel, Urban Oldies, Southern Soul",No,No,,N/A
-North Carolina,Louisburg,"WYRN 106.9 FM/1480 AM - Urban Gospel, Urban Oldies, Southern Soul",Unknown Format,No,No,,N/A
-North Carolina,Elizabeth City/Nags Head,WFMZ 104.9 The Block,Classic Hip Hop,No,No,,N/A
-North Carolina,Elizabeth City/Nags Head,WBXB 100.1 The B,Urban Adult Contemporary,No,No,,N/A
-North Carolina,Elizabeth City/Nags Head,WFMI Rejoice 100.9 - Urban Gospel,Unknown Format,No,No,,N/A
+North Carolina,Warrenton,WARR 103.5 FM/1520 AM,"Urban Gospel, Urban Oldies, Southern Soul",No,No,https://publicfiles.fcc.gov/am-profile/WARR/rss,200
+North Carolina,Louisburg,"WYRN 106.9 FM/1480 AM - Urban Gospel, Urban Oldies, Southern Soul",Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WYRN/rss,200
+North Carolina,Elizabeth City/Nags Head,WFMZ 104.9 The Block,Classic Hip Hop,No,No,https://publicfiles.fcc.gov/fm-profile/WFMZ/rss,200
+North Carolina,Elizabeth City/Nags Head,WBXB 100.1 The B,Urban Adult Contemporary,No,No,https://publicfiles.fcc.gov/fm-profile/WBXB/rss,200
+North Carolina,Elizabeth City/Nags Head,WFMI Rejoice 100.9 - Urban Gospel,Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/WFMI/rss,200
 North Carolina,Elizabeth City/Nags Head,WRVS-FM - 89.9 - Urban Contemporary,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/WRVS-FM/rss,200
-North Carolina,Goldsboro/Kinston,WFMC Gospel 105.7 FM/730 AM - Urban Gospel,Unknown Format,No,No,,N/A
-North Carolina,Goldsboro/Kinston,WWMC Gospel 92.9 FM/1010 AM - Urban Gospel,Unknown Format,No,No,,N/A
-North Carolina,Goldsboro/Kinston,WSSG 92.7 Jamz FM/1300 AM - Mainstream Urban,Unknown Format,No,No,,N/A
+North Carolina,Goldsboro/Kinston,WFMC Gospel 105.7 FM/730 AM - Urban Gospel,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WFMC/rss,200
+North Carolina,Goldsboro/Kinston,WWMC Gospel 92.9 FM/1010 AM - Urban Gospel,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WWMC/rss,200
+North Carolina,Goldsboro/Kinston,WSSG 92.7 Jamz FM/1300 AM - Mainstream Urban,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WSSG/rss,200
 North Carolina,Goldsboro/Kinston,WELS-FM Beach Boogie & Blues 102.9 - Rhythmic Oldies,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/WELS-FM/rss,200
 North Carolina,Roanoke Rapids,WYTT/WWDR 99.5 & 105.9 Jamz - Urban Adult Contemporary,Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/WYTT/rss,200
-North Carolina,Roanoke Rapids,"WCBT Soul 102.7/1230AM - Urban Gospel, Urban Oldies, Southern Soul",Unknown Format,No,No,,N/A
+North Carolina,Roanoke Rapids,"WCBT Soul 102.7/1230AM - Urban Gospel, Urban Oldies, Southern Soul",Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WCBT/rss,200
 North Carolina,Canton,"WXKL - Urban Gospel, Urban Oldies",Unknown Format,No,Yes,https://publicfiles.fcc.gov/am-profile/WXKL/rss,200
-North Dakota,Fargo,KLTA-HD2/K245BY - 96.9 Hits FM - Rhythmic Top 40,Unknown Format,No,No,,N/A
+North Dakota,Fargo,KLTA - 96.9 Hits FM - Rhythmic Top 40,Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/KLTA-FM/rss,200
 Ohio,Cleveland,WENZ,Z-107.9,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/WENZ/rss,200
 Ohio,Cleveland,WZAK,93.1 WZAK,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/WZAK/rss,200
 Ohio,Cleveland,WAKS-HD2 - Real 106.1 - Urban contemporary,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/WAKS/rss,200
 Ohio,Cleveland,WJMO,Praise 94.5,Yes,Yes,https://publicfiles.fcc.gov/am-profile/WJMO/rss,200
-Ohio,Cleveland,WMMS-HD2/W256BT - Cleveland's BIN 99.1 - Black-oriented news,Unknown Format,No,No,,N/A
+Ohio,Cleveland,WMMS - Cleveland's BIN 99.1 - Black-oriented news,Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/WMMS/rss,200
 Ohio,Cleveland,WABQ - AM 1460 - Urban gospel,Unknown Format,No,Yes,https://publicfiles.fcc.gov/am-profile/WABQ/rss,200
-Ohio,Cleveland,WCCD - Radio 1000 - Gospel/Religious,Unknown Format,No,No,,N/A
-Ohio,Cleveland,WERE - NewsTalk 1490 - Urban talk/Brokered programming,Unknown Format,No,No,,N/A
+Ohio,Cleveland,WCCD - Radio 1000 - Gospel/Religious,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WCCD/rss,200
+Ohio,Cleveland,WERE - NewsTalk 1490 - Urban talk/Brokered programming,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WERE/rss,200
 Ohio,Cincinnati,WIZF,101.1 The Wiz,No,No,https://publicfiles.fcc.gov/fm-profile/WIZF/rss,200
 Ohio,Cincinnati,WOSL,100.3 R&B,No,Yes,https://publicfiles.fcc.gov/fm-profile/WOSL/rss,200
 Ohio,Cincinnati,WEBN-HD3,102.3 The Beat,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/WEBN/rss,200
 Ohio,Cincinnati,WGRI,Inspiration 1050 & 103.1,Yes,Yes,https://publicfiles.fcc.gov/am-profile/WGRI/rss,200
 Ohio,Cincinnati,WDBZ,The Buzz 1230 AM,Yes,Yes,https://publicfiles.fcc.gov/am-profile/WDBZ/rss,200
-Ohio,Cincinnati,WCVG - 1320 The Voice - Urban Gospel/Brokered Programming,Unknown Format,No,No,,N/A
+Ohio,Cincinnati,WCVG - 1320 The Voice - Urban Gospel/Brokered Programming,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WCVG/rss,200
 Ohio,Columbus,WZCB,106.7 The Beat,No,Yes,https://publicfiles.fcc.gov/fm-profile/WZCB/rss,200
-Ohio,Columbus,WZCB HD-2 - Throwback 105.3 - Classic Hip Hop,Unknown Format,No,No,,N/A
+Ohio,Columbus,WZCB - Throwback 105.3 - Classic Hip Hop,Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/WZCB/rss,200
 Ohio,Columbus,WCKX / WHTD,Power 107.5/106.3,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/WCKX/rss,200
 Ohio,Columbus,WXMG,Magic 95.5,No,Yes,https://publicfiles.fcc.gov/fm-profile/WXMG/rss,200
 Ohio,Columbus,WYTS - Columbus’ BIN 1230 - Black-oriented news,Unknown Format,Yes,Yes,https://publicfiles.fcc.gov/am-profile/WYTS/rss,200
@@ -688,11 +685,10 @@ Ohio,Toledo,WJUC,107.3 the Juice,No,Yes,https://publicfiles.fcc.gov/fm-profile/W
 Ohio,Toledo,WIMX,Mix 95.7,No,Yes,https://publicfiles.fcc.gov/fm-profile/WIMX/rss,200
 Ohio,Toledo,WVKS-HD2 ,94.9 The Beat,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/WVKS/rss,200
 Ohio,Youngstown,WGFT,Star 94.7,No,Yes,https://publicfiles.fcc.gov/am-profile/WGFT/rss,200
-Ohio,Youngstown,WLOA - Loud 102.3 - Rhythmic contemporary/Hip Hop,Unknown Format,No,No,,N/A
+Ohio,Youngstown,WLOA - Loud 102.3 - Rhythmic contemporary/Hip Hop,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WLOA/rss,200
 Ohio,Youngstown,WAKZ - Real 95.9 - Mainstream urban,Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/WAKZ/rss,200
-Ohio,Youngstown,WKTX - 99.7 The Drum - Urban oldies/Urban contemporary gospel,Unknown Format,No,No,,N/A
+Ohio,Youngstown,WKTX - 99.7 The Drum - Urban oldies/Urban contemporary gospel,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WKTX/rss,200
 Ohio,Middleport,WMPO - 94Q FM - Rhythmic Top 40,Unknown Format,No,Yes,https://publicfiles.fcc.gov/am-profile/WMPO/rss,200
-Ohio,Englewood,WGJM-LP - 97.9 Praise FM - Urban gospel,Unknown Format,No,No,,N/A
 Oklahoma,Oklahoma City,KRMP,Heart & Soul 92.1 & 1140,Yes,Yes,https://publicfiles.fcc.gov/am-profile/KRMP/rss,200
 Oklahoma,Oklahoma City,KTLV,AM 1220,No,Yes,https://publicfiles.fcc.gov/am-profile/KTLV/rss,200
 Oklahoma,Oklahoma City,KVSP,Power 103.5,No,Yes,https://publicfiles.fcc.gov/fm-profile/KVSP/rss,200
@@ -704,56 +700,50 @@ Oklahoma,Lawton,KKRX,Heart & Soul 96.7 & 1380,Yes,Yes,https://publicfiles.fcc.go
 Oklahoma,Langston,KALU,89.3,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/KALU/rss,200
 Oregon,Portland,KBMS,Best Music Station AM 1480,No,No,https://publicfiles.fcc.gov/am-profile/KBMS/rss,200
 Oregon,Portland,KXJM,Jam'n 107.5,No,Yes,https://publicfiles.fcc.gov/fm-profile/KXJM/rss,200
-Oregon,Portland,KINK HD-2/K275CH - WE 102.9 - Rhythmic Top 40/Hip Hop,Unknown Format,No,No,,N/A
+Oregon,Portland,KINK - WE 102.9 - Rhythmic Top 40/Hip Hop,Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/KINK/rss,200
 Oregon,Portland,KOOR - 1010 Urbana - Spanish rhythmic,Unknown Format,No,Yes,https://publicfiles.fcc.gov/am-profile/KOOR/rss,200
 Oregon,Klamath Falls,KKKJ - 3KJ Jammin 105.5 - Rhythmic CHR,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/KKKJ/rss,200
-Pennsylvania,Easton/Allentown/Bethlehem,WEST/WHOL - Loud 106.9/99.5 - Rhythmic Contemporary/Hip Hop,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/KALI/rss,200
+Pennsylvania,Easton/Allentown/Bethlehem,WEST/WHOL - Loud 106.9/99.5 - Rhythmic Contemporary/Hip Hop,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WEST/rss,200
 Pennsylvania,Easton/Allentown/Bethlehem,WTKZ - Mega 101.7 - Spanish CHR,Unknown Format,No,Yes,https://publicfiles.fcc.gov/am-profile/WTKZ/rss,200
-Pennsylvania,Erie,WXKC HD-2 - 104.3 The Vibe - Classic Hip Hop,Unknown Format,No,No,,N/A
+Pennsylvania,Erie,WXKC - 104.3 The Vibe - Classic Hip Hop,Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/WXKC/rss,200
 Pennsylvania,Harrisburg,WHKF - Real 99.3 - Urban Contemporary,Unknown Format,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/WHKF/rss,200
 Pennsylvania,Harrisburg,WWKL - Hot 106.7 - Rhythmic Contemporary,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/WWKL/rss,200
 Pennsylvania,Philadelphia,WURD,AM 900,Yes,Yes,https://publicfiles.fcc.gov/am-profile/WURD/rss,200
 Pennsylvania,Philadelphia,WPPZ,Classix 107.9,No,No,https://publicfiles.fcc.gov/fm-profile/WPPZ-FM/rss,200
-Pennsylvania,Philadelphia,WPPZ-HD2 - Praise 107.9 HD2 - Urban contemporary gospel,Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/WPPZ-FM/rss,200
 Pennsylvania,Philadelphia,WDAS-FM,105.3 WDAS,Yes,Yes,https://publicfiles.fcc.gov/am-profile/WDAS/rss,200
 Pennsylvania,Philadelphia,WRNB,100.3 RNB,No,Yes,https://publicfiles.fcc.gov/fm-profile/WRNB/rss,200
-Pennsylvania,Philadelphia,WRNB HD-2 - 100.3 HD2 R&B & Hip-Hop - Urban contemporary,Unknown Format,No,No,,N/A
-Pennsylvania,Philadelphia,WRNB HD-3 - Philly's Favor 100.7 - Urban contemporary gospel,Unknown Format,No,No,,N/A
 Pennsylvania,Philadelphia,WUSL,Power 99FM,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/WUSL/rss,200
 Pennsylvania,Philadelphia,WTEL - Philadelphia’s BIN 610 - Black-oriented news,Unknown Format,Yes,Yes,https://publicfiles.fcc.gov/am-profile/WTEL/rss,200
 Pennsylvania,Philadelphia,WUMR - Rumba 106.1 - Spanish CHR,Unknown Format,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/WUMR/rss,200
 Pennsylvania,Philadelphia,WEMG - Mega 105.7 - Spanish CHR,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WEMG/rss,200
 Pennsylvania,Philadelphia,WHAT - La Kalle 99.9 - Spanish tropical,Unknown Format,Yes,Yes,https://publicfiles.fcc.gov/am-profile/WHAT/rss,200
-Pennsylvania,Philadelphia,WPEN-HD3 - RITMO FM - Spanish tropical,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WAHT/rss,200
+Pennsylvania,Philadelphia,WPEN - RITMO FM - Spanish tropical,Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/WPEN/rss,200
 Pennsylvania,Pittsburgh,WGBN,Power 1360  98.9 FM,No,Yes,https://publicfiles.fcc.gov/am-profile/WGBN/rss,200
-Pennsylvania,Pittsburgh,WAMO - WAMO 107.3 - Urban Contemporary/Hip Hop,Unknown Format,No,No,,N/A
+Pennsylvania,Pittsburgh,WAMO - WAMO 107.3 - Urban Contemporary/Hip Hop,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WAMO/rss,200
 Pennsylvania,Reading,WLAN - Rumba 100.5 - Spanish tropical,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WECR/rss,200
-Pennsylvania,Reading,WRLD - Loud 98.5 - Rhythmic Contemporary/Hip Hop,Unknown Format,No,No,,N/A
-Pennsylvania,State College,WRSC HD-3 - Loud 101.5 - Rhythmic Contemporary/Hip Hop,Unknown Format,No,No,,N/A
+Pennsylvania,Reading,WRLD - Loud 98.5 - Rhythmic Contemporary/Hip Hop,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WRLD/rss,200
+Pennsylvania,State College,WRSC - Loud 101.5 - Rhythmic Contemporary/Hip Hop,Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/WRSC-FM/rss,200
 Pennsylvania,York,WGLD - Mega 107.1 - Spanish CHR,Unknown Format,No,Yes,https://publicfiles.fcc.gov/am-profile/WGLD/rss,200
 Rhode Island,Providence,WWKX,Hot 106,No,Yes,https://publicfiles.fcc.gov/fm-profile/WWKX/rss,200
 Rhode Island,Providence,WSTL - Mega 94.9 - Spanish tropical,Unknown Format,Yes,Yes,https://publicfiles.fcc.gov/am-profile/WSTL/rss,200
 Rhode Island,Providence,WPMZ - Poder 102.1 & 1110 - Spanish tropical,Unknown Format,No,Yes,https://publicfiles.fcc.gov/am-profile/WPMZ/rss,200
 South Carolina,Greenville/Spartanburg/Anderson,WJMZ-HD3 - Streetz 99.5 - Mainstream Urban,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/WJMZ-FM/rss,200
-South Carolina,Greenville/Spartanburg/Anderson,WFBC-HD2 96.3/104.5/107.7 The Block - Mainstream Urban,Unknown Format,No,No,,N/A
+South Carolina,Greenville/Spartanburg/Anderson,WFBC 96.3/104.5/107.7 The Block - Mainstream Urban,Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/WFBC-FM/rss,200
 South Carolina,Greenville/Spartanburg/Anderson,WJMZ,107.3 Jamz,No,Yes,https://publicfiles.fcc.gov/fm-profile/WJMZ-FM/rss,200
 South Carolina,Greenville/Spartanburg/Anderson,WHZT - Hot 98.1 - Rhythmic Top 40,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/WHZT/rss,200
-South Carolina,Greenville/Spartanburg/Anderson,"WXRU-LP - Smooth 107.9 - Rhythmic Oldies, Urban Oldies",Unknown Format,No,No,,N/A
 South Carolina,Greenville/Spartanburg/Anderson,WGVL - Greenville's BIN 1440 - Black-oriented news,Unknown Format,No,Yes,https://publicfiles.fcc.gov/am-profile/WGVL/rss,200
-South Carolina,Greenville/Spartanburg/Anderson,WASC - 1530 Solid Gold Soul - Urban Oldies,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/KERN/rss,200
+South Carolina,Greenville/Spartanburg/Anderson,WASC - 1530 Solid Gold Soul - Urban Oldies,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WASC/rss,200
 South Carolina,Charleston,WJNI,Gospel 106.3,No,Yes,https://publicfiles.fcc.gov/fm-profile/WJNI/rss,200
 South Carolina,Charleston,WSPO - Heaven 100.1 - Urban Gospel,Unknown Format,Yes,Yes,https://publicfiles.fcc.gov/am-profile/WSPO/rss,200
 South Carolina,Charleston,WWWZ - Z93 Jamz - Mainstream Urban,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/WWWZ/rss,200
-South Carolina,Charleston,WJNI-HD2 - Old school 92.1 - Classic Hip Hop,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/WJNI/rss,200
+South Carolina,Charleston,WJNI - Old school 92.1 - Classic Hip Hop,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/WJNI/rss,200
 South Carolina,Charleston,WMGL,Magic 107.3,No,Yes,https://publicfiles.fcc.gov/fm-profile/WMGL/rss,200
 South Carolina,Charleston,WXST,Star 99.7,No,Yes,https://publicfiles.fcc.gov/fm-profile/WXST/rss,200
-South Carolina,Charleston,WXST-HD2 - 99.3 The Box - Mainstream Urban,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/WXST/rss,200
 South Carolina,Charleston,WZJY - Latina 95.5 - Spanish tropical,Unknown Format,No,Yes,https://publicfiles.fcc.gov/am-profile/WZJY/rss,200
 South Carolina,Columbia,WFMV,Gospel 620 AM 96.1/98.9/107.1,No,Yes,https://publicfiles.fcc.gov/am-profile/WFMV/rss,200
 South Carolina,Columbia,WDEK - Praise 95.7 & 1170 - Urban Gospel,Unknown Format,No,Yes,https://publicfiles.fcc.gov/am-profile/WDEK/rss,200
-South Carolina,Columbia,WJTB-HD2 - 105.1Worship and Word Network - Urban Gospel,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WJTB/rss,200
+South Carolina,Columbia,WJTB - 105.1Worship and Word Network - Urban Gospel,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WJTB/rss,200
 South Carolina,Columbia,WXBT,100.1 The Beat,No,Yes,https://publicfiles.fcc.gov/fm-profile/WXBT/rss,200
-South Carolina,Columbia,WXBT HD-2 - Columbia's BIN 105.5 - Black-oriented news,Unknown Format,No,No,,N/A
 South Carolina,Columbia,WHXT/WSCZ,Hot 103.9/93.9,No,Yes,https://publicfiles.fcc.gov/fm-profile/WHXT/rss,200
 South Carolina,Columbia,WLXC,Kiss 103.1,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/WLXC/rss,200
 South Carolina,Columbia,WWDM,101.3 The Big DM,No,Yes,https://publicfiles.fcc.gov/fm-profile/WWDM/rss,200
@@ -761,21 +751,20 @@ South Carolina,Myrtle Beach,WMIR,Rejoice 1200 AM/103.5,No,Yes,https://publicfile
 South Carolina,Myrtle Beach,WPJS,Gospel 1330 AM,No,Yes,https://publicfiles.fcc.gov/am-profile/WPJS/rss,200
 South Carolina,Myrtle Beach,WDAI,98.5 Kiss FM,No,Yes,https://publicfiles.fcc.gov/fm-profile/WDAI/rss,200
 South Carolina,Florence,WBZF / WYNN,Glory 98.5 FM/540 AM,No,Yes,https://publicfiles.fcc.gov/fm-profile/WBZF/rss,200
-South Carolina,Florence,WJAY - 98.3 FM/1280 AM - Urban Gospel,Unknown Format,No,No,,N/A
-South Carolina,Florence,WALD - 98.7 FM/1080 AM - Urban Gospel,Unknown Format,No,No,,N/A
+South Carolina,Florence,WJAY - 98.3 FM/1280 AM - Urban Gospel,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WJAY/rss,200
+South Carolina,Florence,WALD - 98.7 FM/1080 AM - Urban Gospel,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WALD/rss,200
 South Carolina,Florence,WPDT,Almighty 105.1,No,Yes,https://publicfiles.fcc.gov/fm-profile/WPDT/rss,200
 South Carolina,Florence,WCMG,Magic 94.3,No,Yes,https://publicfiles.fcc.gov/fm-profile/WCMG/rss,200
 South Carolina,Florence,WZTF,The Flo 102.9,No,Yes,https://publicfiles.fcc.gov/fm-profile/WZTF/rss,200
 South Carolina,Florence,WYNN,WYNN 106.3,No,No,https://publicfiles.fcc.gov/am-profile/KWYN/rss,200
 South Carolina,Florence,WDAR-FM,105.5 The Beat,No,Yes,https://publicfiles.fcc.gov/fm-profile/WDAR-FM/rss,200
-South Carolina,Florence,WSIM-HD2 - Jamz 107.5 - Classic Hip Hop,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/WSIM/rss,200
+South Carolina,Florence,WSIM - Jamz 107.5 - Classic Hip Hop,Unknown Format,No,Yes,https://publicfiles.fcc.gov/fm-profile/WSIM/rss,200
 South Carolina,Sumter,WXHL - Reach Gospel Radio 89.1 - Urban Gospel,Unknown Format,No,No,https://publicfiles.fcc.gov/fm-profile/WXHL-FM/rss,200
 South Carolina,Sumter,WLJI,Almighty 98.3,No,Yes,https://publicfiles.fcc.gov/fm-profile/WLJI/rss,200
 South Carolina,Sumter,WWHM,Old Skool 93.3/92.3,Yes,Yes,https://publicfiles.fcc.gov/am-profile/WWHM/rss,200
-South Carolina,Orangeburg,WOCS,93.7,No,No,,N/A
 South Carolina,Orangeburg,WQKI-FM,Jamz 95.7,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/WQKI-FM/rss,200
 South Carolina,Orangeburg,WSPX,Almighty 94.5,No,Yes,https://publicfiles.fcc.gov/fm-profile/WSPX/rss,200
-South Carolina,Camden,WEAF - 1130 AM/99.5 - Urban Gospel,Unknown Format,No,No,,N/A
+South Carolina,Camden,WEAF - 1130 AM/99.5 - Urban Gospel,Unknown Format,No,No,https://publicfiles.fcc.gov/am-profile/WEAF/rss,200
 South Carolina,St. Stephen,WTUA,Power 106,Yes,Yes,https://publicfiles.fcc.gov/fm-profile/WTUA/rss,200
 South Carolina,Beaufort,WVGB - Praise 94.5/1490 AM -Urban Gospel,Unknown Format,No,No,,N/A
 South Carolina,Beaufort,WKWQ - 100.7 -Urban Adult Contemporary,Unknown Format,No,No,,N/A
