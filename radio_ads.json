@@ -59034,5 +59034,17 @@
         "station_url": "https://publicfiles.fcc.gov/am-profile/WGKB/rss",
         "state": "Wisconsin",
         "city": "Milwaukee"
+    },
+    {
+        "title": "fm Entity 52801 uploaded a file in Political Files/2024/Non-Candidate Issue Ads/Nebraska For Us",
+        "url": "https://publicfiles.fcc.gov/api/manager/download/70163a50-dbe8-30b7-e463-380a275b59eb/cb6f68e0-eade-406d-8b31-18c4befc678c.pdf",
+        "id": "https://publicfiles.fcc.gov/fm-profile/KOPW/cb6f68e0-eade-406d-8b31-18c4befc678c",
+        "updated": "2024-05-16T23:59:59Z",
+        "facility_id": 52801,
+        "office": "Non-Candidate Issue Ads",
+        "sponsor": "Nebraska For Us",
+        "station_url": "https://publicfiles.fcc.gov/fm-profile/KOPW/rss",
+        "state": "Nebraska",
+        "city": "Omaha"
     }
 ]
