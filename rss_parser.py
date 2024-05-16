@@ -1,12 +1,12 @@
 import csv
 import feedparser
 import json
+import concurrent.futures
 
 # Input CSV file containing station URLs, states, and cities
 csv_file = 'urban_radio_stations_with_status.csv'
 # JSON file to save collected data
 json_file = 'radio_ads.json'
-
 
 def parse_feed(station_url, state, city):
     """Parse the RSS feed from the given station URL and include state and city."""
@@ -64,7 +64,6 @@ def parse_feed(station_url, state, city):
 
     return entries_list
 
-
 def fetch_rss_entries(csv_file):
     """Fetch RSS entries for each station URL in the provided CSV file."""
     # Load the existing data from radio_ads.json if it exists
@@ -74,27 +73,33 @@ def fetch_rss_entries(csv_file):
     except FileNotFoundError:
         existing_data = []
 
+    existing_ids = {entry['id'] for entry in existing_data}
+
     # Read the CSV file to get the URLs, state, and city information
     with open(csv_file, newline='', encoding='utf-8') as file:
         reader = csv.DictReader(file)
-        for row in reader:
-            station_url = row.get('FCC URL')
-            state = row.get('State')
-            city = row.get('City')
-            if station_url:
-                # Parse the RSS feed for the current URL, passing state and city
-                entries_list = parse_feed(station_url, state, city)
-                
-                # Add only new entries to the existing data
-                for entry in entries_list:
-                    entry_id = entry['id']
-                    if not any(existing_entry['id'] == entry_id for existing_entry in existing_data):
-                        existing_data.append(entry)
+        entries_list = []
+
+        # Use ThreadPoolExecutor to parse feeds in parallel
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            futures = []
+            for row in reader:
+                station_url = row.get('FCC URL')
+                state = row.get('State')
+                city = row.get('City')
+                if station_url:
+                    futures.append(executor.submit(parse_feed, station_url, state, city))
+
+            for future in concurrent.futures.as_completed(futures):
+                entries_list.extend(future.result())
+
+        # Add only new entries to the existing data
+        new_entries = [entry for entry in entries_list if entry['id'] not in existing_ids]
+        existing_data.extend(new_entries)
 
     # Write the combined data to radio_ads.json
     with open(json_file, 'w') as file:
         json.dump(existing_data, file, indent=4)
-
 
 # Main execution
 if __name__ == "__main__":
