@@ -62898,5 +62898,17 @@
         "station_url": "https://publicfiles.fcc.gov/fm-profile/WPRW-FM/rss",
         "state": "Georgia",
         "city": "Augusta"
+    },
+    {
+        "title": "fm Entity 46967 uploaded a file in Political Files/2024/Federal/US House",
+        "url": "https://publicfiles.fcc.gov/api/manager/download/8df0da81-9e5b-d317-3c55-09b0d3d311f1/cddb6213-1941-4380-a94a-cf1e2d33ff15.pdf",
+        "id": "https://publicfiles.fcc.gov/fm-profile/WPRW-FM/cddb6213-1941-4380-a94a-cf1e2d33ff15",
+        "updated": "2024-05-19T23:59:59Z",
+        "facility_id": 46967,
+        "office": "Federal",
+        "sponsor": "US House",
+        "station_url": "https://publicfiles.fcc.gov/fm-profile/WPRW-FM/rss",
+        "state": "Georgia",
+        "city": "Augusta"
     }
 ]
