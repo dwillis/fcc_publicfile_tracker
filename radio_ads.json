@@ -62910,5 +62910,53 @@
         "station_url": "https://publicfiles.fcc.gov/fm-profile/WPRW-FM/rss",
         "state": "Georgia",
         "city": "Augusta"
+    },
+    {
+        "title": "am Entity 8589 uploaded a file in Political Files/2024/Non-Candidate Issue Ads",
+        "url": "https://publicfiles.fcc.gov/api/manager/download/ec426076-8aa4-a5a4-0178-c829a25e5ef6/69cc8950-8cfa-4016-a7f8-fc2a28dda18d.pdf",
+        "id": "https://publicfiles.fcc.gov/am-profile/WTKS/69cc8950-8cfa-4016-a7f8-fc2a28dda18d",
+        "updated": "2024-05-20T23:59:59Z",
+        "facility_id": 8589,
+        "office": "2024",
+        "sponsor": "Non-Candidate Issue Ads",
+        "station_url": "https://publicfiles.fcc.gov/am-profile/WTKS/rss",
+        "state": "Florida",
+        "city": "Orlando/Daytona Beach"
+    },
+    {
+        "title": "fm Entity 11275 uploaded a file in Political Files/2024/Federal/US House",
+        "url": "https://publicfiles.fcc.gov/api/manager/download/df6859ae-aea0-93a1-c44c-1afee7d79677/b677c4d9-b88a-41c6-9b0c-a0d41231c06a.pdf",
+        "id": "https://publicfiles.fcc.gov/fm-profile/WRDG/b677c4d9-b88a-41c6-9b0c-a0d41231c06a",
+        "updated": "2024-05-20T23:59:59Z",
+        "facility_id": 11275,
+        "office": "Federal",
+        "sponsor": "US House",
+        "station_url": "https://publicfiles.fcc.gov/fm-profile/WRDG/rss",
+        "state": "Georgia",
+        "city": "Atlanta"
+    },
+    {
+        "title": "fm Entity 46966 uploaded a file in Political Files/2024/State",
+        "url": "https://publicfiles.fcc.gov/api/manager/download/8d79fb6f-9e37-9bbb-70fc-24a41b8d3faa/3391c9b5-cc4a-40f3-8ff1-e831746f7896.pdf",
+        "id": "https://publicfiles.fcc.gov/fm-profile/WKSP/3391c9b5-cc4a-40f3-8ff1-e831746f7896",
+        "updated": "2024-05-20T23:59:59Z",
+        "facility_id": 46966,
+        "office": "2024",
+        "sponsor": "State",
+        "station_url": "https://publicfiles.fcc.gov/fm-profile/WKSP/rss",
+        "state": "Georgia",
+        "city": "Augusta"
+    },
+    {
+        "title": "fm Entity 62239 uploaded a file in Political Files/2024/State",
+        "url": "https://publicfiles.fcc.gov/api/manager/download/57584244-bc9f-e510-4c7e-92b92a067b97/96f4262c-4468-428a-912a-bca3a3e37516.pdf",
+        "id": "https://publicfiles.fcc.gov/fm-profile/KKMY/96f4262c-4468-428a-912a-bca3a3e37516",
+        "updated": "2024-05-20T23:59:59Z",
+        "facility_id": 62239,
+        "office": "2024",
+        "sponsor": "State",
+        "station_url": "https://publicfiles.fcc.gov/fm-profile/KKMY/rss",
+        "state": "Texas",
+        "city": "Beaumont/Port Arthur"
     }
 ]
