@@ -67638,5 +67638,53 @@
         "station_url": "https://publicfiles.fcc.gov/fm-profile/KJTX/rss",
         "state": "Texas",
         "city": "Jacksonville"
+    },
+    {
+        "title": "fm Entity 2111 uploaded a file in Political Files/2024/Non-Candidate Issue Ads",
+        "url": "https://publicfiles.fcc.gov/api/manager/download/bd9ae482-4fdf-b550-5281-534d78cfd509/8cc02db4-2c1e-473d-8a3a-9d4c558060f1.pdf",
+        "id": "https://publicfiles.fcc.gov/fm-profile/WMJJ/8cc02db4-2c1e-473d-8a3a-9d4c558060f1",
+        "updated": "2024-05-24T23:59:59Z",
+        "facility_id": 2111,
+        "office": "2024",
+        "sponsor": "Non-Candidate Issue Ads",
+        "station_url": "https://publicfiles.fcc.gov/fm-profile/WMJJ/rss",
+        "state": "Alabama",
+        "city": "Birmingham"
+    },
+    {
+        "title": "fm Entity 46967 uploaded a file in Political Files/2024/Federal/US House",
+        "url": "https://publicfiles.fcc.gov/api/manager/download/8df0da81-9e5b-d317-3c55-09b0d3d311f1/cf525241-a41f-4125-9d48-fa4577166c38.pdf",
+        "id": "https://publicfiles.fcc.gov/fm-profile/WPRW-FM/cf525241-a41f-4125-9d48-fa4577166c38",
+        "updated": "2024-05-25T23:59:59Z",
+        "facility_id": 46967,
+        "office": "Federal",
+        "sponsor": "US House",
+        "station_url": "https://publicfiles.fcc.gov/fm-profile/WPRW-FM/rss",
+        "state": "Georgia",
+        "city": "Augusta"
+    },
+    {
+        "title": "fm Entity 74468 uploaded a file in Equal Employment Opportunity Records/Additional Documents/EEO Public File Reports",
+        "url": "https://publicfiles.fcc.gov/api/manager/download/a3b00bc9-ac79-cde7-bbb7-3f7c13dfce99/864ed860-7757-418f-af07-022a112b5afb.pdf",
+        "id": "https://publicfiles.fcc.gov/fm-profile/WAKZ/864ed860-7757-418f-af07-022a112b5afb",
+        "updated": "2024-05-24T23:59:59Z",
+        "facility_id": 74468,
+        "office": "Additional Documents",
+        "sponsor": "EEO Public File Reports",
+        "station_url": "https://publicfiles.fcc.gov/fm-profile/WAKZ/rss",
+        "state": "Ohio",
+        "city": "Youngstown"
+    },
+    {
+        "title": "fm Entity 74468 uploaded a file in Equal Employment Opportunity Records/Additional Documents/EEO Public File Reports",
+        "url": "https://publicfiles.fcc.gov/api/manager/download/a3b00bc9-ac79-cde7-bbb7-3f7c13dfce99/520e1796-2320-4e33-ad2f-ad49e0d3e924.pdf",
+        "id": "https://publicfiles.fcc.gov/fm-profile/WAKZ/520e1796-2320-4e33-ad2f-ad49e0d3e924",
+        "updated": "2024-05-24T23:59:59Z",
+        "facility_id": 74468,
+        "office": "Additional Documents",
+        "sponsor": "EEO Public File Reports",
+        "station_url": "https://publicfiles.fcc.gov/fm-profile/WAKZ/rss",
+        "state": "Ohio",
+        "city": "Youngstown"
     }
 ]
