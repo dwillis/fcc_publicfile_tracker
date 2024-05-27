@@ -67710,5 +67710,17 @@
         "station_url": "https://publicfiles.fcc.gov/fm-profile/WJLB/rss",
         "state": "Michigan",
         "city": "Detroit"
+    },
+    {
+        "title": "fm Entity 23830 uploaded a file in Political Files/2024/Federal/President",
+        "url": "https://publicfiles.fcc.gov/api/manager/download/8b8ceb15-cd2a-0761-dafd-ed7335ce2623/8379ae8b-a875-45a2-ac6e-350598bc9e97.pdf",
+        "id": "https://publicfiles.fcc.gov/fm-profile/WSOL-FM/8379ae8b-a875-45a2-ac6e-350598bc9e97",
+        "updated": "2024-05-27T23:59:59Z",
+        "facility_id": 23830,
+        "office": "Federal",
+        "sponsor": "President",
+        "station_url": "https://publicfiles.fcc.gov/fm-profile/WSOL-FM/rss",
+        "state": "Georgia",
+        "city": "Brunswick"
     }
 ]
