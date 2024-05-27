@@ -67698,5 +67698,17 @@
         "station_url": "https://publicfiles.fcc.gov/fm-profile/WPRW-FM/rss",
         "state": "Georgia",
         "city": "Augusta"
+    },
+    {
+        "title": "fm Entity 59592 uploaded a file in Political Files/2024/Non-Candidate Issue Ads",
+        "url": "https://publicfiles.fcc.gov/api/manager/download/3b967090-8a1d-585c-5a34-21a1e9e619c7/e2e665eb-f5f9-42e3-b462-ec343fb7c6f3.pdf",
+        "id": "https://publicfiles.fcc.gov/fm-profile/WJLB/e2e665eb-f5f9-42e3-b462-ec343fb7c6f3",
+        "updated": "2024-05-27T23:59:59Z",
+        "facility_id": 59592,
+        "office": "2024",
+        "sponsor": "Non-Candidate Issue Ads",
+        "station_url": "https://publicfiles.fcc.gov/fm-profile/WJLB/rss",
+        "state": "Michigan",
+        "city": "Detroit"
     }
 ]
