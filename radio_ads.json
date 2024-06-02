@@ -76158,5 +76158,29 @@
         "station_url": "https://publicfiles.fcc.gov/fm-profile/KZRR/rss",
         "state": "New Mexico",
         "city": "Albuquerque/Santa Fe"
+    },
+    {
+        "title": "fm Entity 46967 uploaded a file in Political Files/2024/Federal/US House",
+        "url": "https://publicfiles.fcc.gov/api/manager/download/8df0da81-9e5b-d317-3c55-09b0d3d311f1/6167315e-45bb-4f75-9242-a2f95b7e18dc.pdf",
+        "id": "https://publicfiles.fcc.gov/fm-profile/WPRW-FM/6167315e-45bb-4f75-9242-a2f95b7e18dc",
+        "updated": "2024-06-02T23:59:59Z",
+        "facility_id": 46967,
+        "office": "Federal",
+        "sponsor": "US House",
+        "station_url": "https://publicfiles.fcc.gov/fm-profile/WPRW-FM/rss",
+        "state": "Georgia",
+        "city": "Augusta"
+    },
+    {
+        "title": "fm Entity 68609 uploaded a file in Political Files/2024/State",
+        "url": "https://publicfiles.fcc.gov/api/manager/download/8a8e43a4-f5a4-c190-0eed-be924a8654cb/e0195dff-f32c-4428-b70d-40be6cc6d233.pdf",
+        "id": "https://publicfiles.fcc.gov/fm-profile/KZRR/e0195dff-f32c-4428-b70d-40be6cc6d233",
+        "updated": "2024-06-02T23:59:59Z",
+        "facility_id": 68609,
+        "office": "2024",
+        "sponsor": "State",
+        "station_url": "https://publicfiles.fcc.gov/fm-profile/KZRR/rss",
+        "state": "New Mexico",
+        "city": "Albuquerque/Santa Fe"
     }
 ]
