@@ -76182,5 +76182,41 @@
         "station_url": "https://publicfiles.fcc.gov/fm-profile/KZRR/rss",
         "state": "New Mexico",
         "city": "Albuquerque/Santa Fe"
+    },
+    {
+        "title": "am Entity 48968 uploaded a file in Political Files/2024/Non-Candidate Issue Ads",
+        "url": "https://publicfiles.fcc.gov/api/manager/download/a5c5fe83-309e-4efb-fbbc-4bc43049dffa/d350bb24-7479-4dfc-bbbf-d0743f65ef24.pdf",
+        "id": "https://publicfiles.fcc.gov/am-profile/KATZ/d350bb24-7479-4dfc-bbbf-d0743f65ef24",
+        "updated": "2024-06-03T23:59:59Z",
+        "facility_id": 48968,
+        "office": "2024",
+        "sponsor": "Non-Candidate Issue Ads",
+        "station_url": "https://publicfiles.fcc.gov/am-profile/KATZ/rss",
+        "state": "Missouri",
+        "city": "Saint Louis"
+    },
+    {
+        "title": "fm Entity 23464 uploaded a file in Political Files/2024/Non-Candidate Issue Ads",
+        "url": "https://publicfiles.fcc.gov/api/manager/download/3d7cd95b-7fd3-8eef-c58e-3e129f8cf26e/b9dbd885-61ac-4b14-8aa8-2e8d1b594623.pdf",
+        "id": "https://publicfiles.fcc.gov/fm-profile/WHKF/b9dbd885-61ac-4b14-8aa8-2e8d1b594623",
+        "updated": "2024-06-03T23:59:59Z",
+        "facility_id": 23464,
+        "office": "2024",
+        "sponsor": "Non-Candidate Issue Ads",
+        "station_url": "https://publicfiles.fcc.gov/fm-profile/WHKF/rss",
+        "state": "Pennsylvania",
+        "city": "Harrisburg"
+    },
+    {
+        "title": "fm Entity 20349 uploaded a file in Political Files/2024/Non-Candidate Issue Ads",
+        "url": "https://publicfiles.fcc.gov/api/manager/download/ed512880-6fb3-51a5-3b9f-c1bff7014189/cef48540-b708-40eb-a54b-343b028e37f5.pdf",
+        "id": "https://publicfiles.fcc.gov/fm-profile/WUSL/cef48540-b708-40eb-a54b-343b028e37f5",
+        "updated": "2024-06-03T23:59:59Z",
+        "facility_id": 20349,
+        "office": "2024",
+        "sponsor": "Non-Candidate Issue Ads",
+        "station_url": "https://publicfiles.fcc.gov/fm-profile/WUSL/rss",
+        "state": "Pennsylvania",
+        "city": "Philadelphia"
     }
 ]
