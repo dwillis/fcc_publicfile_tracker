@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Political Radio Ads - Sponsor/Station Heatmap</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .controls {
+            padding: 25px 30px;
+            background: #fafafa;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .control-group label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        select, input {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            background: white;
+            cursor: pointer;
+        }
+
+        select:focus, input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .stats {
+            padding: 20px 30px;
+            background: #f9f9f9;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        #heatmap {
+            padding: 30px;
+            overflow-x: auto;
+        }
+
+        .cell {
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .cell:hover {
+            opacity: 0.8;
+            stroke: #333;
+            stroke-width: 2px;
+        }
+
+        .axis text {
+            font-size: 11px;
+            fill: #666;
+        }
+
+        .axis path,
+        .axis line {
+            stroke: #ddd;
+        }
+
+        .tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 12px 16px;
+            border-radius: 6px;
+            font-size: 13px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+            max-width: 300px;
+            line-height: 1.6;
+            z-index: 1000;
+        }
+
+        .tooltip.visible {
+            opacity: 1;
+        }
+
+        .legend {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 12px;
+        }
+
+        .legend-gradient {
+            width: 200px;
+            height: 15px;
+            border-radius: 3px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px;
+            color: #999;
+            font-size: 16px;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .no-data {
+            text-align: center;
+            padding: 60px;
+            color: #999;
+            font-size: 16px;
+        }
+
+        .sponsor-label, .station-label {
+            cursor: pointer;
+        }
+
+        .sponsor-label:hover, .station-label:hover {
+            fill: #667eea;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Political Radio Advertising Heatmap</h1>
+            <p class="subtitle">Visualizing which sponsors advertise on which stations</p>
+        </header>
+
+        <div class="controls">
+            <div class="control-group">
+                <label>Office Type</label>
+                <select id="officeFilter">
+                    <option value="all">All Offices</option>
+                    <option value="President">President</option>
+                    <option value="US Senate">US Senate</option>
+                    <option value="US House">US House</option>
+                    <option value="State">State</option>
+                    <option value="Local">Local</option>
+                    <option value="Non-Candidate Issue Ads">Non-Candidate Issue Ads</option>
+                    <option value="Political Matters">Political Matters</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label>Year</label>
+                <select id="yearFilter">
+                    <option value="all">All Years</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label>Top Sponsors</label>
+                <select id="topSponsors">
+                    <option value="25">Top 25</option>
+                    <option value="50" selected>Top 50</option>
+                    <option value="75">Top 75</option>
+                    <option value="100">Top 100</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label>Min Ads</label>
+                <input type="number" id="minAds" value="5" min="1" max="100" style="width: 80px;">
+            </div>
+        </div>
+
+        <div class="stats" id="stats">
+            <div class="stat">
+                <div class="stat-label">Total Ads</div>
+                <div class="stat-value" id="totalAds">-</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Sponsors</div>
+                <div class="stat-value" id="sponsorCount">-</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Stations</div>
+                <div class="stat-value" id="stationCount">-</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Date Range</div>
+                <div class="stat-value" id="dateRange" style="font-size: 16px;">-</div>
+            </div>
+        </div>
+
+        <div id="heatmap">
+            <div class="loading">
+                <div class="spinner"></div>
+                Loading data...
+            </div>
+        </div>
+    </div>
+
+    <div class="tooltip"></div>
+
+    <script>
+        let allData = [];
+        let filteredData = [];
+
+        // Load the data
+        fetch('radio_ads_tagged.json')
+            .then(response => response.json())
+            .then(data => {
+                allData = data.filter(d =>
+                    (d.record_type === 'political_ad' || d.record_type === 'political_matters') &&
+                    d.station &&
+                    d.sponsor &&
+                    !d.sponsor.includes('Entity') && // Filter out parsing errors
+                    d.sponsor !== d.office // Filter out category-only records
+                );
+
+                initializeFilters();
+                updateVisualization();
+            })
+            .catch(error => {
+                document.getElementById('heatmap').innerHTML =
+                    '<div class="no-data">Error loading data: ' + error.message + '</div>';
+            });
+
+        function initializeFilters() {
+            // Populate year filter
+            const years = [...new Set(allData.map(d => d.year).filter(y => y))].sort().reverse();
+            const yearSelect = document.getElementById('yearFilter');
+            years.forEach(year => {
+                const option = document.createElement('option');
+                option.value = year;
+                option.textContent = year;
+                yearSelect.appendChild(option);
+            });
+
+            // Add event listeners
+            document.getElementById('officeFilter').addEventListener('change', updateVisualization);
+            document.getElementById('yearFilter').addEventListener('change', updateVisualization);
+            document.getElementById('topSponsors').addEventListener('change', updateVisualization);
+            document.getElementById('minAds').addEventListener('change', updateVisualization);
+        }
+
+        function updateVisualization() {
+            const officeFilter = document.getElementById('officeFilter').value;
+            const yearFilter = document.getElementById('yearFilter').value;
+            const topN = parseInt(document.getElementById('topSponsors').value);
+            const minAds = parseInt(document.getElementById('minAds').value);
+
+            // Filter data
+            filteredData = allData.filter(d => {
+                if (officeFilter !== 'all' && d.office !== officeFilter) return false;
+                if (yearFilter !== 'all' && d.year !== parseInt(yearFilter)) return false;
+                return true;
+            });
+
+            if (filteredData.length === 0) {
+                document.getElementById('heatmap').innerHTML =
+                    '<div class="no-data">No data matches the selected filters</div>';
+                return;
+            }
+
+            // Count ads by sponsor and station
+            const matrix = {};
+            const sponsorCounts = {};
+            const stationCounts = {};
+
+            filteredData.forEach(d => {
+                const key = `${d.sponsor}|||${d.station}`;
+                matrix[key] = (matrix[key] || 0) + 1;
+                sponsorCounts[d.sponsor] = (sponsorCounts[d.sponsor] || 0) + 1;
+                stationCounts[d.station] = (stationCounts[d.station] || 0) + 1;
+            });
+
+            // Get top sponsors
+            const topSponsors = Object.entries(sponsorCounts)
+                .filter(([_, count]) => count >= minAds)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, topN)
+                .map(([sponsor, _]) => sponsor);
+
+            // Get stations that have ads from top sponsors
+            const relevantStations = new Set();
+            topSponsors.forEach(sponsor => {
+                Object.keys(matrix).forEach(key => {
+                    const [s, st] = key.split('|||');
+                    if (s === sponsor && matrix[key] > 0) {
+                        relevantStations.add(st);
+                    }
+                });
+            });
+
+            const stations = [...relevantStations].sort();
+
+            // Update stats
+            updateStats(filteredData, topSponsors, stations);
+
+            // Draw heatmap
+            drawHeatmap(topSponsors, stations, matrix);
+        }
+
+        function updateStats(data, sponsors, stations) {
+            document.getElementById('totalAds').textContent = data.length.toLocaleString();
+            document.getElementById('sponsorCount').textContent = sponsors.length;
+            document.getElementById('stationCount').textContent = stations.length;
+
+            const dates = data.map(d => new Date(d.updated)).filter(d => !isNaN(d));
+            if (dates.length > 0) {
+                const minDate = new Date(Math.min(...dates));
+                const maxDate = new Date(Math.max(...dates));
+                const formatDate = d => d.toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
+                document.getElementById('dateRange').textContent =
+                    `${formatDate(minDate)} - ${formatDate(maxDate)}`;
+            }
+        }
+
+        function drawHeatmap(sponsors, stations, matrix) {
+            const margin = { top: 80, right: 20, bottom: 20, left: 200 };
+            const cellSize = 30;
+            const width = stations.length * cellSize + margin.left + margin.right;
+            const height = sponsors.length * cellSize + margin.top + margin.bottom;
+
+            // Clear previous visualization
+            document.getElementById('heatmap').innerHTML = '';
+
+            const svg = d3.select('#heatmap')
+                .append('svg')
+                .attr('width', width)
+                .attr('height', height);
+
+            const g = svg.append('g')
+                .attr('transform', `translate(${margin.left},${margin.top})`);
+
+            // Get max value for color scale
+            const maxValue = Math.max(...Object.values(matrix));
+
+            // Color scale
+            const colorScale = d3.scaleSequential()
+                .domain([0, maxValue])
+                .interpolator(d3.interpolateBlues);
+
+            // Create cells
+            sponsors.forEach((sponsor, i) => {
+                stations.forEach((station, j) => {
+                    const key = `${sponsor}|||${station}`;
+                    const value = matrix[key] || 0;
+
+                    g.append('rect')
+                        .attr('class', 'cell')
+                        .attr('x', j * cellSize)
+                        .attr('y', i * cellSize)
+                        .attr('width', cellSize)
+                        .attr('height', cellSize)
+                        .attr('fill', value > 0 ? colorScale(value) : '#f5f5f5')
+                        .attr('stroke', '#fff')
+                        .attr('stroke-width', 1)
+                        .on('mouseover', function(event) {
+                            if (value > 0) {
+                                showTooltip(event, sponsor, station, value);
+                            }
+                        })
+                        .on('mouseout', hideTooltip);
+                });
+            });
+
+            // Add sponsor labels (Y-axis)
+            g.selectAll('.sponsor-label')
+                .data(sponsors)
+                .enter()
+                .append('text')
+                .attr('class', 'sponsor-label')
+                .attr('x', -5)
+                .attr('y', (d, i) => i * cellSize + cellSize / 2)
+                .attr('dy', '0.35em')
+                .attr('text-anchor', 'end')
+                .style('font-size', '11px')
+                .text(d => d.length > 30 ? d.substring(0, 27) + '...' : d)
+                .append('title')
+                .text(d => d);
+
+            // Add station labels (X-axis)
+            g.selectAll('.station-label')
+                .data(stations)
+                .enter()
+                .append('text')
+                .attr('class', 'station-label')
+                .attr('x', (d, i) => i * cellSize + cellSize / 2)
+                .attr('y', -10)
+                .attr('text-anchor', 'start')
+                .attr('transform', (d, i) =>
+                    `rotate(-45, ${i * cellSize + cellSize / 2}, -10)`)
+                .style('font-size', '11px')
+                .text(d => d);
+
+            // Add legend
+            const legendWidth = 200;
+            const legendHeight = 15;
+
+            const legendG = svg.append('g')
+                .attr('transform', `translate(${margin.left}, ${height - 35})`);
+
+            const legendScale = d3.scaleLinear()
+                .domain([0, maxValue])
+                .range([0, legendWidth]);
+
+            const legendAxis = d3.axisBottom(legendScale)
+                .ticks(5)
+                .tickFormat(d3.format('d'));
+
+            // Create gradient
+            const defs = svg.append('defs');
+            const gradient = defs.append('linearGradient')
+                .attr('id', 'legend-gradient');
+
+            gradient.selectAll('stop')
+                .data(d3.range(0, 1.1, 0.1))
+                .enter()
+                .append('stop')
+                .attr('offset', d => `${d * 100}%`)
+                .attr('stop-color', d => colorScale(d * maxValue));
+
+            legendG.append('rect')
+                .attr('width', legendWidth)
+                .attr('height', legendHeight)
+                .style('fill', 'url(#legend-gradient)');
+
+            legendG.append('g')
+                .attr('transform', `translate(0, ${legendHeight})`)
+                .call(legendAxis);
+
+            legendG.append('text')
+                .attr('x', -5)
+                .attr('y', legendHeight / 2)
+                .attr('dy', '0.35em')
+                .attr('text-anchor', 'end')
+                .style('font-size', '11px')
+                .text('Ads:');
+        }
+
+        function showTooltip(event, sponsor, station, count) {
+            const tooltip = d3.select('.tooltip');
+            tooltip.html(`
+                <strong>${sponsor}</strong><br>
+                <strong>${station}</strong><br>
+                ${count} ad${count > 1 ? 's' : ''}
+            `)
+            .style('left', (event.pageX + 15) + 'px')
+            .style('top', (event.pageY - 15) + 'px')
+            .classed('visible', true);
+        }
+
+        function hideTooltip() {
+            d3.select('.tooltip').classed('visible', false);
+        }
+    </script>
+</body>
+</html>
