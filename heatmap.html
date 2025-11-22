@@ -48,10 +48,18 @@
             padding: 25px 30px;
             background: #fafafa;
             border-bottom: 1px solid #e0e0e0;
+        }
+
+        .control-row {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .control-row:last-child {
+            margin-bottom: 0;
         }
 
         .control-group {
@@ -80,6 +88,122 @@
         select:focus, input:focus {
             outline: none;
             border-color: #667eea;
+        }
+
+        .sponsor-selector {
+            width: 100%;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+        }
+
+        .sponsor-selector-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
+        .sponsor-search {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .sponsor-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .sponsor-chip {
+            background: #667eea;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sponsor-chip-remove {
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 1;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .sponsor-chip-remove:hover {
+            opacity: 1;
+        }
+
+        .sponsor-suggestions {
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: white;
+        }
+
+        .sponsor-suggestion {
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 13px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sponsor-suggestion:last-child {
+            border-bottom: none;
+        }
+
+        .sponsor-suggestion:hover {
+            background: #f5f5f5;
+        }
+
+        .sponsor-suggestion.selected {
+            background: #e8eaf6;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .sponsor-count {
+            color: #999;
+            font-size: 12px;
+        }
+
+        .quick-add {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .quick-add-btn {
+            padding: 6px 12px;
+            background: white;
+            border: 1px solid #667eea;
+            color: #667eea;
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .quick-add-btn:hover {
+            background: #667eea;
+            color: white;
         }
 
         .stats {
@@ -198,13 +322,29 @@
             font-size: 16px;
         }
 
-        .sponsor-label, .station-label {
+        .station-label, .sponsor-label {
             cursor: pointer;
         }
 
-        .sponsor-label:hover, .station-label:hover {
+        .station-label:hover, .sponsor-label:hover {
             fill: #667eea;
             font-weight: 600;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 30px;
+            color: #999;
+        }
+
+        .empty-state h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .empty-state p {
+            font-size: 14px;
         }
     </style>
 </head>
@@ -212,44 +352,44 @@
     <div class="container">
         <header>
             <h1>Political Radio Advertising Heatmap</h1>
-            <p class="subtitle">Visualizing which sponsors advertise on which stations</p>
+            <p class="subtitle">Compare sponsor advertising across radio stations</p>
         </header>
 
         <div class="controls">
-            <div class="control-group">
-                <label>Office Type</label>
-                <select id="officeFilter">
-                    <option value="all">All Offices</option>
-                    <option value="President">President</option>
-                    <option value="US Senate">US Senate</option>
-                    <option value="US House">US House</option>
-                    <option value="State">State</option>
-                    <option value="Local">Local</option>
-                    <option value="Non-Candidate Issue Ads">Non-Candidate Issue Ads</option>
-                    <option value="Political Matters">Political Matters</option>
-                </select>
+            <div class="control-row">
+                <div class="control-group">
+                    <label>Office Type</label>
+                    <select id="officeFilter">
+                        <option value="all">All Offices</option>
+                        <option value="President">President</option>
+                        <option value="US Senate">US Senate</option>
+                        <option value="US House">US House</option>
+                        <option value="State">State</option>
+                        <option value="Local">Local</option>
+                        <option value="Non-Candidate Issue Ads">Non-Candidate Issue Ads</option>
+                        <option value="Political Matters">Political Matters</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label>Year</label>
+                    <select id="yearFilter">
+                        <option value="all">All Years</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label>Min Ads per Station</label>
+                    <input type="number" id="minAds" value="1" min="1" max="100" style="width: 80px;">
+                </div>
             </div>
 
-            <div class="control-group">
-                <label>Year</label>
-                <select id="yearFilter">
-                    <option value="all">All Years</option>
-                </select>
-            </div>
-
-            <div class="control-group">
-                <label>Top Sponsors</label>
-                <select id="topSponsors">
-                    <option value="25">Top 25</option>
-                    <option value="50" selected>Top 50</option>
-                    <option value="75">Top 75</option>
-                    <option value="100">Top 100</option>
-                </select>
-            </div>
-
-            <div class="control-group">
-                <label>Min Ads</label>
-                <input type="number" id="minAds" value="5" min="1" max="100" style="width: 80px;">
+            <div class="sponsor-selector">
+                <div class="sponsor-selector-label">Select Sponsors to Compare</div>
+                <input type="text" class="sponsor-search" id="sponsorSearch" placeholder="Search sponsors...">
+                <div class="sponsor-chips" id="selectedSponsors"></div>
+                <div class="quick-add" id="quickAdd"></div>
+                <div class="sponsor-suggestions" id="sponsorSuggestions"></div>
             </div>
         </div>
 
@@ -259,7 +399,7 @@
                 <div class="stat-value" id="totalAds">-</div>
             </div>
             <div class="stat">
-                <div class="stat-label">Sponsors</div>
+                <div class="stat-label">Selected Sponsors</div>
                 <div class="stat-value" id="sponsorCount">-</div>
             </div>
             <div class="stat">
@@ -285,6 +425,8 @@
     <script>
         let allData = [];
         let filteredData = [];
+        let selectedSponsors = new Set();
+        let allSponsors = [];
 
         // Load the data
         fetch('radio_ads_standardized.json')
@@ -294,11 +436,12 @@
                     (d.record_type === 'political_ad' || d.record_type === 'political_matters') &&
                     d.station &&
                     d.sponsor_normalized &&
-                    !d.sponsor_normalized.includes('Entity') && // Filter out parsing errors
-                    d.sponsor_normalized !== d.office // Filter out category-only records
+                    !d.sponsor_normalized.includes('Entity') &&
+                    d.sponsor_normalized !== d.office
                 );
 
                 initializeFilters();
+                initializeSponsors();
                 updateVisualization();
             })
             .catch(error => {
@@ -307,7 +450,6 @@
             });
 
         function initializeFilters() {
-            // Populate year filter
             const years = [...new Set(allData.map(d => d.year).filter(y => y))].sort().reverse();
             const yearSelect = document.getElementById('yearFilter');
             years.forEach(year => {
@@ -317,20 +459,123 @@
                 yearSelect.appendChild(option);
             });
 
-            // Add event listeners
-            document.getElementById('officeFilter').addEventListener('change', updateVisualization);
-            document.getElementById('yearFilter').addEventListener('change', updateVisualization);
-            document.getElementById('topSponsors').addEventListener('change', updateVisualization);
+            document.getElementById('officeFilter').addEventListener('change', () => {
+                initializeSponsors();
+                updateVisualization();
+            });
+            document.getElementById('yearFilter').addEventListener('change', () => {
+                initializeSponsors();
+                updateVisualization();
+            });
             document.getElementById('minAds').addEventListener('change', updateVisualization);
+            document.getElementById('sponsorSearch').addEventListener('input', updateSponsorSuggestions);
+        }
+
+        function initializeSponsors() {
+            const officeFilter = document.getElementById('officeFilter').value;
+            const yearFilter = document.getElementById('yearFilter').value;
+
+            const filtered = allData.filter(d => {
+                if (officeFilter !== 'all' && d.office !== officeFilter) return false;
+                if (yearFilter !== 'all' && d.year !== parseInt(yearFilter)) return false;
+                return true;
+            });
+
+            const sponsorCounts = {};
+            filtered.forEach(d => {
+                sponsorCounts[d.sponsor_normalized] = (sponsorCounts[d.sponsor_normalized] || 0) + 1;
+            });
+
+            allSponsors = Object.entries(sponsorCounts)
+                .map(([sponsor, count]) => ({ sponsor, count }))
+                .sort((a, b) => b.count - a.count);
+
+            // Auto-select top 5 if nothing selected
+            if (selectedSponsors.size === 0 && allSponsors.length > 0) {
+                allSponsors.slice(0, 5).forEach(s => selectedSponsors.add(s.sponsor));
+            }
+
+            // Create quick-add buttons for top sponsors
+            const quickAdd = document.getElementById('quickAdd');
+            quickAdd.innerHTML = '<div style="font-size: 12px; color: #999; margin-bottom: 5px;">Quick add:</div>';
+            allSponsors.slice(0, 10).forEach(s => {
+                if (!selectedSponsors.has(s.sponsor)) {
+                    const btn = document.createElement('button');
+                    btn.className = 'quick-add-btn';
+                    btn.textContent = s.sponsor.length > 25 ? s.sponsor.substring(0, 22) + '...' : s.sponsor;
+                    btn.title = s.sponsor;
+                    btn.onclick = () => {
+                        selectedSponsors.add(s.sponsor);
+                        initializeSponsors();
+                        updateVisualization();
+                    };
+                    quickAdd.appendChild(btn);
+                }
+            });
+
+            updateSelectedSponsorsUI();
+            updateSponsorSuggestions();
+        }
+
+        function updateSelectedSponsorsUI() {
+            const container = document.getElementById('selectedSponsors');
+            container.innerHTML = '';
+
+            if (selectedSponsors.size === 0) {
+                container.innerHTML = '<div style="color: #999; font-size: 13px;">No sponsors selected. Choose from suggestions below.</div>';
+                return;
+            }
+
+            selectedSponsors.forEach(sponsor => {
+                const chip = document.createElement('div');
+                chip.className = 'sponsor-chip';
+                chip.innerHTML = `
+                    <span>${sponsor.length > 30 ? sponsor.substring(0, 27) + '...' : sponsor}</span>
+                    <span class="sponsor-chip-remove" title="Remove">×</span>
+                `;
+                chip.querySelector('.sponsor-chip-remove').onclick = () => {
+                    selectedSponsors.delete(sponsor);
+                    initializeSponsors();
+                    updateVisualization();
+                };
+                container.appendChild(chip);
+            });
+        }
+
+        function updateSponsorSuggestions() {
+            const search = document.getElementById('sponsorSearch').value.toLowerCase();
+            const suggestions = document.getElementById('sponsorSuggestions');
+
+            const filtered = allSponsors.filter(s =>
+                s.sponsor.toLowerCase().includes(search)
+            ).slice(0, 20);
+
+            suggestions.innerHTML = '';
+            filtered.forEach(s => {
+                const div = document.createElement('div');
+                div.className = 'sponsor-suggestion' + (selectedSponsors.has(s.sponsor) ? ' selected' : '');
+                div.innerHTML = `
+                    <span>${s.sponsor}</span>
+                    <span class="sponsor-count">${s.count} ads</span>
+                `;
+                div.onclick = () => {
+                    if (selectedSponsors.has(s.sponsor)) {
+                        selectedSponsors.delete(s.sponsor);
+                    } else {
+                        selectedSponsors.add(s.sponsor);
+                    }
+                    initializeSponsors();
+                    updateVisualization();
+                };
+                suggestions.appendChild(div);
+            });
         }
 
         function updateVisualization() {
             const officeFilter = document.getElementById('officeFilter').value;
             const yearFilter = document.getElementById('yearFilter').value;
-            const topN = parseInt(document.getElementById('topSponsors').value);
             const minAds = parseInt(document.getElementById('minAds').value);
 
-            // Filter data
             filteredData = allData.filter(d => {
                 if (officeFilter !== 'all' && d.office !== officeFilter) return false;
                 if (yearFilter !== 'all' && d.year !== parseInt(yearFilter)) return false;
@@ -343,67 +588,59 @@
                 return;
             }
 
-            // Count ads by sponsor and station
+            if (selectedSponsors.size === 0) {
+                document.getElementById('heatmap').innerHTML =
+                    '<div class="empty-state"><h3>No sponsors selected</h3><p>Select sponsors from the list above to visualize their advertising patterns across stations.</p></div>';
+                updateStats(filteredData, [], []);
+                return;
+            }
+
             const matrix = {};
-            const sponsorCounts = {};
             const stationCounts = {};
 
             filteredData.forEach(d => {
-                const key = `${d.sponsor_normalized}|||${d.station}`;
-                matrix[key] = (matrix[key] || 0) + 1;
-                sponsorCounts[d.sponsor_normalized] = (sponsorCounts[d.sponsor_normalized] || 0) + 1;
-                stationCounts[d.station] = (stationCounts[d.station] || 0) + 1;
+                if (selectedSponsors.has(d.sponsor_normalized)) {
+                    const key = `${d.station}|||${d.sponsor_normalized}`;
+                    matrix[key] = (matrix[key] || 0) + 1;
+                    stationCounts[d.station] = (stationCounts[d.station] || 0) + 1;
+                }
             });
 
-            // Get top sponsors
-            const topSponsors = Object.entries(sponsorCounts)
+            const stations = Object.entries(stationCounts)
                 .filter(([_, count]) => count >= minAds)
                 .sort((a, b) => b[1] - a[1])
-                .slice(0, topN)
-                .map(([sponsor, _]) => sponsor);
+                .map(([station, _]) => station);
 
-            // Get stations that have ads from top sponsors
-            const relevantStations = new Set();
-            topSponsors.forEach(sponsor => {
-                Object.keys(matrix).forEach(key => {
-                    const [s, st] = key.split('|||');
-                    if (s === sponsor && matrix[key] > 0) {
-                        relevantStations.add(st);
-                    }
-                });
-            });
+            const sponsors = [...selectedSponsors];
 
-            const stations = [...relevantStations].sort();
-
-            // Update stats
-            updateStats(filteredData, topSponsors, stations);
-
-            // Draw heatmap
-            drawHeatmap(topSponsors, stations, matrix);
+            updateStats(filteredData, sponsors, stations);
+            drawHeatmap(stations, sponsors, matrix);
         }
 
         function updateStats(data, sponsors, stations) {
-            document.getElementById('totalAds').textContent = data.length.toLocaleString();
+            const relevant = data.filter(d => selectedSponsors.has(d.sponsor_normalized));
+            document.getElementById('totalAds').textContent = relevant.length.toLocaleString();
             document.getElementById('sponsorCount').textContent = sponsors.length;
             document.getElementById('stationCount').textContent = stations.length;
 
-            const dates = data.map(d => new Date(d.updated)).filter(d => !isNaN(d));
+            const dates = relevant.map(d => new Date(d.updated)).filter(d => !isNaN(d));
             if (dates.length > 0) {
                 const minDate = new Date(Math.min(...dates));
                 const maxDate = new Date(Math.max(...dates));
                 const formatDate = d => d.toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
                 document.getElementById('dateRange').textContent =
                     `${formatDate(minDate)} - ${formatDate(maxDate)}`;
+            } else {
+                document.getElementById('dateRange').textContent = '-';
             }
         }
 
-        function drawHeatmap(sponsors, stations, matrix) {
-            const margin = { top: 80, right: 20, bottom: 20, left: 200 };
-            const cellSize = 30;
-            const width = stations.length * cellSize + margin.left + margin.right;
-            const height = sponsors.length * cellSize + margin.top + margin.bottom;
+        function drawHeatmap(stations, sponsors, matrix) {
+            const margin = { top: 100, right: 20, bottom: 20, left: 150 };
+            const cellSize = 35;
+            const width = sponsors.length * cellSize + margin.left + margin.right;
+            const height = stations.length * cellSize + margin.top + margin.bottom;
 
-            // Clear previous visualization
             document.getElementById('heatmap').innerHTML = '';
 
             const svg = d3.select('#heatmap')
@@ -414,18 +651,16 @@
             const g = svg.append('g')
                 .attr('transform', `translate(${margin.left},${margin.top})`);
 
-            // Get max value for color scale
-            const maxValue = Math.max(...Object.values(matrix));
+            const maxValue = Math.max(...Object.values(matrix), 1);
 
-            // Color scale
             const colorScale = d3.scaleSequential()
                 .domain([0, maxValue])
                 .interpolator(d3.interpolateBlues);
 
-            // Create cells
-            sponsors.forEach((sponsor, i) => {
-                stations.forEach((station, j) => {
-                    const key = `${sponsor}|||${station}`;
+            // Create cells (stations = rows, sponsors = columns)
+            stations.forEach((station, i) => {
+                sponsors.forEach((sponsor, j) => {
+                    const key = `${station}|||${sponsor}`;
                     const value = matrix[key] || 0;
 
                     g.append('rect')
@@ -446,51 +681,44 @@
                 });
             });
 
-            // Add sponsor labels (Y-axis)
-            g.selectAll('.sponsor-label')
-                .data(sponsors)
-                .enter()
-                .append('text')
-                .attr('class', 'sponsor-label')
-                .attr('x', -5)
-                .attr('y', (d, i) => i * cellSize + cellSize / 2)
-                .attr('dy', '0.35em')
-                .attr('text-anchor', 'end')
-                .style('font-size', '11px')
-                .text(d => d.length > 30 ? d.substring(0, 27) + '...' : d)
-                .append('title')
-                .text(d => d);
-
-            // Add station labels (X-axis)
+            // Add station labels (Y-axis)
             g.selectAll('.station-label')
                 .data(stations)
                 .enter()
                 .append('text')
                 .attr('class', 'station-label')
+                .attr('x', -5)
+                .attr('y', (d, i) => i * cellSize + cellSize / 2)
+                .attr('dy', '0.35em')
+                .attr('text-anchor', 'end')
+                .style('font-size', '11px')
+                .text(d => d);
+
+            // Add sponsor labels (X-axis)
+            g.selectAll('.sponsor-label')
+                .data(sponsors)
+                .enter()
+                .append('text')
+                .attr('class', 'sponsor-label')
                 .attr('x', (d, i) => i * cellSize + cellSize / 2)
                 .attr('y', -10)
                 .attr('text-anchor', 'start')
                 .attr('transform', (d, i) =>
                     `rotate(-45, ${i * cellSize + cellSize / 2}, -10)`)
                 .style('font-size', '11px')
+                .text(d => d.length > 25 ? d.substring(0, 22) + '...' : d)
+                .append('title')
                 .text(d => d);
 
-            // Add legend
-            const legendWidth = 200;
-            const legendHeight = 15;
-
+            // Legend
             const legendG = svg.append('g')
                 .attr('transform', `translate(${margin.left}, ${height - 35})`);
 
+            const legendWidth = 200;
             const legendScale = d3.scaleLinear()
                 .domain([0, maxValue])
                 .range([0, legendWidth]);
 
-            const legendAxis = d3.axisBottom(legendScale)
-                .ticks(5)
-                .tickFormat(d3.format('d'));
-
-            // Create gradient
             const defs = svg.append('defs');
             const gradient = defs.append('linearGradient')
                 .attr('id', 'legend-gradient');
@@ -504,16 +732,16 @@
 
             legendG.append('rect')
                 .attr('width', legendWidth)
-                .attr('height', legendHeight)
+                .attr('height', 15)
                 .style('fill', 'url(#legend-gradient)');
 
             legendG.append('g')
-                .attr('transform', `translate(0, ${legendHeight})`)
-                .call(legendAxis);
+                .attr('transform', 'translate(0, 15)')
+                .call(d3.axisBottom(legendScale).ticks(5).tickFormat(d3.format('d')));
 
             legendG.append('text')
                 .attr('x', -5)
-                .attr('y', legendHeight / 2)
+                .attr('y', 7.5)
                 .attr('dy', '0.35em')
                 .attr('text-anchor', 'end')
                 .style('font-size', '11px')
@@ -523,8 +751,8 @@
         function showTooltip(event, sponsor, station, count) {
             const tooltip = d3.select('.tooltip');
             tooltip.html(`
-                <strong>${sponsor}</strong><br>
                 <strong>${station}</strong><br>
+                <strong>${sponsor}</strong><br>
                 ${count} ad${count > 1 ? 's' : ''}
             `)
             .style('left', (event.pageX + 15) + 'px')
