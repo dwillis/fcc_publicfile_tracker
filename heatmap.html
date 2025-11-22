@@ -32,6 +32,7 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 30px;
+            position: relative;
         }
 
         h1 {
@@ -42,6 +43,31 @@
         .subtitle {
             font-size: 14px;
             opacity: 0.9;
+        }
+
+        .share-btn {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .share-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .share-btn.copied {
+            background: rgba(76, 175, 80, 0.8);
         }
 
         .controls {
@@ -353,6 +379,10 @@
         <header>
             <h1>Political Radio Advertising Heatmap</h1>
             <p class="subtitle">Compare sponsor advertising across radio stations</p>
+            <button class="share-btn" id="shareBtn" onclick="copyLink()">
+                <span>🔗</span>
+                <span id="shareBtnText">Copy Link</span>
+            </button>
         </header>
 
         <div class="controls">
@@ -427,6 +457,69 @@
         let filteredData = [];
         let selectedSponsors = new Set();
         let allSponsors = [];
+        let ignoreUrlUpdate = false; // Flag to prevent infinite loops
+
+        // Parse URL parameters
+        function getUrlParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                sponsors: params.get('sponsors') ? params.get('sponsors').split(',') : null,
+                office: params.get('office') || 'all',
+                year: params.get('year') || 'all',
+                minAds: params.get('minAds') || '1'
+            };
+        }
+
+        // Update URL with current state
+        function updateUrl() {
+            if (ignoreUrlUpdate) return;
+
+            const params = new URLSearchParams();
+
+            if (selectedSponsors.size > 0) {
+                params.set('sponsors', Array.from(selectedSponsors).join(','));
+            }
+
+            const office = document.getElementById('officeFilter').value;
+            if (office !== 'all') {
+                params.set('office', office);
+            }
+
+            const year = document.getElementById('yearFilter').value;
+            if (year !== 'all') {
+                params.set('year', year);
+            }
+
+            const minAds = document.getElementById('minAds').value;
+            if (minAds !== '1') {
+                params.set('minAds', minAds);
+            }
+
+            const newUrl = params.toString() ?
+                `${window.location.pathname}?${params.toString()}` :
+                window.location.pathname;
+
+            window.history.replaceState({}, '', newUrl);
+        }
+
+        // Load state from URL
+        function loadStateFromUrl() {
+            const params = getUrlParams();
+
+            ignoreUrlUpdate = true;
+
+            // Set filter values
+            document.getElementById('officeFilter').value = params.office;
+            document.getElementById('yearFilter').value = params.year;
+            document.getElementById('minAds').value = params.minAds;
+
+            // Set selected sponsors (will be applied after allSponsors is populated)
+            if (params.sponsors) {
+                params.sponsors.forEach(s => selectedSponsors.add(s));
+            }
+
+            ignoreUrlUpdate = false;
+        }
 
         // Load the data
         fetch('radio_ads_standardized.json')
@@ -441,6 +534,7 @@
                 );
 
                 initializeFilters();
+                loadStateFromUrl();
                 initializeSponsors();
                 updateVisualization();
             })
@@ -462,12 +556,17 @@
             document.getElementById('officeFilter').addEventListener('change', () => {
                 initializeSponsors();
                 updateVisualization();
+                updateUrl();
             });
             document.getElementById('yearFilter').addEventListener('change', () => {
                 initializeSponsors();
                 updateVisualization();
+                updateUrl();
             });
-            document.getElementById('minAds').addEventListener('change', updateVisualization);
+            document.getElementById('minAds').addEventListener('change', () => {
+                updateVisualization();
+                updateUrl();
+            });
             document.getElementById('sponsorSearch').addEventListener('input', updateSponsorSuggestions);
         }
 
@@ -508,6 +607,7 @@
                         selectedSponsors.add(s.sponsor);
                         initializeSponsors();
                         updateVisualization();
+                        updateUrl();
                     };
                     quickAdd.appendChild(btn);
                 }
@@ -537,6 +637,7 @@
                     selectedSponsors.delete(sponsor);
                     initializeSponsors();
                     updateVisualization();
+                    updateUrl();
                 };
                 container.appendChild(chip);
             });
@@ -566,6 +667,7 @@
                     }
                     initializeSponsors();
                     updateVisualization();
+                    updateUrl();
                 };
                 suggestions.appendChild(div);
             });
@@ -762,6 +864,23 @@
 
         function hideTooltip() {
             d3.select('.tooltip').classed('visible', false);
+        }
+
+        function copyLink() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                const btn = document.getElementById('shareBtn');
+                const text = document.getElementById('shareBtnText');
+                btn.classList.add('copied');
+                text.textContent = 'Copied!';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    text.textContent = 'Copy Link';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+                alert('Could not copy link. Please copy manually:\n' + url);
+            });
         }
     </script>
 </body>
