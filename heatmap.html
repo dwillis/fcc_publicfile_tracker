@@ -402,6 +402,13 @@
                 </div>
 
                 <div class="control-group">
+                    <label>State</label>
+                    <select id="stateFilter">
+                        <option value="all">All States</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
                     <label>Year</label>
                     <select id="yearFilter">
                         <option value="all">All Years</option>
@@ -465,6 +472,7 @@
             return {
                 sponsors: params.get('sponsors') ? params.get('sponsors').split(',') : null,
                 office: params.get('office') || 'all',
+                state: params.get('state') || 'all',
                 year: params.get('year') || 'all',
                 minAds: params.get('minAds') || '1'
             };
@@ -483,6 +491,11 @@
             const office = document.getElementById('officeFilter').value;
             if (office !== 'all') {
                 params.set('office', office);
+            }
+
+            const state = document.getElementById('stateFilter').value;
+            if (state !== 'all') {
+                params.set('state', state);
             }
 
             const year = document.getElementById('yearFilter').value;
@@ -510,6 +523,7 @@
 
             // Set filter values
             document.getElementById('officeFilter').value = params.office;
+            document.getElementById('stateFilter').value = params.state;
             document.getElementById('yearFilter').value = params.year;
             document.getElementById('minAds').value = params.minAds;
 
@@ -544,6 +558,7 @@
             });
 
         function initializeFilters() {
+            // Populate years
             const years = [...new Set(allData.map(d => d.year).filter(y => y))].sort().reverse();
             const yearSelect = document.getElementById('yearFilter');
             years.forEach(year => {
@@ -553,7 +568,22 @@
                 yearSelect.appendChild(option);
             });
 
+            // Populate states
+            const states = [...new Set(allData.map(d => d.state).filter(s => s))].sort();
+            const stateSelect = document.getElementById('stateFilter');
+            states.forEach(state => {
+                const option = document.createElement('option');
+                option.value = state;
+                option.textContent = state;
+                stateSelect.appendChild(option);
+            });
+
             document.getElementById('officeFilter').addEventListener('change', () => {
+                initializeSponsors();
+                updateVisualization();
+                updateUrl();
+            });
+            document.getElementById('stateFilter').addEventListener('change', () => {
                 initializeSponsors();
                 updateVisualization();
                 updateUrl();
@@ -572,10 +602,12 @@
 
         function initializeSponsors() {
             const officeFilter = document.getElementById('officeFilter').value;
+            const stateFilter = document.getElementById('stateFilter').value;
             const yearFilter = document.getElementById('yearFilter').value;
 
             const filtered = allData.filter(d => {
                 if (officeFilter !== 'all' && d.office !== officeFilter) return false;
+                if (stateFilter !== 'all' && d.state !== stateFilter) return false;
                 if (yearFilter !== 'all' && d.year !== parseInt(yearFilter)) return false;
                 return true;
             });
@@ -675,11 +707,13 @@
 
         function updateVisualization() {
             const officeFilter = document.getElementById('officeFilter').value;
+            const stateFilter = document.getElementById('stateFilter').value;
             const yearFilter = document.getElementById('yearFilter').value;
             const minAds = parseInt(document.getElementById('minAds').value);
 
             filteredData = allData.filter(d => {
                 if (officeFilter !== 'all' && d.office !== officeFilter) return false;
+                if (stateFilter !== 'all' && d.state !== stateFilter) return false;
                 if (yearFilter !== 'all' && d.year !== parseInt(yearFilter)) return false;
                 return true;
             });
@@ -699,12 +733,21 @@
 
             const matrix = {};
             const stationCounts = {};
+            const stationMetadata = {}; // Map of station -> {city, state}
 
             filteredData.forEach(d => {
                 if (selectedSponsors.has(d.sponsor_normalized)) {
                     const key = `${d.station}|||${d.sponsor_normalized}`;
                     matrix[key] = (matrix[key] || 0) + 1;
                     stationCounts[d.station] = (stationCounts[d.station] || 0) + 1;
+
+                    // Store station metadata
+                    if (!stationMetadata[d.station]) {
+                        stationMetadata[d.station] = {
+                            city: d.city,
+                            state: d.state
+                        };
+                    }
                 }
             });
 
@@ -716,7 +759,7 @@
             const sponsors = [...selectedSponsors];
 
             updateStats(filteredData, sponsors, stations);
-            drawHeatmap(stations, sponsors, matrix);
+            drawHeatmap(stations, sponsors, matrix, stationMetadata);
         }
 
         function updateStats(data, sponsors, stations) {
@@ -737,8 +780,8 @@
             }
         }
 
-        function drawHeatmap(stations, sponsors, matrix) {
-            const margin = { top: 100, right: 20, bottom: 20, left: 150 };
+        function drawHeatmap(stations, sponsors, matrix, stationMetadata) {
+            const margin = { top: 100, right: 20, bottom: 20, left: 200 }; // Wider left margin for city/state
             const cellSize = 35;
             const width = sponsors.length * cellSize + margin.left + margin.right;
             const height = stations.length * cellSize + margin.top + margin.bottom;
@@ -776,7 +819,7 @@
                         .attr('stroke-width', 1)
                         .on('mouseover', function(event) {
                             if (value > 0) {
-                                showTooltip(event, sponsor, station, value);
+                                showTooltip(event, sponsor, station, value, stationMetadata[station]);
                             }
                         })
                         .on('mouseout', hideTooltip);
@@ -794,7 +837,15 @@
                 .attr('dy', '0.35em')
                 .attr('text-anchor', 'end')
                 .style('font-size', '11px')
-                .text(d => d);
+                .text(d => {
+                    const meta = stationMetadata[d];
+                    if (meta && meta.city && meta.state) {
+                        return `${d} (${meta.city}, ${meta.state})`;
+                    } else if (meta && meta.state) {
+                        return `${d} (${meta.state})`;
+                    }
+                    return d;
+                });
 
             // Add sponsor labels (X-axis)
             g.selectAll('.sponsor-label')
@@ -850,10 +901,19 @@
                 .text('Ads:');
         }
 
-        function showTooltip(event, sponsor, station, count) {
+        function showTooltip(event, sponsor, station, count, stationMeta) {
             const tooltip = d3.select('.tooltip');
+            let locationText = '';
+            if (stationMeta) {
+                if (stationMeta.city && stationMeta.state) {
+                    locationText = `<div style="font-size: 12px; opacity: 0.8;">${stationMeta.city}, ${stationMeta.state}</div>`;
+                } else if (stationMeta.state) {
+                    locationText = `<div style="font-size: 12px; opacity: 0.8;">${stationMeta.state}</div>`;
+                }
+            }
             tooltip.html(`
-                <strong>${station}</strong><br>
+                <strong>${station}</strong>
+                ${locationText}
                 <strong>${sponsor}</strong><br>
                 ${count} ad${count > 1 ? 's' : ''}
             `)
