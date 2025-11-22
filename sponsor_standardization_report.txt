@@ -1,0 +1,224 @@
+================================================================================
+SPONSOR STANDARDIZATION REPORT
+================================================================================
+
+Total records: 60,614
+Records with sponsors: 21,285
+Sponsors standardized: 6,868
+Sponsors unchanged: 14,417
+
+Unique sponsor names (original): 2,020
+Unique sponsor names (standardized): 1,895
+Sponsors merged: 125
+
+================================================================================
+SPONSORS WITH MULTIPLE VARIATIONS
+================================================================================
+
+1. Kamala Harris for President (555 ads total)
+   - "KAMALA HARRIS FOR PRESIDENT" (46 ads)
+   - "Kamala Harris For President" (128 ads)
+   → "Kamala Harris for President" (381 ads) [STANDARDIZED]
+
+2. Harris for President (379 ads total)
+   - "HARRIS FOR PRESIDENT" (55 ads)
+   - "Harris For President" (47 ads)
+   → "Harris for President" (277 ads) [STANDARDIZED]
+
+3. Joe Biden for President (308 ads total)
+   - "JOE BIDEN FOR PRESIDENT" (5 ads)
+   → "Joe Biden for President" (303 ads) [STANDARDIZED]
+
+4. Biden for President (264 ads total)
+   - "BIDEN FOR PRESIDENT" (95 ads)
+   - "Biden For President" (29 ads)
+   → "Biden for President" (140 ads) [STANDARDIZED]
+
+5. Invoices (251 ads total)
+   - "INVOICES" (8 ads)
+   → "Invoices" (243 ads) [STANDARDIZED]
+
+6. Friends of Sherrod Brown (219 ads total)
+   - "FRIENDS OF SHERROD BROWN" (51 ads)
+   → "Friends of Sherrod Brown" (168 ads) [STANDARDIZED]
+
+7. American Independent Radio (184 ads total)
+   - "AMERICAN INDEPENDENT RADIO" (41 ads)
+   → "American Independent Radio" (143 ads) [STANDARDIZED]
+
+8. FF PAC (183 ads total)
+   → "FF PAC" (179 ads) [STANDARDIZED]
+   - "FF Pac" (4 ads)
+
+9. Colin Allred for Senate (179 ads total)
+   - "COLIN ALLRED FOR SENATE" (124 ads)
+   - "Colin Allred For Senate" (40 ads)
+   → "Colin Allred for Senate" (15 ads) [STANDARDIZED]
+
+10. Kamala Harris (164 ads total)
+   - "KAMALA HARRIS" (23 ads)
+   → "Kamala Harris" (141 ads) [STANDARDIZED]
+
+11. Black PAC (155 ads total)
+   - "BLACK PAC" (59 ads)
+   → "Black PAC" (96 ads) [STANDARDIZED]
+
+12. Joe Biden (144 ads total)
+   - "JOE BIDEN" (34 ads)
+   → "Joe Biden" (110 ads) [STANDARDIZED]
+
+13. Abigail Spanberger for Governor (134 ads total)
+   - "Abigail Spanberger For Governor" (30 ads)
+   → "Abigail Spanberger for Governor" (104 ads) [STANDARDIZED]
+
+14. American Independent Foundation (121 ads total)
+   - "AMERICAN INDEPENDENT FOUNDATION" (22 ads)
+   → "American Independent Foundation" (99 ads) [STANDARDIZED]
+
+15. MAGA INC (120 ads total)
+   → "MAGA INC" (73 ads) [STANDARDIZED]
+   - "MAGA Inc" (47 ads)
+
+16. Urban One - Reality Radio (120 ads total)
+   - "URBAN ONE - REALITY RADIO" (3 ads)
+   → "Urban One - Reality Radio" (117 ads) [STANDARDIZED]
+
+17. Black Voters Matter Fund (101 ads total)
+   - "BLACK VOTERS MATTER FUND" (36 ads)
+   → "Black Voters Matter Fund" (65 ads) [STANDARDIZED]
+
+18. House Majority Forward (78 ads total)
+   - "HOUSE MAJORITY FORWARD" (5 ads)
+   → "House Majority Forward" (73 ads) [STANDARDIZED]
+
+19. Sherrod Brown for US Senate (78 ads total)
+   - "SHERROD BROWN FOR US SENATE" (4 ads)
+   - "SHERROD BROWN for US SENATE" (74 ads)
+
+20. Citizens Not Politicians (75 ads total)
+   - "CITIZENS NOT POLITICIANS" (35 ads)
+   → "Citizens Not Politicians" (40 ads) [STANDARDIZED]
+
+21. Black Voters Matter (69 ads total)
+   - "BLACK VOTERS MATTER" (12 ads)
+   → "Black Voters Matter" (57 ads) [STANDARDIZED]
+
+22. House Majority PAC (69 ads total)
+   - "HOUSE MAJORITY PAC" (7 ads)
+   → "House Majority PAC" (62 ads) [STANDARDIZED]
+
+23. Black Voters Matter Capacity Building Institute (58 ads total)
+   - "BLACK VOTERS MATTER CAPACITY BUILDING INSTITUTE" (2 ads)
+   → "Black Voters Matter Capacity Building Institute" (56 ads) [STANDARDIZED]
+
+24. Winsenate (56 ads total)
+   - "WINSENATE" (41 ads)
+   - "WinSenate" (15 ads)
+
+25. Progressive State Leaders Committee (55 ads total)
+   - "PROGRESSIVE STATE LEADERS COMMITTEE" (2 ads)
+   → "Progressive State Leaders Committee" (53 ads) [STANDARDIZED]
+
+26. Donald Trump for President (52 ads total)
+   - "Donald Trump For President" (2 ads)
+   → "Donald Trump for President" (50 ads) [STANDARDIZED]
+
+27. Blackpac (51 ads total)
+   - "BLACKPAC" (12 ads)
+   - "BlackPAC" (28 ads)
+   - "BlackPac" (11 ads)
+
+28. Democratic National Committee (50 ads total)
+   - "DEMOCRATIC NATIONAL COMMITTEE" (6 ads)
+   → "Democratic National Committee" (44 ads) [STANDARDIZED]
+
+29. Right for America PAC (46 ads total)
+   - "RIGHT FOR AMERICA PAC" (2 ads)
+   - "Right For America Pac" (37 ads)
+   → "Right for America PAC" (7 ads) [STANDARDIZED]
+
+30. Donald J Trump for President (43 ads total)
+   - "DONALD J TRUMP FOR PRESIDENT" (5 ads)
+   - "Donald J Trump For President" (8 ads)
+   → "Donald J Trump for President" (30 ads) [STANDARDIZED]
+
+31. Drummond D Mayor (42 ads total)
+   - "DRUMMOND D MAYOR" (14 ads)
+   → "Drummond D Mayor" (28 ads) [STANDARDIZED]
+
+32. United Democracy Project (40 ads total)
+   - "UNITED DEMOCRACY PROJECT" (3 ads)
+   → "United Democracy Project" (37 ads) [STANDARDIZED]
+
+33. Jacky Rosen for US Senate (39 ads total)
+   - "JACKY ROSEN FOR US SENATE" (6 ads)
+   → "Jacky Rosen for US Senate" (33 ads) [STANDARDIZED]
+
+34. Josh Stein for Governor (38 ads total)
+   - "JOSH STEIN FOR GOVERNOR" (11 ads)
+   → "Josh Stein for Governor" (27 ads) [STANDARDIZED]
+
+35. Onyx Impact (37 ads total)
+   - "ONYX IMPACT" (12 ads)
+   → "Onyx Impact" (25 ads) [STANDARDIZED]
+
+36. Klca-Hd4 Juan (35 ads total)
+   - "KLCA-HD4 JUAN" (29 ads)
+   - "KLCA-HD4 Juan" (6 ads)
+
+37. Black Voters Matter Action PAC (35 ads total)
+   - "BLACK VOTERS MATTER ACTION PAC" (8 ads)
+   → "Black Voters Matter Action PAC" (27 ads) [STANDARDIZED]
+
+38. Left of Center PAC (32 ads total)
+   - "LEFT OF CENTER PAC" (2 ads)
+   → "Left of Center PAC" (30 ads) [STANDARDIZED]
+
+39. Better Schools Kentucky (30 ads total)
+   → "Better Schools Kentucky" (15 ads) [STANDARDIZED]
+   - "Better schools Kentucky" (15 ads)
+
+40. Black Progressive Action Coalition (29 ads total)
+   - "BLACK PROGRESSIVE ACTION COALITION" (2 ads)
+   → "Black Progressive Action Coalition" (27 ads) [STANDARDIZED]
+
+41. Communications Workers of America (28 ads total)
+   - "COMMUNICATIONS WORKERS OF AMERICA" (11 ads)
+   - "Communications Workers Of America" (1 ads)
+   → "Communications Workers of America" (16 ads) [STANDARDIZED]
+
+42. Invoice (27 ads total)
+   - "INVOICE" (1 ads)
+   → "Invoice" (26 ads) [STANDARDIZED]
+
+43. Climate Power (26 ads total)
+   - "CLIMATE POWER" (1 ads)
+   → "Climate Power" (25 ads) [STANDARDIZED]
+
+44. Advocate for America (26 ads total)
+   - "Advocate For America" (16 ads)
+   → "Advocate for America" (10 ads) [STANDARDIZED]
+
+45. American Independent (25 ads total)
+   - "AMERICAN INDEPENDENT" (8 ads)
+   → "American Independent" (17 ads) [STANDARDIZED]
+
+46. Voteorg (24 ads total)
+   - "VOTEORG" (21 ads)
+   → "Voteorg" (3 ads) [STANDARDIZED]
+
+47. Fight for Democracy (24 ads total)
+   - "FIGHT FOR DEMOCRACY" (8 ads)
+   - "Fight For Democracy" (16 ads)
+
+48. Natalie Hall for Fulton County Commissioner (23 ads total)
+   - "Natalie Hall For Fulton County Commissioner" (19 ads)
+   → "Natalie Hall for Fulton County Commissioner" (4 ads) [STANDARDIZED]
+
+49. Future Forward PAC (23 ads total)
+   - "FUTURE FORWARD PAC" (21 ads)
+   → "Future Forward PAC" (2 ads) [STANDARDIZED]
+
+50. YES on PROP 2 (23 ads total)
+   - "YES ON PROP 2" (15 ads)
+   - "Yes On Prop 2" (8 ads)

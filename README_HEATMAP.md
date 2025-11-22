@@ -28,11 +28,19 @@ Automatically filters out:
 - Category-only records (no specific sponsor)
 - Records missing station or sponsor information
 
+### Sponsor Standardization
+Sponsor names are automatically standardized to merge variations:
+- "Kamala Harris for President", "KAMALA HARRIS FOR PRESIDENT", and "Kamala Harris For President" → all merged
+- "MAGA Inc", "MAGA INC", "Maga Inc" → standardized to "MAGA INC"
+- **125 sponsor variations merged** into consistent names
+- Uses the `sponsor_normalized` field for accurate counting
+
 ## Usage
 
 ### Running Locally
 
-1. Make sure `radio_ads_tagged.json` is in the same directory as `heatmap.html`
+1. Make sure `radio_ads_standardized.json` is in the same directory as `heatmap.html`
+   - If you only have `radio_ads_tagged.json`, run `python3 standardize_sponsors.py` first
 
 2. Start a local web server:
    ```bash
@@ -75,7 +83,7 @@ Automatically filters out:
 
 ## Data Source
 
-Uses `radio_ads_tagged.json` - cleaned and tagged FCC public file data containing:
+Uses `radio_ads_standardized.json` - cleaned, tagged, and standardized FCC public file data containing:
 - 56,458 political ad records
 - 157 political matters/controversial issues records
 - Coverage from 2018-2025
@@ -137,5 +145,6 @@ Possible additions:
 
 When new data is scraped:
 1. Run `tag_and_clean_data.py` to update `radio_ads_tagged.json`
-2. Refresh the page - new data loads automatically
-3. Year filter updates automatically with new years
+2. Run `standardize_sponsors.py` to create `radio_ads_standardized.json` with normalized sponsor names
+3. Refresh the page - new data loads automatically
+4. Year filter updates automatically with new years

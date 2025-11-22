@@ -287,15 +287,15 @@
         let filteredData = [];
 
         // Load the data
-        fetch('radio_ads_tagged.json')
+        fetch('radio_ads_standardized.json')
             .then(response => response.json())
             .then(data => {
                 allData = data.filter(d =>
                     (d.record_type === 'political_ad' || d.record_type === 'political_matters') &&
                     d.station &&
-                    d.sponsor &&
-                    !d.sponsor.includes('Entity') && // Filter out parsing errors
-                    d.sponsor !== d.office // Filter out category-only records
+                    d.sponsor_normalized &&
+                    !d.sponsor_normalized.includes('Entity') && // Filter out parsing errors
+                    d.sponsor_normalized !== d.office // Filter out category-only records
                 );
 
                 initializeFilters();
@@ -349,9 +349,9 @@
             const stationCounts = {};
 
             filteredData.forEach(d => {
-                const key = `${d.sponsor}|||${d.station}`;
+                const key = `${d.sponsor_normalized}|||${d.station}`;
                 matrix[key] = (matrix[key] || 0) + 1;
-                sponsorCounts[d.sponsor] = (sponsorCounts[d.sponsor] || 0) + 1;
+                sponsorCounts[d.sponsor_normalized] = (sponsorCounts[d.sponsor_normalized] || 0) + 1;
                 stationCounts[d.station] = (stationCounts[d.station] || 0) + 1;
             });
 
