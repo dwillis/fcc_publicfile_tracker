@@ -1,224 +1,492 @@
 ================================================================================
-SPONSOR STANDARDIZATION REPORT
+ADVANCED SPONSOR STANDARDIZATION REPORT
 ================================================================================
 
-Total records: 60,614
-Records with sponsors: 21,285
-Sponsors standardized: 6,868
-Sponsors unchanged: 14,417
-
-Unique sponsor names (original): 2,020
-Unique sponsor names (standardized): 1,895
-Sponsors merged: 125
+Original unique sponsors: 2,020
+Standardized unique sponsors: 1,727
+Sponsors merged: 293
+Reduction: 14.5%
 
 ================================================================================
-SPONSORS WITH MULTIPLE VARIATIONS
+TOP MERGED SPONSORS
 ================================================================================
 
-1. Kamala Harris for President (555 ads total)
-   - "KAMALA HARRIS FOR PRESIDENT" (46 ads)
+1. Kamala Harris for President (1,221 ads total)
+   → "Kamala Harris for President" (381 ads) [CANONICAL]
+   - "Harris for President" (277 ads)
+   - "Kamala Harris" (141 ads)
    - "Kamala Harris For President" (128 ads)
-   → "Kamala Harris for President" (381 ads) [STANDARDIZED]
-
-2. Harris for President (379 ads total)
    - "HARRIS FOR PRESIDENT" (55 ads)
    - "Harris For President" (47 ads)
-   → "Harris for President" (277 ads) [STANDARDIZED]
+   - "KAMALA HARRIS FOR PRESIDENT" (46 ads)
+   - "KAMALA HARRIS" (23 ads)
+   - "Harris D President" (14 ads)
+   - "Harris-D-President" (8 ads)
+   - "Premier Network Harris for President" (7 ads)
+   - "Harris for President 767792 8-19-2024" (4 ads)
+   - "Kamala Harris for President 09052024" (4 ads)
+   - "Harris for President 772612 9-20-2024" (4 ads)
+   - "Kamala Harris for President - 5124625 ESTOCT04 10012024" (4 ads)
+   ... and 28 more variations
 
-3. Joe Biden for President (308 ads total)
-   - "JOE BIDEN FOR PRESIDENT" (5 ads)
-   → "Joe Biden for President" (303 ads) [STANDARDIZED]
-
-4. Biden for President (264 ads total)
+2. Joe Biden for President (906 ads total)
+   → "Joe Biden for President" (303 ads) [CANONICAL]
+   - "Biden for President" (140 ads)
+   - "Joe Biden" (110 ads)
    - "BIDEN FOR PRESIDENT" (95 ads)
+   - "JOE BIDEN" (34 ads)
    - "Biden For President" (29 ads)
-   → "Biden for President" (140 ads) [STANDARDIZED]
+   - "BIDEN" (23 ads)
+   - "Joseph Biden for President" (12 ads)
+   - "Joe Biden for President - 4856652--1 - 05202024" (6 ads)
+   - "Joe Biden for President - 4933394--1 06252024" (6 ads)
+   - "Joe Biden for President - 4964273--1 07082024" (6 ads)
+   - "JOE BIDEN FOR PRESIDENT" (5 ads)
+   - "Joe Biden for President - 4904711--1 - 06102024" (5 ads)
+   - "Joseph Biden For President 06112024" (5 ads)
+   - "Joseph Biden" (4 ads)
+   ... and 59 more variations
 
-5. Invoices (251 ads total)
+3. NAACP (379 ads total)
+   → "NAACP" (369 ads) [CANONICAL]
+   - "NAACP - 5147307 EST4405 10182024" (5 ads)
+   - "NAACP - 5136125 EST4403 101112024" (4 ads)
+   - "NAACP - 5147276 EST4404 10182024" (1 ads)
+
+4. Invoices (251 ads total)
+   → "Invoices" (243 ads) [CANONICAL]
    - "INVOICES" (8 ads)
-   → "Invoices" (243 ads) [STANDARDIZED]
 
-6. Friends of Sherrod Brown (219 ads total)
+5. Friends of Sherrod Brown (219 ads total)
+   → "Friends of Sherrod Brown" (168 ads) [CANONICAL]
    - "FRIENDS OF SHERROD BROWN" (51 ads)
-   → "Friends of Sherrod Brown" (168 ads) [STANDARDIZED]
 
-7. American Independent Radio (184 ads total)
+6. American Independent Radio (189 ads total)
+   → "American Independent Radio" (143 ads) [CANONICAL]
    - "AMERICAN INDEPENDENT RADIO" (41 ads)
-   → "American Independent Radio" (143 ads) [STANDARDIZED]
+   - "American Independent Radio - 5150978 EST1865 10222024" (5 ads)
 
-8. FF PAC (183 ads total)
-   → "FF PAC" (179 ads) [STANDARDIZED]
+7. FF PAC (186 ads total)
+   → "FF PAC" (179 ads) [CANONICAL]
    - "FF Pac" (4 ads)
+   - "FF PAC - 5087373 - EST13881 091202024" (3 ads)
 
-9. Colin Allred for Senate (179 ads total)
+8. Colin Allred for Senate (179 ads total)
    - "COLIN ALLRED FOR SENATE" (124 ads)
    - "Colin Allred For Senate" (40 ads)
-   → "Colin Allred for Senate" (15 ads) [STANDARDIZED]
+   → "Colin Allred for Senate" (15 ads) [CANONICAL]
 
-10. Kamala Harris (164 ads total)
-   - "KAMALA HARRIS" (23 ads)
-   → "Kamala Harris" (141 ads) [STANDARDIZED]
-
-11. Black PAC (155 ads total)
+9. Black PAC (155 ads total)
+   → "Black PAC" (96 ads) [CANONICAL]
    - "BLACK PAC" (59 ads)
-   → "Black PAC" (96 ads) [STANDARDIZED]
 
-12. Joe Biden (144 ads total)
-   - "JOE BIDEN" (34 ads)
-   → "Joe Biden" (110 ads) [STANDARDIZED]
+10. Donald Trump for President (136 ads total)
+   → "Donald Trump for President" (50 ads) [CANONICAL]
+   - "Donald J Trump for President" (30 ads)
+   - "Donald Trump" (14 ads)
+   - "trump for President" (10 ads)
+   - "DONALD TRUMP" (9 ads)
+   - "Donald J Trump For President" (8 ads)
+   - "DONALD J TRUMP FOR PRESIDENT" (5 ads)
+   - "Trump For President" (3 ads)
+   - "Trump for President" (3 ads)
+   - "Donald Trump For President" (2 ads)
+   - "Donald J Trump" (2 ads)
 
-13. Abigail Spanberger for Governor (134 ads total)
+11. Abigail Spanberger for Governor (134 ads total)
+   → "Abigail Spanberger for Governor" (104 ads) [CANONICAL]
    - "Abigail Spanberger For Governor" (30 ads)
-   → "Abigail Spanberger for Governor" (104 ads) [STANDARDIZED]
 
-14. American Independent Foundation (121 ads total)
+12. American Independent Foundation (131 ads total)
+   → "American Independent Foundation" (99 ads) [CANONICAL]
    - "AMERICAN INDEPENDENT FOUNDATION" (22 ads)
-   → "American Independent Foundation" (99 ads) [STANDARDIZED]
+   - "American Independent Foundation - 5090013--1 EST1709 09172024" (7 ads)
+   - "American Independent Foundation - 5090013 EST1709 09182024" (3 ads)
 
-15. MAGA INC (120 ads total)
-   → "MAGA INC" (73 ads) [STANDARDIZED]
+13. MAGA INC (128 ads total)
+   → "MAGA INC" (73 ads) [CANONICAL]
    - "MAGA Inc" (47 ads)
+   - "MAGA Inc - 5149765 ESTC30NMI 10212024" (3 ads)
+   - "MAGA Inc - 5149764 ESTC23MI 10212024" (3 ads)
+   - "MAGA Inc - 5146245 ESTC18CMI 10172024" (2 ads)
 
-16. Urban One - Reality Radio (120 ads total)
+14. Urban One - Reality Radio (120 ads total)
+   → "Urban One - Reality Radio" (117 ads) [CANONICAL]
    - "URBAN ONE - REALITY RADIO" (3 ads)
-   → "Urban One - Reality Radio" (117 ads) [STANDARDIZED]
 
-17. Black Voters Matter Fund (101 ads total)
+15. Black Voters Matter Fund (101 ads total)
+   → "Black Voters Matter Fund" (65 ads) [CANONICAL]
    - "BLACK VOTERS MATTER FUND" (36 ads)
-   → "Black Voters Matter Fund" (65 ads) [STANDARDIZED]
 
-18. House Majority Forward (78 ads total)
+16. House Majority Forward (78 ads total)
+   → "House Majority Forward" (73 ads) [CANONICAL]
    - "HOUSE MAJORITY FORWARD" (5 ads)
-   → "House Majority Forward" (73 ads) [STANDARDIZED]
 
-19. Sherrod Brown for US Senate (78 ads total)
-   - "SHERROD BROWN FOR US SENATE" (4 ads)
+17. Sherrod Brown for US Senate (78 ads total)
    - "SHERROD BROWN for US SENATE" (74 ads)
+   - "SHERROD BROWN FOR US SENATE" (4 ads)
 
-20. Citizens Not Politicians (75 ads total)
+18. Citizens Not Politicians (75 ads total)
+   → "Citizens Not Politicians" (40 ads) [CANONICAL]
    - "CITIZENS NOT POLITICIANS" (35 ads)
-   → "Citizens Not Politicians" (40 ads) [STANDARDIZED]
 
-21. Black Voters Matter (69 ads total)
+19. Black Voters Matter (69 ads total)
+   → "Black Voters Matter" (57 ads) [CANONICAL]
    - "BLACK VOTERS MATTER" (12 ads)
-   → "Black Voters Matter" (57 ads) [STANDARDIZED]
 
-22. House Majority PAC (69 ads total)
+20. House Majority PAC (69 ads total)
+   → "House Majority PAC" (62 ads) [CANONICAL]
    - "HOUSE MAJORITY PAC" (7 ads)
-   → "House Majority PAC" (62 ads) [STANDARDIZED]
 
-23. Black Voters Matter Capacity Building Institute (58 ads total)
+21. Black Voters Matter Capacity Building Institute (58 ads total)
+   → "Black Voters Matter Capacity Building Institute" (56 ads) [CANONICAL]
    - "BLACK VOTERS MATTER CAPACITY BUILDING INSTITUTE" (2 ads)
-   → "Black Voters Matter Capacity Building Institute" (56 ads) [STANDARDIZED]
 
-24. Winsenate (56 ads total)
+22. Winsenate (58 ads total)
    - "WINSENATE" (41 ads)
    - "WinSenate" (15 ads)
+   - "WinSenate 778420 10-29-2024" (2 ads)
 
-25. Progressive State Leaders Committee (55 ads total)
+23. Progressive State Leaders Committee (55 ads total)
+   → "Progressive State Leaders Committee" (53 ads) [CANONICAL]
    - "PROGRESSIVE STATE LEADERS COMMITTEE" (2 ads)
-   → "Progressive State Leaders Committee" (53 ads) [STANDARDIZED]
 
-26. Donald Trump for President (52 ads total)
-   - "Donald Trump For President" (2 ads)
-   → "Donald Trump for President" (50 ads) [STANDARDIZED]
-
-27. Blackpac (51 ads total)
-   - "BLACKPAC" (12 ads)
+24. Blackpac (51 ads total)
    - "BlackPAC" (28 ads)
+   - "BLACKPAC" (12 ads)
    - "BlackPac" (11 ads)
 
-28. Democratic National Committee (50 ads total)
+25. Democratic National Committee (50 ads total)
+   → "Democratic National Committee" (44 ads) [CANONICAL]
    - "DEMOCRATIC NATIONAL COMMITTEE" (6 ads)
-   → "Democratic National Committee" (44 ads) [STANDARDIZED]
 
-29. Right for America PAC (46 ads total)
-   - "RIGHT FOR AMERICA PAC" (2 ads)
+26. Right for America PAC (46 ads total)
    - "Right For America Pac" (37 ads)
-   → "Right for America PAC" (7 ads) [STANDARDIZED]
+   → "Right for America PAC" (7 ads) [CANONICAL]
+   - "RIGHT FOR AMERICA PAC" (2 ads)
 
-30. Donald J Trump for President (43 ads total)
-   - "DONALD J TRUMP FOR PRESIDENT" (5 ads)
-   - "Donald J Trump For President" (8 ads)
-   → "Donald J Trump for President" (30 ads) [STANDARDIZED]
-
-31. Drummond D Mayor (42 ads total)
+27. Drummond D Mayor (42 ads total)
+   → "Drummond D Mayor" (28 ads) [CANONICAL]
    - "DRUMMOND D MAYOR" (14 ads)
-   → "Drummond D Mayor" (28 ads) [STANDARDIZED]
 
-32. United Democracy Project (40 ads total)
+28. United Democracy Project (40 ads total)
+   → "United Democracy Project" (37 ads) [CANONICAL]
    - "UNITED DEMOCRACY PROJECT" (3 ads)
-   → "United Democracy Project" (37 ads) [STANDARDIZED]
 
-33. Jacky Rosen for US Senate (39 ads total)
+29. Jacky Rosen for US Senate (39 ads total)
+   → "Jacky Rosen for US Senate" (33 ads) [CANONICAL]
    - "JACKY ROSEN FOR US SENATE" (6 ads)
-   → "Jacky Rosen for US Senate" (33 ads) [STANDARDIZED]
 
-34. Josh Stein for Governor (38 ads total)
+30. Josh Stein for Governor (38 ads total)
+   → "Josh Stein for Governor" (27 ads) [CANONICAL]
    - "JOSH STEIN FOR GOVERNOR" (11 ads)
-   → "Josh Stein for Governor" (27 ads) [STANDARDIZED]
 
-35. Onyx Impact (37 ads total)
+31. Onyx Impact (37 ads total)
+   → "Onyx Impact" (25 ads) [CANONICAL]
    - "ONYX IMPACT" (12 ads)
-   → "Onyx Impact" (25 ads) [STANDARDIZED]
 
-36. Klca-Hd4 Juan (35 ads total)
+32. Winsome for Governor - Virginia (37 ads total)
+   - "Winsome for Governor - Virginia - 4" (9 ads)
+   → "Winsome for Governor - Virginia" (8 ads) [CANONICAL]
+   - "Winsome for Governor - Virginia - 6" (7 ads)
+   - "Winsome for Governor - Virginia - 7" (6 ads)
+   - "Winsome for Governor - Virginia - 5" (4 ads)
+   - "Winsome for Governor - Virginia - 2" (3 ads)
+
+33. Klca-Hd4 Juan (35 ads total)
    - "KLCA-HD4 JUAN" (29 ads)
    - "KLCA-HD4 Juan" (6 ads)
 
-37. Black Voters Matter Action PAC (35 ads total)
+34. Black Voters Matter Action PAC (35 ads total)
+   → "Black Voters Matter Action PAC" (27 ads) [CANONICAL]
    - "BLACK VOTERS MATTER ACTION PAC" (8 ads)
-   → "Black Voters Matter Action PAC" (27 ads) [STANDARDIZED]
 
-38. Left of Center PAC (32 ads total)
+35. Left of Center PAC (32 ads total)
+   → "Left of Center PAC" (30 ads) [CANONICAL]
    - "LEFT OF CENTER PAC" (2 ads)
-   → "Left of Center PAC" (30 ads) [STANDARDIZED]
 
-39. Better Schools Kentucky (30 ads total)
-   → "Better Schools Kentucky" (15 ads) [STANDARDIZED]
+36. Better Schools Kentucky (30 ads total)
+   → "Better Schools Kentucky" (15 ads) [CANONICAL]
    - "Better schools Kentucky" (15 ads)
 
-40. Black Progressive Action Coalition (29 ads total)
-   - "BLACK PROGRESSIVE ACTION COALITION" (2 ads)
-   → "Black Progressive Action Coalition" (27 ads) [STANDARDIZED]
+37. Issues - for a Better Tomorrow (29 ads total)
+   - "Issues - For a Better Tomorrow 100124-110424" (17 ads)
+   - "Issues - For a Better Tomorrow 101524-110424" (12 ads)
 
-41. Communications Workers of America (28 ads total)
+38. Black Progressive Action Coalition (29 ads total)
+   → "Black Progressive Action Coalition" (27 ads) [CANONICAL]
+   - "BLACK PROGRESSIVE ACTION COALITION" (2 ads)
+
+39. Communications Workers of America (28 ads total)
+   → "Communications Workers of America" (16 ads) [CANONICAL]
    - "COMMUNICATIONS WORKERS OF AMERICA" (11 ads)
    - "Communications Workers Of America" (1 ads)
-   → "Communications Workers of America" (16 ads) [STANDARDIZED]
 
-42. Invoice (27 ads total)
+40. Invoice (27 ads total)
+   → "Invoice" (26 ads) [CANONICAL]
    - "INVOICE" (1 ads)
-   → "Invoice" (26 ads) [STANDARDIZED]
 
-43. Climate Power (26 ads total)
+41. Climate Power (26 ads total)
+   → "Climate Power" (25 ads) [CANONICAL]
    - "CLIMATE POWER" (1 ads)
-   → "Climate Power" (25 ads) [STANDARDIZED]
 
-44. Advocate for America (26 ads total)
+42. Advocate for America (26 ads total)
    - "Advocate For America" (16 ads)
-   → "Advocate for America" (10 ads) [STANDARDIZED]
+   → "Advocate for America" (10 ads) [CANONICAL]
 
-45. American Independent (25 ads total)
+43. Future Forward PAC (25 ads total)
+   - "FUTURE FORWARD PAC" (21 ads)
+   → "Future Forward PAC" (2 ads) [CANONICAL]
+   - "Future Forward PAC 10242024" (2 ads)
+
+44. American Independent (25 ads total)
+   → "American Independent" (17 ads) [CANONICAL]
    - "AMERICAN INDEPENDENT" (8 ads)
-   → "American Independent" (17 ads) [STANDARDIZED]
 
-46. Voteorg (24 ads total)
+45. Voteorg (24 ads total)
    - "VOTEORG" (21 ads)
-   → "Voteorg" (3 ads) [STANDARDIZED]
+   → "Voteorg" (3 ads) [CANONICAL]
 
-47. Fight for Democracy (24 ads total)
-   - "FIGHT FOR DEMOCRACY" (8 ads)
+46. Fight for Democracy (24 ads total)
    - "Fight For Democracy" (16 ads)
+   - "FIGHT FOR DEMOCRACY" (8 ads)
+
+47. Abigail Spanberger for Governor of Virginia (24 ads total)
+   - "Abigail Spanberger for Governor of Virginia - 3" (9 ads)
+   - "Abigail Spanberger for Governor of Virginia - 4" (9 ads)
+   → "Abigail Spanberger for Governor of Virginia" (3 ads) [CANONICAL]
+   - "Abigail Spanberger for Governor of Virginia - 2" (3 ads)
 
 48. Natalie Hall for Fulton County Commissioner (23 ads total)
    - "Natalie Hall For Fulton County Commissioner" (19 ads)
-   → "Natalie Hall for Fulton County Commissioner" (4 ads) [STANDARDIZED]
+   → "Natalie Hall for Fulton County Commissioner" (4 ads) [CANONICAL]
 
-49. Future Forward PAC (23 ads total)
-   - "FUTURE FORWARD PAC" (21 ads)
-   → "Future Forward PAC" (2 ads) [STANDARDIZED]
-
-50. YES on PROP 2 (23 ads total)
+49. YES on PROP 2 (23 ads total)
    - "YES ON PROP 2" (15 ads)
    - "Yes On Prop 2" (8 ads)
+
+50. Black Progressive Action Committee (23 ads total)
+   - "BLACK PROGRESSIVE ACTION COMMITTEE" (16 ads)
+   → "Black Progressive Action Committee" (7 ads) [CANONICAL]
+
+51. Riggs for Our Courts (22 ads total)
+   → "Riggs for Our Courts" (21 ads) [CANONICAL]
+   - "Riggs For Our Courts" (1 ads)
+
+52. Justice Melody Stewart (22 ads total)
+   - "JUSTICE MELODY STEWART" (16 ads)
+   → "Justice Melody Stewart" (6 ads) [CANONICAL]
+
+53. Advance Carolina (22 ads total)
+   → "Advance Carolina" (18 ads) [CANONICAL]
+   - "ADVANCE CAROLINA" (4 ads)
+
+54. National Urban League (21 ads total)
+   → "National Urban League" (19 ads) [CANONICAL]
+   - "NATIONAL URBAN LEAGUE" (2 ads)
+
+55. Lawyers Committee for Civil Rights Under Law (21 ads total)
+   → "Lawyers Committee for Civil Rights Under Law" (19 ads) [CANONICAL]
+   - "LAWYERS COMMITTEE FOR CIVIL RIGHTS UNDER LAW" (2 ads)
+
+56. Win IT Back PAC (20 ads total)
+   - "Win It Back PAC 770074 9-4-2024" (3 ads)
+   - "Win It Back PAC 770073 9-4-2024" (3 ads)
+   - "Win It Back PAC 770072 9-4-2024" (3 ads)
+   - "Win It Back PAC 770070 9-4-2024" (3 ads)
+   - "Win It Back PAC 770075 9-4-2024" (2 ads)
+   - "Win It Back PAC 770067 9-4-2024" (2 ads)
+   - "WIN IT BACK PAC" (2 ads)
+   - "Win It Back PAC 770063 9-4-2024" (1 ads)
+   - "Win It Back PAC 770066 9-4-2024" (1 ads)
+
+57. Kdaykdey (20 ads total)
+   - "KDAYKDEY 320312" (10 ads)
+   - "KDAYKDEY 320057" (10 ads)
+
+58. Texas Legislative Black Caucus (19 ads total)
+   - "TEXAS LEGISLATIVE BLACK CAUCUS" (13 ads)
+   → "Texas Legislative Black Caucus" (6 ads) [CANONICAL]
+
+59. Ffusa Action Climate Power (19 ads total)
+   - "FFUSA Action  Climate Power" (13 ads)
+   - "FFUSA ACTION CLIMATE POWER" (4 ads)
+   - "FFUSA ACTION  CLIMATE POWER" (2 ads)
+
+60. Unite the Country (18 ads total)
+   - "UNITE THE COUNTRY" (10 ads)
+   → "Unite the Country" (7 ads) [CANONICAL]
+   - "Unite The Country" (1 ads)
+
+61. Missy Cotter Smasal for Congress (18 ads total)
+   - "MISSY COTTER SMASAL FOR CONGRESS" (12 ads)
+   → "Missy Cotter Smasal for Congress" (6 ads) [CANONICAL]
+
+62. Figures D Congress (18 ads total)
+   → "Figures D Congress" (12 ads) [CANONICAL]
+   - "FIGURES D CONGRESS" (6 ads)
+
+63. Danny Avula for Mayor (17 ads total)
+   - "DANNY AVULA FOR MAYOR" (13 ads)
+   → "Danny Avula for Mayor" (4 ads) [CANONICAL]
+
+64. Vote Dot Org (17 ads total)
+   - "vote dot org" (13 ads)
+   - "VOTE DOT ORG" (4 ads)
+
+65. Campaign to Elect Carmalitha Gumbs (17 ads total)
+   - "Campaign To Elect Carmalitha Gumbs" (11 ads)
+   → "Campaign to Elect Carmalitha Gumbs" (6 ads) [CANONICAL]
+
+66. Right for America (15 ads total)
+   → "Right for America" (13 ads) [CANONICAL]
+   - "RIGHT FOR AMERICA" (2 ads)
+
+67. Lorien Acquintas (15 ads total)
+   - "Lorien Acquintas 102224 - 103124" (10 ads)
+   - "Lorien Acquintas 101724 - 103024" (5 ads)
+
+68. Harris County Strong (15 ads total)
+   - "HARRIS COUNTY STRONG" (11 ads)
+   → "Harris County Strong" (4 ads) [CANONICAL]
+
+69. NAACP Virginia State Conference (15 ads total)
+   → "NAACP Virginia State Conference" (9 ads) [CANONICAL]
+   - "NAACP Virginia State Conference 11-5-24" (6 ads)
+
+70. Shri Thanedar (14 ads total)
+   → "Shri Thanedar" (8 ads) [CANONICAL]
+   - "SHRI THANEDAR" (6 ads)
+
+71. Vote YES Petersburg (14 ads total)
+   - "Vote Yes Petersburg" (7 ads)
+   - "VOTE YES PETERSBURG" (7 ads)
+
+72. Stand America PAC (14 ads total)
+   → "Stand America PAC" (11 ads) [CANONICAL]
+   - "STAND AMERICA PAC" (3 ads)
+
+73. Congressional Black Caucus PAC (14 ads total)
+   - "CONGRESSIONAL BLACK CAUCUS PAC" (7 ads)
+   - "Congressional Black Caucus Pac" (5 ads)
+   → "Congressional Black Caucus PAC" (2 ads) [CANONICAL]
+
+74. Team Kennedy (13 ads total)
+   - "TEAM KENNEDY" (11 ads)
+   → "Team Kennedy" (2 ads) [CANONICAL]
+
+75. Naca Economic Justice for All (13 ads total)
+   - "NACA ECONOMIC JUSTICE FOR ALL" (8 ads)
+   - "NACA Economic Justice for All" (5 ads)
+
+76. Tasha Kama (13 ads total)
+   - "Tasha Kama 110924-111324" (8 ads)
+   - "Tasha Kama 93024 - 110124" (5 ads)
+
+77. Desert Friends to Elect Christy Holstege (13 ads total)
+   - "Desert Friends to Elect Christy Holstege 101524-102124" (4 ads)
+   - "Desert Friends to Elect Christy Holstege 100924-101424" (3 ads)
+   - "Desert Friends to Elect Christy Holstege 102824-110424" (3 ads)
+   - "Desert Friends to Elect Christy Holstege 102224-102824" (3 ads)
+
+78. MAGA INC - (12 ads total)
+   - "MAGA INC - 4822249--1 05012024" (5 ads)
+   - "MAGA INC - 4753101 03282024" (3 ads)
+   - "MAGA INC - 4762516 04022024" (2 ads)
+   - "MAGA INC - 4762517 04022024" (1 ads)
+   - "MAGA INC - 4758336 04012024" (1 ads)
+
+79. Ohio Organizing Collaborative (12 ads total)
+   - "OHIO ORGANIZING COLLABORATIVE" (7 ads)
+   → "Ohio Organizing Collaborative" (5 ads) [CANONICAL]
+
+80. Reproductive Freedom for All (12 ads total)
+   - "REPRODUCTIVE FREEDOM FOR ALL" (7 ads)
+   → "Reproductive Freedom for All" (4 ads) [CANONICAL]
+   - "Reproductive Freedom For All" (1 ads)
+
+81. Kristen Mcdonald Rivet for Congress (12 ads total)
+   - "Kristen Mcdonald Rivet for Congress - 5100595--1 EST668 09202024" (3 ads)
+   - "Kristen Mcdonald Rivet for Congress - 5149739 EST715 10121024" (3 ads)
+   - "Kristen Mcdonald Rivet for Congress - 5112149 EST707 09272024" (2 ads)
+   - "Kristen Mcdonald Rivet for Congress - 5122640 EST711 10032024" (2 ads)
+   - "Kristen Mcdonald Rivet for Congress - 5137183 EST713 10142024" (2 ads)
+
+82. Vote Vets (11 ads total)
+   - "VOTE VETS" (6 ads)
+   → "Vote Vets" (5 ads) [CANONICAL]
+
+83. New Voices for Reproductive Justice (11 ads total)
+   → "New Voices for Reproductive Justice" (9 ads) [CANONICAL]
+   - "NEW VOICES FOR REPRODUCTIVE JUSTICE" (2 ads)
+
+84. The Vote to Live Action Fund (11 ads total)
+   → "The Vote to Live Action Fund" (7 ads) [CANONICAL]
+   - "THE VOTE TO LIVE ACTION FUND" (4 ads)
+
+85. Sonya Allen for DA (10 ads total)
+   - "Sonya Allen For DA" (8 ads)
+   → "Sonya Allen for DA" (2 ads) [CANONICAL]
+
+86. Agreement Form (10 ads total)
+   → "Agreement Form" (9 ads) [CANONICAL]
+   - "AGREEMENT FORM" (1 ads)
+
+87. 2024 Local Non-Candidate Issue - Better Schools of Kentucky (10 ads total)
+   - "2024 Local Non-Candidate Issue - Better Schools of Kentucky 101424-11424" (8 ads)
+   - "2024 Local Non-Candidate Issue - Better Schools of Kentucky 101324-11924" (2 ads)
+
+88. Afscme People (10 ads total)
+   - "AFSCME PEOPLE - 5104748 EST62 09242024" (6 ads)
+   - "AFSCME PEOPLE" (4 ads)
+
+89. Bpacblack Progressive Action Committee (10 ads total)
+   - "BPACBLACK PROGRESSIVE ACTION COMMITTEE" (6 ads)
+   - "BPACBlack Progressive Action Committee" (4 ads)
+
+90. Bpac Black Progressive Action Coalition (10 ads total)
+   - "BPAC BLACK PROGRESSIVE ACTION COALITION" (6 ads)
+   - "BPAC Black Progressive Action Coalition" (4 ads)
+
+91. Calvin Hawkins for County Executive (10 ads total)
+   - "Calvin Hawkins for County Executive 2-28-25" (6 ads)
+   → "Calvin Hawkins for County Executive" (4 ads) [CANONICAL]
+
+92. Issues - Progress Action 090825 (10 ads total)
+   - "Issues - PROGRESS ACTION 090825 - 101325 - KJMD" (5 ads)
+   - "Issues - PROGRESS ACTION 090825 - 101325 - KLHI" (5 ads)
+
+93. Klli (10 ads total)
+   - "KLLI 320314" (5 ads)
+   - "KLLI 320049" (5 ads)
+
+94. Kpwr (10 ads total)
+   - "KPWR 320168" (8 ads)
+   - "KPWR 320313" (2 ads)
+
+95. David Trone for Senate (9 ads total)
+   → "David Trone for Senate" (7 ads) [CANONICAL]
+   - "David Trone For Senate" (2 ads)
+
+96. FF PAC - (9 ads total)
+   - "FF PAC - 5064380 - 08302024" (3 ads)
+   - "FF PAC - 5064373 - 08302024" (3 ads)
+   - "FF PAC - 5064398 - 08302024" (2 ads)
+   - "FF PAC - 5064371 - 08302024" (1 ads)
+
+97. Vote to Live Action Fund (9 ads total)
+   - "Vote To Live Action Fund" (8 ads)
+   → "Vote to Live Action Fund" (1 ads) [CANONICAL]
+
+98. Families Over Billionaires (9 ads total)
+   → "Families Over Billionaires" (6 ads) [CANONICAL]
+   - "Families over Billionaires 209504" (2 ads)
+   - "Families over Billionaires" (1 ads)
+
+99. Mikie Sherrill for Governor (9 ads total)
+   - "MIKIE SHERRILL FOR GOVERNOR" (7 ads)
+   → "Mikie Sherrill for Governor" (2 ads) [CANONICAL]
+
+100. Civic Nation (8 ads total)
+   → "Civic Nation" (6 ads) [CANONICAL]
+   - "CIVIC NATION" (2 ads)
