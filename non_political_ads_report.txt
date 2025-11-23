@@ -1,0 +1,521 @@
+================================================================================
+NON-POLITICAL FILE ANALYSIS
+================================================================================
+
+Total records: 60,614
+Political Files: 56,458 (93.1%)
+Non-Political Files: 4,156 (6.9%)
+Malformed titles: 0
+
+NON-POLITICAL CATEGORIES:
+--------------------------------------------------------------------------------
+ 2,453 records - Equal Employment Opportunity Records
+   511 records - FCC Authorizations
+   493 records - Ownership Reports
+   178 records - Time Brokerage Agreements
+   157 records - Political Matters and Controversial Issues Disclosures
+   116 records - Local Public Notice Announcements
+    49 records - FCC Investigations or Complaints
+    44 records - Applications and Related Materials
+    43 records - Foreign Government-Provided Programming Disclosures
+    39 records - Citizen Agreements
+    39 records - Donor Lists - Applicable Only for NCEs
+    17 records - Information
+    17 records - Joint Sales Agreements
+
+================================================================================
+DETAILED EXAMPLES
+================================================================================
+
+Equal Employment Opportunity Records (2,453 records)
+--------------------------------------------------------------------------------
+  Full Path: Equal Employment Opportunity Records/Additional Documents/EEO Public File Reports
+  Sponsor (parsed): EEO Public File Reports
+  Office (parsed): Additional Documents
+  Station: N/A
+  Updated: 2023-12-02T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/39fcf6c2-d9c7-c76e-4ac7-1208406062af/e88115ee-1814-48ba-a53c-c0f141aef61e.pdf
+
+  Full Path: Equal Employment Opportunity Records/Additional Documents/EEO Public File Reports
+  Sponsor (parsed): EEO Public File Reports
+  Office (parsed): Additional Documents
+  Station: N/A
+  Updated: 2023-12-01T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/39fcf6c2-d9c7-c76e-4ac7-1208406062af/7ef78f84-acb6-4496-874d-0fab4115c74d.pdf
+
+  Full Path: Equal Employment Opportunity Records/Additional Documents/EEO Public File Reports
+  Sponsor (parsed): EEO Public File Reports
+  Office (parsed): Additional Documents
+  Station: N/A
+  Updated: 2023-11-28T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/39fcf6c2-d9c7-c76e-4ac7-1208406062af/0a4fdc91-cbc4-435e-a800-1dd73422a219.pdf
+
+  Full Path: Equal Employment Opportunity Records/Additional Documents/EEO Public File Reports
+  Sponsor (parsed): EEO Public File Reports
+  Office (parsed): Additional Documents
+  Station: N/A
+  Updated: 2024-02-07T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/842c8d97-a314-c9d6-a702-ae63e44489a0/4a44dbad-cca1-495c-9215-0c5243fd1e0c.pdf
+
+  Full Path: Equal Employment Opportunity Records/Additional Documents/EEO Public File Reports
+  Sponsor (parsed): EEO Public File Reports
+  Office (parsed): Additional Documents
+  Station: N/A
+  Updated: 2023-11-17T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/842c8d97-a314-c9d6-a702-ae63e44489a0/37a50891-5721-45fc-8bb7-fe803c002417.pdf
+
+
+FCC Authorizations (511 records)
+--------------------------------------------------------------------------------
+  Full Path: FCC Authorizations/Additional Documents
+  Sponsor (parsed): Additional Documents
+  Office (parsed): FCC Authorizations
+  Station: N/A
+  Updated: 2024-01-10T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/8c22d6ef-38bd-8480-a678-9c0cbeea5f1a/2889729f-8a4e-4b94-b841-61ab4ebf6c91.pdf
+
+  Full Path: FCC Authorizations/Additional Documents
+  Sponsor (parsed): Additional Documents
+  Office (parsed): FCC Authorizations
+  Station: N/A
+  Updated: 2020-03-13T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/8c22d6ef-38bd-8480-a678-9c0cbeea5f1a/12f28747-d4b8-461c-bfb2-e840be7d1477.pdf
+
+  Full Path: FCC Authorizations/Additional Documents
+  Sponsor (parsed): Additional Documents
+  Office (parsed): FCC Authorizations
+  Station: N/A
+  Updated: 2024-01-10T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/bd96aff3-3a82-b694-a5f8-9fc571096de5/e8148357-fe2e-4cc3-8f0a-941e58178bad.pdf
+
+  Full Path: FCC Authorizations/Additional Documents
+  Sponsor (parsed): Additional Documents
+  Office (parsed): FCC Authorizations
+  Station: N/A
+  Updated: 2020-03-13T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/bd96aff3-3a82-b694-a5f8-9fc571096de5/25f40135-2b48-4e4b-b614-a9686a5bcc78.pdf
+
+  Full Path: FCC Authorizations/Additional Documents
+  Sponsor (parsed): Additional Documents
+  Office (parsed): FCC Authorizations
+  Station: N/A
+  Updated: 2024-04-09T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/10d27baf-ab44-8e0b-3358-a31b6b1d509f/4529b248-8fbd-4843-b65c-bf152aee96bc.pdf
+
+
+Ownership Reports (493 records)
+--------------------------------------------------------------------------------
+  Full Path: Ownership Reports/Additional Documents/Contracts and Agreements
+  Sponsor (parsed): Contracts and Agreements
+  Office (parsed): Additional Documents
+  Station: N/A
+  Updated: 2024-04-24T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/ceea2076-6209-e0a1-24b0-dbf0ae40bf84/85d1bdc8-543c-440e-b667-7d051b781a56.pdf
+
+  Full Path: Ownership Reports/Additional Documents/Contracts and Agreements
+  Sponsor (parsed): Contracts and Agreements
+  Office (parsed): Additional Documents
+  Station: N/A
+  Updated: 2024-04-24T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/ceea2076-6209-e0a1-24b0-dbf0ae40bf84/74bfc799-e201-4a77-bf35-e6982464749a.pdf
+
+  Full Path: Ownership Reports/Additional Documents/Contracts and Agreements
+  Sponsor (parsed): Contracts and Agreements
+  Office (parsed): Additional Documents
+  Station: N/A
+  Updated: 2024-02-06T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/62084de8-3a40-c0ee-f56b-8947d9f54b3d/4db47b58-4f86-492e-90ee-0452788963e1.pdf
+
+  Full Path: Ownership Reports/Additional Documents/Contracts and Agreements
+  Sponsor (parsed): Contracts and Agreements
+  Office (parsed): Additional Documents
+  Station: N/A
+  Updated: 2023-12-18T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/62084de8-3a40-c0ee-f56b-8947d9f54b3d/4c6dc63c-4512-47ba-bcf3-a4334a5d76a6.pdf
+
+  Full Path: Ownership Reports/Additional Documents/Contracts and Agreements
+  Sponsor (parsed): Contracts and Agreements
+  Office (parsed): Additional Documents
+  Station: N/A
+  Updated: 2023-11-18T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/62084de8-3a40-c0ee-f56b-8947d9f54b3d/6fa887ac-12d8-4c46-9064-653517139400.pdf
+
+
+Time Brokerage Agreements (178 records)
+--------------------------------------------------------------------------------
+  Full Path: Time Brokerage Agreements
+  Sponsor (parsed): am Entity 23614 uploaded a file in Time Brokerage Agreements
+  Office (parsed): None
+  Station: N/A
+  Updated: 2021-08-03T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/6c91265c-04de-ba77-b82d-fb8560c8cb1b/45b0c046-b710-4b67-ac6a-e1daeb96d4d7.pdf
+
+  Full Path: Time Brokerage Agreements
+  Sponsor (parsed): fm Entity 43711 uploaded a file in Time Brokerage Agreements
+  Office (parsed): None
+  Station: N/A
+  Updated: 2024-03-21T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/5871997d-a6d4-aa4d-4a85-078c4a759ced/f25375ee-9c3d-4cd2-bc84-8d82cf35729a.pdf
+
+  Full Path: Time Brokerage Agreements
+  Sponsor (parsed): fm Entity 43711 uploaded a file in Time Brokerage Agreements
+  Office (parsed): None
+  Station: N/A
+  Updated: 2024-03-20T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/5871997d-a6d4-aa4d-4a85-078c4a759ced/9f70c375-ee0f-4db9-9a9d-9274ad7089aa.pdf
+
+  Full Path: Time Brokerage Agreements
+  Sponsor (parsed): fm Entity 43711 uploaded a file in Time Brokerage Agreements
+  Office (parsed): None
+  Station: N/A
+  Updated: 2024-03-20T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/5871997d-a6d4-aa4d-4a85-078c4a759ced/a33927ba-37f4-42a9-b8c0-11aea1618d26.pdf
+
+  Full Path: Time Brokerage Agreements
+  Sponsor (parsed): fm Entity 43711 uploaded a file in Time Brokerage Agreements
+  Office (parsed): None
+  Station: N/A
+  Updated: 2024-03-20T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/5871997d-a6d4-aa4d-4a85-078c4a759ced/03d17a23-82a6-4ca8-98f1-bb6ea7dea012.pdf
+
+
+Political Matters and Controversial Issues Disclosures (157 records)
+--------------------------------------------------------------------------------
+  Full Path: Political Matters and Controversial Issues Disclosures
+  Sponsor (parsed): fm Entity 73194 uploaded a file in Political Matters and Controversial Issues Disclosures
+  Office (parsed): None
+  Station: N/A
+  Updated: 2024-03-03T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/f6aadc35-5840-de30-252d-d66867554bdf/4cb0a018-b34e-4e3e-b21e-677530dc583c.pdf
+
+  Full Path: Political Matters and Controversial Issues Disclosures
+  Sponsor (parsed): fm Entity 73194 uploaded a file in Political Matters and Controversial Issues Disclosures
+  Office (parsed): None
+  Station: N/A
+  Updated: 2024-03-03T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/f6aadc35-5840-de30-252d-d66867554bdf/a5e77a9d-8a5f-48dc-83ef-1a4b6f36d332.pdf
+
+  Full Path: Political Matters and Controversial Issues Disclosures
+  Sponsor (parsed): fm Entity 73194 uploaded a file in Political Matters and Controversial Issues Disclosures
+  Office (parsed): None
+  Station: N/A
+  Updated: 2024-03-03T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/f6aadc35-5840-de30-252d-d66867554bdf/2ec7e328-15ee-469a-b2a9-a30abc39cdfd.pdf
+
+  Full Path: Political Matters and Controversial Issues Disclosures
+  Sponsor (parsed): fm Entity 73194 uploaded a file in Political Matters and Controversial Issues Disclosures
+  Office (parsed): None
+  Station: N/A
+  Updated: 2024-03-03T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/f6aadc35-5840-de30-252d-d66867554bdf/b961a373-6cd6-4e84-aaa1-ffc9224437e9.pdf
+
+  Full Path: Political Matters and Controversial Issues Disclosures
+  Sponsor (parsed): fm Entity 73194 uploaded a file in Political Matters and Controversial Issues Disclosures
+  Office (parsed): None
+  Station: N/A
+  Updated: 2024-02-03T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/f6aadc35-5840-de30-252d-d66867554bdf/128aa689-41f9-46b8-a665-04846a9ca450.pdf
+
+
+Local Public Notice Announcements (116 records)
+--------------------------------------------------------------------------------
+  Full Path: Local Public Notice Announcements
+  Sponsor (parsed): am Entity 23614 uploaded a file in Local Public Notice Announcements
+  Office (parsed): None
+  Station: N/A
+  Updated: 2021-08-27T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/ac9e2a09-2f23-a926-cb32-06006029a106/7cebd539-3abe-4a83-ae5e-a006b33d3d06.pdf
+
+  Full Path: Local Public Notice Announcements
+  Sponsor (parsed): am Entity 23614 uploaded a file in Local Public Notice Announcements
+  Office (parsed): None
+  Station: N/A
+  Updated: 2021-07-23T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/ac9e2a09-2f23-a926-cb32-06006029a106/540c9f40-8278-4d22-bdd8-21e9cf0ede4e.pdf
+
+  Full Path: Local Public Notice Announcements/Transfer of control announements
+  Sponsor (parsed): Transfer of control announements
+  Office (parsed): Local Public Notice Announcements
+  Station: N/A
+  Updated: 2023-07-17T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/3408dd19-9fa7-3c96-a4e1-03eff8879279/87d9fd24-1d63-4b36-9d0f-2e627508f558.pdf
+
+  Full Path: Local Public Notice Announcements
+  Sponsor (parsed): fm Entity 40746 uploaded a file in Local Public Notice Announcements
+  Office (parsed): None
+  Station: N/A
+  Updated: 2020-04-23T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/fa0943b9-2c4c-ad4f-111c-ee986e7fada4/6159a26f-04e7-4204-b0eb-47791d90efd5.pdf
+
+  Full Path: Local Public Notice Announcements
+  Sponsor (parsed): fm Entity 40746 uploaded a file in Local Public Notice Announcements
+  Office (parsed): None
+  Station: N/A
+  Updated: 2020-04-23T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/fa0943b9-2c4c-ad4f-111c-ee986e7fada4/7b04f0e3-a44e-44ab-aaa8-a7ba32f29144.pdf
+
+
+FCC Investigations or Complaints (49 records)
+--------------------------------------------------------------------------------
+  Full Path: FCC Investigations or Complaints
+  Sponsor (parsed): fm Entity 6113 uploaded a file in FCC Investigations or Complaints
+  Office (parsed): None
+  Station: N/A
+  Updated: 2022-10-06T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/4428d38d-0ae4-ddc1-fbc9-5657a03abc8a/fd21be82-3e8c-440d-aedd-790f238c56f2.pdf
+
+  Full Path: FCC Investigations or Complaints
+  Sponsor (parsed): fm Entity 20334 uploaded a file in FCC Investigations or Complaints
+  Office (parsed): None
+  Station: N/A
+  Updated: 2022-11-16T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/aa1d7770-ba7f-ff94-2929-2b615ff5d60b/75f39aa5-0a9a-4dae-bffe-81ffb31fdacc.pdf
+
+  Full Path: FCC Investigations or Complaints
+  Sponsor (parsed): fm Entity 20334 uploaded a file in FCC Investigations or Complaints
+  Office (parsed): None
+  Station: N/A
+  Updated: 2022-11-16T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/aa1d7770-ba7f-ff94-2929-2b615ff5d60b/32b1a543-97fa-4296-863f-efaa04614131.pdf
+
+  Full Path: FCC Investigations or Complaints
+  Sponsor (parsed): fm Entity 3970 uploaded a file in FCC Investigations or Complaints
+  Office (parsed): None
+  Station: N/A
+  Updated: 2021-01-17T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/242afbe3-ee00-43e0-f029-77c28215aa84/2351a254-6b36-48d4-ac6c-d9dc3ca2278c.pdf
+
+  Full Path: FCC Investigations or Complaints
+  Sponsor (parsed): fm Entity 93959 uploaded a file in FCC Investigations or Complaints
+  Office (parsed): None
+  Station: N/A
+  Updated: 2022-06-28T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/483fffca-9e67-a357-ca71-4c59a83ab597/d8962102-966a-42c2-873c-461ba3b05f26.pdf
+
+
+Applications and Related Materials (44 records)
+--------------------------------------------------------------------------------
+  Full Path: Applications and Related Materials/Additional Documents/License Related Documents
+  Sponsor (parsed): License Related Documents
+  Office (parsed): Additional Documents
+  Station: N/A
+  Updated: 2019-12-04T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/d4de237b-1336-82f7-5244-1b0899442296/ed790960-d4a0-48b1-bc4e-091637b0fac0.pdf
+
+  Full Path: Applications and Related Materials/Additional Documents/Assignment Related Documents
+  Sponsor (parsed): Assignment Related Documents
+  Office (parsed): Additional Documents
+  Station: N/A
+  Updated: 2021-07-23T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/c8b23e1f-3699-4ffe-7128-0fa739c53d15/61c310b3-36d3-47a1-a96e-542797eba80e.pdf
+
+  Full Path: Applications and Related Materials/Additional Documents/Transfer Related Documents
+  Sponsor (parsed): Transfer Related Documents
+  Office (parsed): Additional Documents
+  Station: N/A
+  Updated: 2023-06-13T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/802aaabe-b432-4149-6b7d-27e2eea8d2b0/4e2dbd12-68e9-4351-908b-a731a6ff1c83.pdf
+
+  Full Path: Applications and Related Materials/Additional Documents/Transfer Related Documents
+  Sponsor (parsed): Transfer Related Documents
+  Office (parsed): Additional Documents
+  Station: N/A
+  Updated: 2023-02-06T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/c0111ade-89ee-d71c-ce0f-a41b5031ebe3/7067e16b-6141-48fa-bc4d-616d4cc21fc4.pdf
+
+  Full Path: Applications and Related Materials/Additional Documents/Renewal Related Documents
+  Sponsor (parsed): Renewal Related Documents
+  Office (parsed): Additional Documents
+  Station: N/A
+  Updated: 2022-03-16T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/87d95eda-bb77-a008-bf0c-17dfc5b5ace2/36de2624-0859-45a4-a394-ee00d9bde476.pdf
+
+
+Foreign Government-Provided Programming Disclosures (43 records)
+--------------------------------------------------------------------------------
+  Full Path: Foreign Government-Provided Programming Disclosures/Sean Pittman Show
+  Sponsor (parsed): Sean Pittman Show
+  Office (parsed): Foreign Government-Provided Programming Disclosures
+  Station: N/A
+  Updated: 2023-12-29T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/318751c1-0414-5cd4-1edf-39718c296d80/1f494c03-89ba-4e37-927e-f410d81e7ee0.pdf
+
+  Full Path: Foreign Government-Provided Programming Disclosures/Sean Pittman Show
+  Sponsor (parsed): Sean Pittman Show
+  Office (parsed): Foreign Government-Provided Programming Disclosures
+  Station: N/A
+  Updated: 2023-12-29T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/318751c1-0414-5cd4-1edf-39718c296d80/ae7031b3-5ed4-481c-a32d-7f44e5bf40d9.pdf
+
+  Full Path: Foreign Government-Provided Programming Disclosures/Sean Pittman Show
+  Sponsor (parsed): Sean Pittman Show
+  Office (parsed): Foreign Government-Provided Programming Disclosures
+  Station: N/A
+  Updated: 2023-12-29T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/318751c1-0414-5cd4-1edf-39718c296d80/8122f7a2-37fa-47ae-b01a-3af4584768c2.pdf
+
+  Full Path: Foreign Government-Provided Programming Disclosures/Celebrate New Life Tabernacle Church
+  Sponsor (parsed): Celebrate New Life Tabernacle Church
+  Office (parsed): Foreign Government-Provided Programming Disclosures
+  Station: N/A
+  Updated: 2024-04-03T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/a3af6f06-421f-8d1e-a7e7-2bd3ce3f4b01/5c89f9e3-4890-433f-94cb-e306392236f3.pdf
+
+  Full Path: Foreign Government-Provided Programming Disclosures/Celebrate New Life Tabernacle Church
+  Sponsor (parsed): Celebrate New Life Tabernacle Church
+  Office (parsed): Foreign Government-Provided Programming Disclosures
+  Station: N/A
+  Updated: 2024-04-03T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/a3af6f06-421f-8d1e-a7e7-2bd3ce3f4b01/87302555-6af3-4d38-b312-882f4150c12c.pdf
+
+
+Citizen Agreements (39 records)
+--------------------------------------------------------------------------------
+  Full Path: Citizen Agreements
+  Sponsor (parsed): am Entity 87141 uploaded a file in Citizen Agreements
+  Office (parsed): None
+  Station: N/A
+  Updated: 2019-10-07T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/e7391c9e-e7f0-7cf5-8b59-4e669c54e7fe/b9e8e9da-f6c1-4c40-8d25-f21d9ea561e1.pdf
+
+  Full Path: Citizen Agreements
+  Sponsor (parsed): am Entity 43896 uploaded a file in Citizen Agreements
+  Office (parsed): None
+  Station: N/A
+  Updated: 2018-03-01T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/a3522b3a-89b5-d0d7-1147-d34082165a3d/0872e306-ad4f-4cc2-aff4-c9f5c95e3610.pdf
+
+  Full Path: Citizen Agreements
+  Sponsor (parsed): am Entity 43896 uploaded a file in Citizen Agreements
+  Office (parsed): None
+  Station: N/A
+  Updated: 2018-03-01T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/a3522b3a-89b5-d0d7-1147-d34082165a3d/e0cab20a-a4a0-4787-bb93-d2850abae9b1.pdf
+
+  Full Path: Citizen Agreements
+  Sponsor (parsed): am Entity 43896 uploaded a file in Citizen Agreements
+  Office (parsed): None
+  Station: N/A
+  Updated: 2018-03-01T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/a3522b3a-89b5-d0d7-1147-d34082165a3d/0aec5fe6-1c7b-4417-a9ef-393eb7cd334f.pdf
+
+  Full Path: Citizen Agreements
+  Sponsor (parsed): am Entity 43896 uploaded a file in Citizen Agreements
+  Office (parsed): None
+  Station: N/A
+  Updated: 2018-03-01T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/a3522b3a-89b5-d0d7-1147-d34082165a3d/1869ecdc-f640-486c-bcb0-0ecdb8f9884b.pdf
+
+
+Donor Lists - Applicable Only for NCEs (39 records)
+--------------------------------------------------------------------------------
+  Full Path: Donor Lists - Applicable Only for NCEs/2024
+  Sponsor (parsed): 2024
+  Office (parsed): Donor Lists - Applicable Only for NCEs
+  Station: N/A
+  Updated: 2024-05-08T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/b787bb27-7dba-e395-1892-d13eb465d65d/67df77ef-469f-4735-864e-61814344ba34.pdf
+
+  Full Path: Donor Lists - Applicable Only for NCEs/2024
+  Sponsor (parsed): 2024
+  Office (parsed): Donor Lists - Applicable Only for NCEs
+  Station: N/A
+  Updated: 2024-04-09T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/b787bb27-7dba-e395-1892-d13eb465d65d/47abe0ad-3312-4d1f-9130-0da58c75837a.pdf
+
+  Full Path: Donor Lists - Applicable Only for NCEs/2024
+  Sponsor (parsed): 2024
+  Office (parsed): Donor Lists - Applicable Only for NCEs
+  Station: N/A
+  Updated: 2024-03-07T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/b787bb27-7dba-e395-1892-d13eb465d65d/f9bdf54f-b00e-43ad-8705-3c9a461db650.pdf
+
+  Full Path: Donor Lists - Applicable Only for NCEs/2024
+  Sponsor (parsed): 2024
+  Office (parsed): Donor Lists - Applicable Only for NCEs
+  Station: N/A
+  Updated: 2024-02-07T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/b787bb27-7dba-e395-1892-d13eb465d65d/a1ef05ea-9390-452b-9987-1559396d37a6.pdf
+
+  Full Path: Donor Lists - Applicable Only for NCEs/2023
+  Sponsor (parsed): 2023
+  Office (parsed): Donor Lists - Applicable Only for NCEs
+  Station: N/A
+  Updated: 2024-01-05T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/d5198c0c-bf4d-2169-d5e4-21c7c8a0ffba/452bdfe9-ef00-4aa6-a724-bb3d2bdbbd01.pdf
+
+
+Information (17 records)
+--------------------------------------------------------------------------------
+  Full Path: Information
+  Sponsor (parsed): 2024
+  Office (parsed): None
+  Station: N/A
+  Updated: 2024-04-24T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/8ab32579-1efd-4e70-94dd-3397f5f986ac/47b13a37-1ce4-426b-9168-e2a804dfc916.pdf
+
+  Full Path: Information
+  Sponsor (parsed): 2024
+  Office (parsed): None
+  Station: N/A
+  Updated: 2024-04-24T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/8ab32579-1efd-4e70-94dd-3397f5f986ac/e5360b58-c123-4dd4-a937-13b2a13fd2a2.pdf
+
+  Full Path: Information
+  Sponsor (parsed): 2023
+  Office (parsed): None
+  Station: N/A
+  Updated: 2024-01-05T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/7c8d0f02-039f-6493-e841-5d93efc233b4/c9cebbeb-04c7-4d57-981f-ea54e7d862cb.pdf
+
+  Full Path: Information
+  Sponsor (parsed): fm Entity 19249 uploaded a file in Information on Third-Party Fundraising - For NCE Stations Only
+  Office (parsed): None
+  Station: N/A
+  Updated: 2024-04-10T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/bdad361f-ffff-f355-16e0-75848ecd9f06/f07d7f50-7241-42d3-9929-9b7c22110af0.pdf
+
+  Full Path: Information
+  Sponsor (parsed): fm Entity 19249 uploaded a file in Information on Third-Party Fundraising - For NCE Stations Only
+  Office (parsed): None
+  Station: N/A
+  Updated: 2024-01-11T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/bdad361f-ffff-f355-16e0-75848ecd9f06/03145454-aa68-40b1-be3e-d5d1ec49119f.pdf
+
+
+Joint Sales Agreements (17 records)
+--------------------------------------------------------------------------------
+  Full Path: Joint Sales Agreements
+  Sponsor (parsed): fm Entity 69855 uploaded a file in Joint Sales Agreements
+  Office (parsed): None
+  Station: N/A
+  Updated: 2023-11-22T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/dc76cee5-efa9-e382-5cda-f72f3a97de43/ef0c714c-8fa7-476a-bf50-eaa88d4099a9.pdf
+
+  Full Path: Joint Sales Agreements
+  Sponsor (parsed): am Entity 70516 uploaded a file in Joint Sales Agreements
+  Office (parsed): None
+  Station: N/A
+  Updated: 2024-04-10T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/1dd5c74f-bfe0-51b2-0fec-700f20820253/8e2bddc7-aea9-4b3a-9073-ca3640845277.pdf
+
+  Full Path: Joint Sales Agreements
+  Sponsor (parsed): am Entity 41310 uploaded a file in Joint Sales Agreements
+  Office (parsed): None
+  Station: N/A
+  Updated: 2024-04-10T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/28ae90dd-c560-c6d7-2532-0b5ab8c642ff/9b688031-a957-4f4a-bda9-6b8b4c48ec00.pdf
+
+  Full Path: Joint Sales Agreements
+  Sponsor (parsed): am Entity 70516 uploaded a file in Joint Sales Agreements
+  Office (parsed): None
+  Station: N/A
+  Updated: 2024-07-08T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/1dd5c74f-bfe0-51b2-0fec-700f20820253/fc147d1f-9c26-4f53-a057-4a9a5a6e698a.pdf
+
+  Full Path: Joint Sales Agreements
+  Sponsor (parsed): am Entity 41310 uploaded a file in Joint Sales Agreements
+  Office (parsed): None
+  Station: N/A
+  Updated: 2024-07-08T23:59:59Z
+  URL: https://publicfiles.fcc.gov/api/manager/download/28ae90dd-c560-c6d7-2532-0b5ab8c642ff/a04fad22-177b-441b-ac75-f474d2313e34.pdf
