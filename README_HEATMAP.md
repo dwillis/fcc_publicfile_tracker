@@ -39,8 +39,10 @@ Sponsor names are automatically standardized to merge variations:
 
 ### Running Locally
 
-1. Make sure `radio_ads_standardized.json` is in the same directory as `heatmap.html`
-   - If you only have `radio_ads_tagged.json`, run `python3 standardize_sponsors.py` first
+1. Make sure `radio_ads_heatmap.json` is in the same directory as `heatmap.html`
+   - If you only have `radio_ads_tagged.json`:
+     1. Run `python3 standardize_sponsors.py` first
+     2. Run `python3 create_minimal_json.py` to create the optimized file
 
 2. Start a local web server:
    ```bash
@@ -83,11 +85,13 @@ Sponsor names are automatically standardized to merge variations:
 
 ## Data Source
 
-Uses `radio_ads_standardized.json` - cleaned, tagged, and standardized FCC public file data containing:
-- 56,458 political ad records
-- 157 political matters/controversial issues records
+Uses `radio_ads_heatmap.json` - optimized, cleaned, tagged, and standardized FCC public file data containing:
+- 60,614 total records (56,458 political ads + 157 political matters + 3,999 non-political)
+- Only political ads and political matters are displayed (56,615 records)
 - Coverage from 2018-2025
 - ~1,000 radio stations nationwide (urban format focus)
+- File size: 11.23 MB (75% smaller than full dataset)
+- Contains only fields needed for visualization (8 fields vs 11+ in full dataset)
 
 ## Technical Details
 
@@ -146,5 +150,17 @@ Possible additions:
 When new data is scraped:
 1. Run `tag_and_clean_data.py` to update `radio_ads_tagged.json`
 2. Run `standardize_sponsors.py` to create `radio_ads_standardized.json` with normalized sponsor names
-3. Refresh the page - new data loads automatically
-4. Year filter updates automatically with new years
+3. Run `create_minimal_json.py` to create optimized `radio_ads_heatmap.json` (75% smaller)
+4. Refresh the page - new data loads automatically
+5. Year filter updates automatically with new years
+
+## GitHub Pages Deployment
+
+The optimized JSON file (`radio_ads_heatmap.json` at 11.23 MB) is ready for GitHub Pages deployment:
+
+1. Create a `docs/` folder in your repository
+2. Copy `heatmap.html` and `radio_ads_heatmap.json` to `docs/`
+3. Enable GitHub Pages in repository settings (Settings → Pages → Source: Deploy from branch → Branch: main, /docs)
+4. Access via `https://[username].github.io/[repository]/heatmap.html`
+
+GitHub Pages automatically serves files with gzip compression, further reducing the download size.
