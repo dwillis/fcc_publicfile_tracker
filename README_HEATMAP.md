@@ -90,8 +90,9 @@ Uses `radio_ads_heatmap.json` - optimized, cleaned, tagged, and standardized FCC
 - Only political ads and political matters are displayed (56,615 records)
 - Coverage from 2018-2025
 - ~1,000 radio stations nationwide (urban format focus)
-- File size: 11.23 MB (75% smaller than full dataset)
-- Contains only fields needed for visualization (8 fields vs 11+ in full dataset)
+- File size: 19.03 MB (57.6% smaller than full dataset)
+- Contains only fields needed for visualization (9 fields vs 11+ in full dataset)
+- Includes PDF links for potential future features
 
 ## Technical Details
 
@@ -150,13 +151,13 @@ Possible additions:
 When new data is scraped:
 1. Run `tag_and_clean_data.py` to update `radio_ads_tagged.json`
 2. Run `standardize_sponsors.py` to create `radio_ads_standardized.json` with normalized sponsor names
-3. Run `create_minimal_json.py` to create optimized `radio_ads_heatmap.json` (75% smaller)
+3. Run `create_minimal_json.py` to create optimized `radio_ads_heatmap.json` (58% smaller)
 4. Refresh the page - new data loads automatically
 5. Year filter updates automatically with new years
 
 ## GitHub Pages Deployment
 
-The optimized JSON file (`radio_ads_heatmap.json` at 11.23 MB) is ready for GitHub Pages deployment:
+The optimized JSON file (`radio_ads_heatmap.json` at 19.03 MB) is ready for GitHub Pages deployment:
 
 1. Create a `docs/` folder in your repository
 2. Copy `heatmap.html` and `radio_ads_heatmap.json` to `docs/`
