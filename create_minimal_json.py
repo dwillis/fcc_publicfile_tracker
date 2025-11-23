@@ -21,6 +21,7 @@ def create_minimal_json():
     # - state (filter dropdown, location display)
     # - city (location display)
     # - updated (date range statistics)
+    # - url (PDF link for future features)
 
     minimal_data = []
     for record in data:
@@ -32,7 +33,8 @@ def create_minimal_json():
             'year': record.get('year'),
             'state': record.get('state'),
             'city': record.get('city'),
-            'updated': record.get('updated')
+            'updated': record.get('updated'),
+            'url': record.get('url')
         }
         minimal_data.append(minimal)
 
@@ -57,7 +59,6 @@ def create_minimal_json():
     print('Removed fields:')
     print('  - id (not used by heatmap)')
     print('  - title (not used by heatmap)')
-    print('  - url (PDF links - not currently used)')
     print('  - facility_id (not used by heatmap)')
     print('  - sponsor (original - heatmap uses sponsor_normalized)')
     print('  - file_path (not used by heatmap)')
@@ -72,6 +73,7 @@ def create_minimal_json():
     print('  - state (filtering, location display)')
     print('  - city (location display)')
     print('  - updated (date range stats)')
+    print('  - url (PDF links for future features)')
     print()
     print('Output: radio_ads_heatmap.json')
     print('=' * 80)
