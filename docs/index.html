@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Political Radio Ads - Sponsor/Station Heatmap</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .share-btn {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .share-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .share-btn.copied {
+            background: rgba(76, 175, 80, 0.8);
+        }
+
+        .controls {
+            padding: 25px 30px;
+            background: #fafafa;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .control-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .control-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .control-group label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        select, input {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            background: white;
+            cursor: pointer;
+        }
+
+        select:focus, input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .sponsor-selector {
+            width: 100%;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 15px;
+        }
+
+        .sponsor-selector-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
+        .sponsor-search {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .sponsor-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .sponsor-chip {
+            background: #667eea;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sponsor-chip-remove {
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 1;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .sponsor-chip-remove:hover {
+            opacity: 1;
+        }
+
+        .sponsor-suggestions {
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: white;
+        }
+
+        .sponsor-suggestion {
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 13px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sponsor-suggestion:last-child {
+            border-bottom: none;
+        }
+
+        .sponsor-suggestion:hover {
+            background: #f5f5f5;
+        }
+
+        .sponsor-suggestion.selected {
+            background: #e8eaf6;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .sponsor-count {
+            color: #999;
+            font-size: 12px;
+        }
+
+        .quick-add {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .quick-add-btn {
+            padding: 6px 12px;
+            background: white;
+            border: 1px solid #667eea;
+            color: #667eea;
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .quick-add-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .stats {
+            padding: 20px 30px;
+            background: #f9f9f9;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        #heatmap {
+            padding: 30px;
+            overflow-x: auto;
+        }
+
+        .cell {
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .cell:hover {
+            opacity: 0.8;
+            stroke: #333;
+            stroke-width: 2px;
+        }
+
+        .axis text {
+            font-size: 11px;
+            fill: #666;
+        }
+
+        .axis path,
+        .axis line {
+            stroke: #ddd;
+        }
+
+        .tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 12px 16px;
+            border-radius: 6px;
+            font-size: 13px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+            max-width: 300px;
+            line-height: 1.6;
+            z-index: 1000;
+        }
+
+        .tooltip.visible {
+            opacity: 1;
+        }
+
+        .legend {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 12px;
+        }
+
+        .legend-gradient {
+            width: 200px;
+            height: 15px;
+            border-radius: 3px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px;
+            color: #999;
+            font-size: 16px;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .no-data {
+            text-align: center;
+            padding: 60px;
+            color: #999;
+            font-size: 16px;
+        }
+
+        .station-label, .sponsor-label {
+            cursor: pointer;
+        }
+
+        .station-label:hover, .sponsor-label:hover {
+            fill: #667eea;
+            font-weight: 600;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 30px;
+            color: #999;
+        }
+
+        .empty-state h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .empty-state p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Political Radio Advertising Heatmap</h1>
+            <p class="subtitle">Compare sponsor advertising across radio stations</p>
+            <button class="share-btn" id="shareBtn" onclick="copyLink()">
+                <span>🔗</span>
+                <span id="shareBtnText">Copy Link</span>
+            </button>
+        </header>
+
+        <div class="controls">
+            <div class="control-row">
+                <div class="control-group">
+                    <label>Office Type</label>
+                    <select id="officeFilter">
+                        <option value="all">All Offices</option>
+                        <option value="President">President</option>
+                        <option value="US Senate">US Senate</option>
+                        <option value="US House">US House</option>
+                        <option value="State">State</option>
+                        <option value="Local">Local</option>
+                        <option value="Non-Candidate Issue Ads">Non-Candidate Issue Ads</option>
+                        <option value="Political Matters">Political Matters</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label>State</label>
+                    <select id="stateFilter">
+                        <option value="all">All States</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label>Year</label>
+                    <select id="yearFilter">
+                        <option value="all">All Years</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label>Min Ads per Station</label>
+                    <input type="number" id="minAds" value="1" min="1" max="100" style="width: 80px;">
+                </div>
+            </div>
+
+            <div class="sponsor-selector">
+                <div class="sponsor-selector-label">Select Sponsors to Compare</div>
+                <input type="text" class="sponsor-search" id="sponsorSearch" placeholder="Search sponsors...">
+                <div class="sponsor-chips" id="selectedSponsors"></div>
+                <div class="quick-add" id="quickAdd"></div>
+                <div class="sponsor-suggestions" id="sponsorSuggestions"></div>
+            </div>
+        </div>
+
+        <div class="stats" id="stats">
+            <div class="stat">
+                <div class="stat-label">Total Ads</div>
+                <div class="stat-value" id="totalAds">-</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Selected Sponsors</div>
+                <div class="stat-value" id="sponsorCount">-</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Stations</div>
+                <div class="stat-value" id="stationCount">-</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Date Range</div>
+                <div class="stat-value" id="dateRange" style="font-size: 16px;">-</div>
+            </div>
+        </div>
+
+        <div id="heatmap">
+            <div class="loading">
+                <div class="spinner"></div>
+                Loading data...
+            </div>
+        </div>
+    </div>
+
+    <div class="tooltip"></div>
+
+    <script>
+        let allData = [];
+        let filteredData = [];
+        let selectedSponsors = new Set();
+        let allSponsors = [];
+        let ignoreUrlUpdate = false; // Flag to prevent infinite loops
+
+        // Parse URL parameters
+        function getUrlParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                sponsors: params.get('sponsors') ? params.get('sponsors').split(',') : null,
+                office: params.get('office') || 'all',
+                state: params.get('state') || 'all',
+                year: params.get('year') || 'all',
+                minAds: params.get('minAds') || '1'
+            };
+        }
+
+        // Update URL with current state
+        function updateUrl() {
+            if (ignoreUrlUpdate) return;
+
+            const params = new URLSearchParams();
+
+            if (selectedSponsors.size > 0) {
+                params.set('sponsors', Array.from(selectedSponsors).join(','));
+            }
+
+            const office = document.getElementById('officeFilter').value;
+            if (office !== 'all') {
+                params.set('office', office);
+            }
+
+            const state = document.getElementById('stateFilter').value;
+            if (state !== 'all') {
+                params.set('state', state);
+            }
+
+            const year = document.getElementById('yearFilter').value;
+            if (year !== 'all') {
+                params.set('year', year);
+            }
+
+            const minAds = document.getElementById('minAds').value;
+            if (minAds !== '1') {
+                params.set('minAds', minAds);
+            }
+
+            const newUrl = params.toString() ?
+                `${window.location.pathname}?${params.toString()}` :
+                window.location.pathname;
+
+            window.history.replaceState({}, '', newUrl);
+        }
+
+        // Load state from URL
+        function loadStateFromUrl() {
+            const params = getUrlParams();
+
+            ignoreUrlUpdate = true;
+
+            // Set filter values
+            document.getElementById('officeFilter').value = params.office;
+            document.getElementById('stateFilter').value = params.state;
+            document.getElementById('yearFilter').value = params.year;
+            document.getElementById('minAds').value = params.minAds;
+
+            // Set selected sponsors (will be applied after allSponsors is populated)
+            if (params.sponsors) {
+                params.sponsors.forEach(s => selectedSponsors.add(s));
+            }
+
+            ignoreUrlUpdate = false;
+        }
+
+        // Load the data
+        fetch('radio_ads_heatmap.json')
+            .then(response => response.json())
+            .then(data => {
+                allData = data.filter(d =>
+                    (d.record_type === 'political_ad' || d.record_type === 'political_matters') &&
+                    d.station &&
+                    d.sponsor_normalized &&
+                    !d.sponsor_normalized.includes('Entity') &&
+                    d.sponsor_normalized !== d.office
+                );
+
+                initializeFilters();
+                loadStateFromUrl();
+                initializeSponsors();
+                updateVisualization();
+            })
+            .catch(error => {
+                document.getElementById('heatmap').innerHTML =
+                    '<div class="no-data">Error loading data: ' + error.message + '</div>';
+            });
+
+        function initializeFilters() {
+            // Populate years
+            const years = [...new Set(allData.map(d => d.year).filter(y => y))].sort().reverse();
+            const yearSelect = document.getElementById('yearFilter');
+            years.forEach(year => {
+                const option = document.createElement('option');
+                option.value = year;
+                option.textContent = year;
+                yearSelect.appendChild(option);
+            });
+
+            // Populate states
+            const states = [...new Set(allData.map(d => d.state).filter(s => s))].sort();
+            const stateSelect = document.getElementById('stateFilter');
+            states.forEach(state => {
+                const option = document.createElement('option');
+                option.value = state;
+                option.textContent = state;
+                stateSelect.appendChild(option);
+            });
+
+            document.getElementById('officeFilter').addEventListener('change', () => {
+                initializeSponsors();
+                updateVisualization();
+                updateUrl();
+            });
+            document.getElementById('stateFilter').addEventListener('change', () => {
+                initializeSponsors();
+                updateVisualization();
+                updateUrl();
+            });
+            document.getElementById('yearFilter').addEventListener('change', () => {
+                initializeSponsors();
+                updateVisualization();
+                updateUrl();
+            });
+            document.getElementById('minAds').addEventListener('change', () => {
+                updateVisualization();
+                updateUrl();
+            });
+            document.getElementById('sponsorSearch').addEventListener('input', updateSponsorSuggestions);
+        }
+
+        function initializeSponsors() {
+            const officeFilter = document.getElementById('officeFilter').value;
+            const stateFilter = document.getElementById('stateFilter').value;
+            const yearFilter = document.getElementById('yearFilter').value;
+
+            const filtered = allData.filter(d => {
+                if (officeFilter !== 'all' && d.office !== officeFilter) return false;
+                if (stateFilter !== 'all' && d.state !== stateFilter) return false;
+                if (yearFilter !== 'all' && d.year !== parseInt(yearFilter)) return false;
+                return true;
+            });
+
+            const sponsorCounts = {};
+            filtered.forEach(d => {
+                sponsorCounts[d.sponsor_normalized] = (sponsorCounts[d.sponsor_normalized] || 0) + 1;
+            });
+
+            allSponsors = Object.entries(sponsorCounts)
+                .map(([sponsor, count]) => ({ sponsor, count }))
+                .sort((a, b) => b.count - a.count);
+
+            // Auto-select top 5 if nothing selected
+            if (selectedSponsors.size === 0 && allSponsors.length > 0) {
+                allSponsors.slice(0, 5).forEach(s => selectedSponsors.add(s.sponsor));
+            }
+
+            // Create quick-add buttons for top sponsors
+            const quickAdd = document.getElementById('quickAdd');
+            quickAdd.innerHTML = '<div style="font-size: 12px; color: #999; margin-bottom: 5px;">Quick add:</div>';
+            allSponsors.slice(0, 10).forEach(s => {
+                if (!selectedSponsors.has(s.sponsor)) {
+                    const btn = document.createElement('button');
+                    btn.className = 'quick-add-btn';
+                    btn.textContent = s.sponsor.length > 25 ? s.sponsor.substring(0, 22) + '...' : s.sponsor;
+                    btn.title = s.sponsor;
+                    btn.onclick = () => {
+                        selectedSponsors.add(s.sponsor);
+                        initializeSponsors();
+                        updateVisualization();
+                        updateUrl();
+                    };
+                    quickAdd.appendChild(btn);
+                }
+            });
+
+            updateSelectedSponsorsUI();
+            updateSponsorSuggestions();
+        }
+
+        function updateSelectedSponsorsUI() {
+            const container = document.getElementById('selectedSponsors');
+            container.innerHTML = '';
+
+            if (selectedSponsors.size === 0) {
+                container.innerHTML = '<div style="color: #999; font-size: 13px;">No sponsors selected. Choose from suggestions below.</div>';
+                return;
+            }
+
+            selectedSponsors.forEach(sponsor => {
+                const chip = document.createElement('div');
+                chip.className = 'sponsor-chip';
+                chip.innerHTML = `
+                    <span>${sponsor.length > 30 ? sponsor.substring(0, 27) + '...' : sponsor}</span>
+                    <span class="sponsor-chip-remove" title="Remove">×</span>
+                `;
+                chip.querySelector('.sponsor-chip-remove').onclick = () => {
+                    selectedSponsors.delete(sponsor);
+                    initializeSponsors();
+                    updateVisualization();
+                    updateUrl();
+                };
+                container.appendChild(chip);
+            });
+        }
+
+        function updateSponsorSuggestions() {
+            const search = document.getElementById('sponsorSearch').value.toLowerCase();
+            const suggestions = document.getElementById('sponsorSuggestions');
+
+            const filtered = allSponsors.filter(s =>
+                s.sponsor.toLowerCase().includes(search)
+            ).slice(0, 20);
+
+            suggestions.innerHTML = '';
+            filtered.forEach(s => {
+                const div = document.createElement('div');
+                div.className = 'sponsor-suggestion' + (selectedSponsors.has(s.sponsor) ? ' selected' : '');
+                div.innerHTML = `
+                    <span>${s.sponsor}</span>
+                    <span class="sponsor-count">${s.count} ads</span>
+                `;
+                div.onclick = () => {
+                    if (selectedSponsors.has(s.sponsor)) {
+                        selectedSponsors.delete(s.sponsor);
+                    } else {
+                        selectedSponsors.add(s.sponsor);
+                    }
+                    initializeSponsors();
+                    updateVisualization();
+                    updateUrl();
+                };
+                suggestions.appendChild(div);
+            });
+        }
+
+        function updateVisualization() {
+            const officeFilter = document.getElementById('officeFilter').value;
+            const stateFilter = document.getElementById('stateFilter').value;
+            const yearFilter = document.getElementById('yearFilter').value;
+            const minAds = parseInt(document.getElementById('minAds').value);
+
+            filteredData = allData.filter(d => {
+                if (officeFilter !== 'all' && d.office !== officeFilter) return false;
+                if (stateFilter !== 'all' && d.state !== stateFilter) return false;
+                if (yearFilter !== 'all' && d.year !== parseInt(yearFilter)) return false;
+                return true;
+            });
+
+            if (filteredData.length === 0) {
+                document.getElementById('heatmap').innerHTML =
+                    '<div class="no-data">No data matches the selected filters</div>';
+                return;
+            }
+
+            if (selectedSponsors.size === 0) {
+                document.getElementById('heatmap').innerHTML =
+                    '<div class="empty-state"><h3>No sponsors selected</h3><p>Select sponsors from the list above to visualize their advertising patterns across stations.</p></div>';
+                updateStats(filteredData, [], []);
+                return;
+            }
+
+            const matrix = {};
+            const stationCounts = {};
+            const stationMetadata = {}; // Map of station -> {city, state}
+
+            filteredData.forEach(d => {
+                if (selectedSponsors.has(d.sponsor_normalized)) {
+                    const key = `${d.station}|||${d.sponsor_normalized}`;
+                    matrix[key] = (matrix[key] || 0) + 1;
+                    stationCounts[d.station] = (stationCounts[d.station] || 0) + 1;
+
+                    // Store station metadata
+                    if (!stationMetadata[d.station]) {
+                        stationMetadata[d.station] = {
+                            city: d.city,
+                            state: d.state
+                        };
+                    }
+                }
+            });
+
+            const stations = Object.entries(stationCounts)
+                .filter(([_, count]) => count >= minAds)
+                .sort((a, b) => b[1] - a[1])
+                .map(([station, _]) => station);
+
+            const sponsors = [...selectedSponsors];
+
+            updateStats(filteredData, sponsors, stations);
+            drawHeatmap(stations, sponsors, matrix, stationMetadata);
+        }
+
+        function updateStats(data, sponsors, stations) {
+            const relevant = data.filter(d => selectedSponsors.has(d.sponsor_normalized));
+            document.getElementById('totalAds').textContent = relevant.length.toLocaleString();
+            document.getElementById('sponsorCount').textContent = sponsors.length;
+            document.getElementById('stationCount').textContent = stations.length;
+
+            const dates = relevant.map(d => new Date(d.updated)).filter(d => !isNaN(d));
+            if (dates.length > 0) {
+                const minDate = new Date(Math.min(...dates));
+                const maxDate = new Date(Math.max(...dates));
+                const formatDate = d => d.toLocaleDateString('en-US', { year: 'numeric', month: 'short' });
+                document.getElementById('dateRange').textContent =
+                    `${formatDate(minDate)} - ${formatDate(maxDate)}`;
+            } else {
+                document.getElementById('dateRange').textContent = '-';
+            }
+        }
+
+        function drawHeatmap(stations, sponsors, matrix, stationMetadata) {
+            const margin = { top: 100, right: 20, bottom: 20, left: 200 }; // Wider left margin for city/state
+            const cellSize = 35;
+            const width = sponsors.length * cellSize + margin.left + margin.right;
+            const height = stations.length * cellSize + margin.top + margin.bottom;
+
+            document.getElementById('heatmap').innerHTML = '';
+
+            const svg = d3.select('#heatmap')
+                .append('svg')
+                .attr('width', width)
+                .attr('height', height);
+
+            const g = svg.append('g')
+                .attr('transform', `translate(${margin.left},${margin.top})`);
+
+            const maxValue = Math.max(...Object.values(matrix), 1);
+
+            const colorScale = d3.scaleSequential()
+                .domain([0, maxValue])
+                .interpolator(d3.interpolateBlues);
+
+            // Create cells (stations = rows, sponsors = columns)
+            stations.forEach((station, i) => {
+                sponsors.forEach((sponsor, j) => {
+                    const key = `${station}|||${sponsor}`;
+                    const value = matrix[key] || 0;
+
+                    g.append('rect')
+                        .attr('class', 'cell')
+                        .attr('x', j * cellSize)
+                        .attr('y', i * cellSize)
+                        .attr('width', cellSize)
+                        .attr('height', cellSize)
+                        .attr('fill', value > 0 ? colorScale(value) : '#f5f5f5')
+                        .attr('stroke', '#fff')
+                        .attr('stroke-width', 1)
+                        .on('mouseover', function(event) {
+                            if (value > 0) {
+                                showTooltip(event, sponsor, station, value, stationMetadata[station]);
+                            }
+                        })
+                        .on('mouseout', hideTooltip);
+                });
+            });
+
+            // Add station labels (Y-axis)
+            g.selectAll('.station-label')
+                .data(stations)
+                .enter()
+                .append('text')
+                .attr('class', 'station-label')
+                .attr('x', -5)
+                .attr('y', (d, i) => i * cellSize + cellSize / 2)
+                .attr('dy', '0.35em')
+                .attr('text-anchor', 'end')
+                .style('font-size', '11px')
+                .text(d => {
+                    const meta = stationMetadata[d];
+                    if (meta && meta.city && meta.state) {
+                        return `${d} (${meta.city}, ${meta.state})`;
+                    } else if (meta && meta.state) {
+                        return `${d} (${meta.state})`;
+                    }
+                    return d;
+                });
+
+            // Add sponsor labels (X-axis)
+            g.selectAll('.sponsor-label')
+                .data(sponsors)
+                .enter()
+                .append('text')
+                .attr('class', 'sponsor-label')
+                .attr('x', (d, i) => i * cellSize + cellSize / 2)
+                .attr('y', -10)
+                .attr('text-anchor', 'start')
+                .attr('transform', (d, i) =>
+                    `rotate(-45, ${i * cellSize + cellSize / 2}, -10)`)
+                .style('font-size', '11px')
+                .text(d => d.length > 25 ? d.substring(0, 22) + '...' : d)
+                .append('title')
+                .text(d => d);
+
+            // Legend
+            const legendG = svg.append('g')
+                .attr('transform', `translate(${margin.left}, ${height - 35})`);
+
+            const legendWidth = 200;
+            const legendScale = d3.scaleLinear()
+                .domain([0, maxValue])
+                .range([0, legendWidth]);
+
+            const defs = svg.append('defs');
+            const gradient = defs.append('linearGradient')
+                .attr('id', 'legend-gradient');
+
+            gradient.selectAll('stop')
+                .data(d3.range(0, 1.1, 0.1))
+                .enter()
+                .append('stop')
+                .attr('offset', d => `${d * 100}%`)
+                .attr('stop-color', d => colorScale(d * maxValue));
+
+            legendG.append('rect')
+                .attr('width', legendWidth)
+                .attr('height', 15)
+                .style('fill', 'url(#legend-gradient)');
+
+            legendG.append('g')
+                .attr('transform', 'translate(0, 15)')
+                .call(d3.axisBottom(legendScale).ticks(5).tickFormat(d3.format('d')));
+
+            legendG.append('text')
+                .attr('x', -5)
+                .attr('y', 7.5)
+                .attr('dy', '0.35em')
+                .attr('text-anchor', 'end')
+                .style('font-size', '11px')
+                .text('Ads:');
+        }
+
+        function showTooltip(event, sponsor, station, count, stationMeta) {
+            const tooltip = d3.select('.tooltip');
+            let locationText = '';
+            if (stationMeta) {
+                if (stationMeta.city && stationMeta.state) {
+                    locationText = `<div style="font-size: 12px; opacity: 0.8;">${stationMeta.city}, ${stationMeta.state}</div>`;
+                } else if (stationMeta.state) {
+                    locationText = `<div style="font-size: 12px; opacity: 0.8;">${stationMeta.state}</div>`;
+                }
+            }
+            tooltip.html(`
+                <strong>${station}</strong>
+                ${locationText}
+                <strong>${sponsor}</strong><br>
+                ${count} ad${count > 1 ? 's' : ''}
+            `)
+            .style('left', (event.pageX + 15) + 'px')
+            .style('top', (event.pageY - 15) + 'px')
+            .classed('visible', true);
+        }
+
+        function hideTooltip() {
+            d3.select('.tooltip').classed('visible', false);
+        }
+
+        function copyLink() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                const btn = document.getElementById('shareBtn');
+                const text = document.getElementById('shareBtnText');
+                btn.classList.add('copied');
+                text.textContent = 'Copied!';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    text.textContent = 'Copy Link';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+                alert('Could not copy link. Please copy manually:\n' + url);
+            });
+        }
+    </script>
+</body>
+</html>
