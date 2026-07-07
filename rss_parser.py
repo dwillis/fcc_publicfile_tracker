@@ -1,106 +1,110 @@
-import csv
-import feedparser
-import json
+#!/usr/bin/env python3
+"""Fetch each station's FCC public-file RSS feed and append new filings to
+data/raw/YYYY.jsonl, deduped by RSS entry id.
+"""
 import concurrent.futures
+import csv
+import glob
+import json
+import os
 
-# Input CSV file containing station URLs, states, and cities
-csv_file = 'urban_radio_stations_with_status.csv'
-# JSON file to save collected data
-json_file = 'radio_ads.json'
+import feedparser
+import requests
+
+CSV_FILE = 'urban_radio_stations_with_status.csv'
+RAW_DIR = 'data/raw'
+REQUEST_TIMEOUT = 30
+MAX_WORKERS = 16
+
+
+def load_existing_ids():
+    ids = set()
+    for path in glob.glob(os.path.join(RAW_DIR, '*.jsonl')):
+        with open(path) as f:
+            for line in f:
+                line = line.strip()
+                if line:
+                    ids.add(json.loads(line)['id'])
+    return ids
+
 
 def parse_feed(station_url, state, city):
-    """Parse the RSS feed from the given station URL and include state and city."""
-    # Parse the feed using feedparser
-    feed = feedparser.parse(station_url)
-    
-    # List to store extracted entries information
-    entries_list = []
+    """Fetch and parse one station's RSS feed into slim raw records."""
+    entries = []
+    try:
+        response = requests.get(station_url, timeout=REQUEST_TIMEOUT)
+        response.raise_for_status()
+    except requests.RequestException as exc:
+        print(f'  fetch failed for {station_url}: {exc}')
+        return entries
 
-    # Iterate over each entry in the RSS feed
+    feed = feedparser.parse(response.content)
     for entry in feed.entries:
-        title = entry.title
-
-        # Skip entries where "Issues and Programs Lists" appears in the title
-        if "Issues and Programs Lists" in title:
+        try:
+            title = entry.title
+            if 'Issues and Programs Lists' in title:
+                continue
+            record = {
+                'id': entry.id,
+                'title': title,
+                'url': entry.link,
+                'updated': entry.updated,
+                'station_url': station_url,
+            }
+        except AttributeError:
             continue
 
-        link = entry.link
-        entry_id = entry.id
-        updated = entry.updated
+        if state:
+            record['state'] = state
+        if city:
+            record['city'] = city
+        entries.append(record)
 
-        # Extract the sponsor from the title
-        sponsor = title.split('/')[-1]
+    return entries
 
-        # Extract facility ID (uploader) from the title
-        try:
-            facility_id = int(title.split('Entity ')[1].split(' ')[0])
-        except (IndexError, ValueError):
-            facility_id = None
-
-        # Extract relevant information from the content
-        try:
-            file_info = title.split(' in ')[1].split(' on ')
-            file_segments = file_info[0].split('/')
-            office = file_segments[-2]
-        except (IndexError, ValueError):
-            office = None
-
-        # Create a dictionary to store the entry information
-        entry_dict = {
-            "title": title,
-            "url": link,
-            "id": entry_id,
-            "updated": updated,
-            "facility_id": facility_id,
-            "office": office,
-            "sponsor": sponsor,
-            "station_url": station_url,
-            "state": state,
-            "city": city
-        }
-
-        # Append the dictionary to the list
-        entries_list.append(entry_dict)
-
-    return entries_list
 
 def fetch_rss_entries(csv_file):
-    """Fetch RSS entries for each station URL in the provided CSV file."""
-    # Load the existing data from radio_ads.json if it exists
-    try:
-        with open(json_file, 'r') as file:
-            existing_data = json.load(file)
-    except FileNotFoundError:
-        existing_data = []
+    existing_ids = load_existing_ids()
 
-    existing_ids = {entry['id'] for entry in existing_data}
+    with open(csv_file, newline='', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        rows = [row for row in reader if row.get('FCC URL')]
 
-    # Read the CSV file to get the URLs, state, and city information
-    with open(csv_file, newline='', encoding='utf-8') as file:
-        reader = csv.DictReader(file)
-        entries_list = []
+    new_by_year = {}
+    failures = 0
 
-        # Use ThreadPoolExecutor to parse feeds in parallel
-        with concurrent.futures.ThreadPoolExecutor() as executor:
-            futures = []
-            for row in reader:
-                station_url = row.get('FCC URL')
-                state = row.get('State')
-                city = row.get('City')
-                if station_url:
-                    futures.append(executor.submit(parse_feed, station_url, state, city))
+    with concurrent.futures.ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+        futures = {
+            executor.submit(parse_feed, row['FCC URL'], row.get('State'), row.get('City')): row['FCC URL']
+            for row in rows
+        }
+        for future in concurrent.futures.as_completed(futures):
+            try:
+                entries = future.result()
+            except Exception as exc:
+                failures += 1
+                print(f'  error processing {futures[future]}: {exc}')
+                continue
 
-            for future in concurrent.futures.as_completed(futures):
-                entries_list.extend(future.result())
+            for entry in entries:
+                if entry['id'] in existing_ids:
+                    continue
+                existing_ids.add(entry['id'])
+                year = entry['updated'][:4] if entry.get('updated') else 'unknown'
+                new_by_year.setdefault(year, []).append(entry)
 
-        # Add only new entries to the existing data
-        new_entries = [entry for entry in entries_list if entry['id'] not in existing_ids]
-        existing_data.extend(new_entries)
+    os.makedirs(RAW_DIR, exist_ok=True)
+    total_new = 0
+    for year, entries in sorted(new_by_year.items()):
+        path = os.path.join(RAW_DIR, f'{year}.jsonl')
+        with open(path, 'a') as f:
+            for entry in entries:
+                f.write(json.dumps(entry, separators=(',', ':')) + '\n')
+        total_new += len(entries)
+        print(f'  {year}.jsonl: +{len(entries)} records')
 
-    # Write the combined data to radio_ads.json
-    with open(json_file, 'w') as file:
-        json.dump(existing_data, file, indent=4)
+    print(f'Added {total_new} new records ({failures} station fetch failures out of {len(rows)})')
 
-# Main execution
-if __name__ == "__main__":
-    fetch_rss_entries(csv_file)
+
+if __name__ == '__main__':
+    fetch_rss_entries(CSV_FILE)

@@ -1,43 +1,65 @@
 # FCC Public File Tracker
 
-This repository tracks documents submitted to radio station public files via their RSS feeds.
+Tracks documents filed to FCC public inspection files at ~880 urban-format
+radio stations, with a focus on political advertising disclosures, and
+publishes them as a searchable table at
+[the GitHub Pages site](https://dwillis.github.io/fcc_publicfile_tracker/).
 
-## Description
+## How it works
 
-The FCC Public File Tracker is a project aimed at tracking the contents of public files at selected radio stations, and in particular urban format stations based on [this Wikipedia page](https://en.wikipedia.org/wiki/List_of_urban-format_radio_stations_in_the_United_States).
+Each station's FCC public file exposes an RSS feed of newly uploaded
+documents. Twice a day, `.github/workflows/publish.yaml` runs the pipeline
+below and redeploys the site:
 
-## Files
+1. **`rss_parser.py`** fetches every station's RSS feed (list of stations:
+   `urban_radio_stations_with_status.csv`) and appends new entries, deduped
+   by RSS entry id, to `data/raw/YYYY.jsonl` (one compact JSON object per
+   line, sharded by the year the entry was filed).
+2. **`build_site.py`** reads all of `data/raw/*.jsonl`, classifies each
+   filing by its FCC folder path (political ad, political matters
+   disclosure, or non-political), normalizes sponsor names
+   (`sponsors.py`), and writes `docs/data/filings-YYYY.json` +
+   `docs/data/manifest.json` — the data the frontend loads.
 
-- `fetch_radio_stations.py`: Scrapes the list of stations from Wikipedia, creating a CSV file.
-- `get_fcc.py`: Uses that CSV file and the FCC's API to try and match RSS URLs to each station.
-- `url_checker.py`: Verifies that each RSS feed url works.
-- `rss_parser.py`: Takes a clean CSV file of radio stations, retrieves the RSS feed and parses it into JSON.
+`data/raw/` is the only data committed to the repo; `docs/data/` is a build
+output, regenerated on every run, and not tracked in git.
 
-## Installation
+## The site
 
-1. Clone the repository:
+`docs/index.html` + `docs/app.js` is a plain HTML/JS filings table — no
+build step, no framework, no CDN dependency. It loads one year's shard by
+default (or all years, on request), and lets you filter by state, office
+type, and a text search, sort any column, page through results, and export
+the current filter as a CSV. Every row links to the original PDF on
+`publicfiles.fcc.gov`.
 
-    ```bash
-    git clone https://github.com/dwillis/fcc_publicfile_tracker.git
-    ```
+Office and sponsor names are exactly what station staff typed into the FCC
+public file system, so expect inconsistency — this is an exploration tool
+for finding filings and reading the underlying documents, not a polished
+analysis.
 
-2. Install the required dependencies:
+To run it locally: `python -m http.server -d docs`, then open
+`http://localhost:8000/`. You'll need `docs/data/` populated first — see
+below.
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+## Running the pipeline locally
 
-## Usage
+```bash
+pip install -r requirements.txt
+python rss_parser.py     # fetch new filings into data/raw/
+python build_site.py     # rebuild docs/data/ from data/raw/
+```
 
-Run the main script:
+## One-time setup scripts
 
-    ```bash
-    python rss_parser.py
-    ```
+`scripts/setup/` holds the scripts that originally built
+`urban_radio_stations_with_status.csv` (scraping a Wikipedia station list,
+matching stations to FCC RSS feeds, checking feed URLs). They're not part
+of the recurring pipeline — see `scripts/setup/README.md`.
 
 ## Contributing
 
-Contributions are welcome! If you would like to contribute to this project, please follow these steps:
+Contributions are welcome:
 
 1. Fork the repository.
 2. Create a new branch: `git checkout -b feature/your-feature`.
