@@ -231,7 +231,12 @@ async function init() {
   try {
     state.manifest = await fetchJson('data/manifest.json');
   } catch (err) {
-    setStatus(`Could not load manifest.json: ${err.message}`);
+    setStatus(
+      `Could not load manifest.json (${err.message}). docs/data/ is a build artifact, ` +
+      'not checked into git — run "python build_site.py" from the repo root to generate it. ' +
+      'On GitHub Pages, it only exists after the publish workflow has run, and the Pages ' +
+      'source (Settings → Pages) must be set to "GitHub Actions".'
+    );
     return;
   }
 
