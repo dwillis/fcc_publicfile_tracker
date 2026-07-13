@@ -111,9 +111,9 @@
   <p class="subtitle">
     A working list of documents filed to FCC radio public files at ~880 urban-format stations.
     Each row is an upload event from a station's RSS feed: the date is when the file was
-    uploaded, and the folder is where it was filed &mdash; the folder's year can differ from
-    the upload date (stations backfile old documents), and stations sometimes move or delete
-    files after uploading. Sponsor and office names come straight from the folder names station
+    uploaded, and the folder is where it was filed. The filing-year filter follows the
+    folder's year, which can be earlier than the upload date (stations backfile old
+    documents), and stations sometimes move or delete files after uploading. Sponsor and office names come straight from the folder names station
     staff typed &mdash; expect typos, abbreviations, and inconsistent naming. The FCC blocks
     direct links to individual PDFs, so "Station filings" opens the station's filings on the
     FCC's site; follow the row's folder path from there.
@@ -122,7 +122,7 @@
 
   <div class="controls">
     <div class="field">
-      <label for="yearSelect">Year</label>
+      <label for="yearSelect">Filing year</label>
       <select id="yearSelect"></select>
     </div>
     <div class="field">

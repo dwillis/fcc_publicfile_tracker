@@ -40,8 +40,10 @@ for finding filings and reading the underlying documents, not a polished
 analysis. Each row is an upload event from a station's RSS feed: the date
 is when the file was uploaded, while the folder path carries the
 political-file year it was filed under, which can be an earlier year
-(stations backfile old documents). Stations also sometimes move or delete
-files after uploading, so a row can outlive the document it announced.
+(stations backfile old documents). The site's year filter — and the
+data/filings-YYYY.json shards — use that folder year, not the upload date.
+Stations also sometimes move or delete files after uploading, so a row can
+outlive the document it announced.
 
 To run it locally: `python -m http.server -d docs`, then open
 `http://localhost:8000/`. You'll need `docs/data/` populated first — see
