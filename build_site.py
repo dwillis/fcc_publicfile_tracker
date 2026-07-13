@@ -17,8 +17,7 @@ from sponsors import standardize_sponsor_advanced, standardize_sponsor_basic
 
 RAW_DIR = 'data/raw'
 OUT_DIR = 'docs/data'
-PDF_URL_PREFIX = 'https://publicfiles.fcc.gov/api/manager/download/'
-COLS = ['date', 'station', 'state', 'city', 'office', 'sponsor', 'type', 'path', 'doc']
+COLS = ['date', 'station', 'state', 'city', 'office', 'sponsor', 'type', 'path', 'service']
 
 # The office categories categorize_record() actually recognizes. Filed paths that
 # don't match one of the known shapes still get *some* office value (the fallback
@@ -30,15 +29,20 @@ OFFICE_CATEGORIES = {
 }
 
 
-def extract_station_from_url(url, entry_id):
-    """Pull an AM/FM call sign out of the profile URL or entry id."""
-    for value in (entry_id, url):
+def extract_station_and_service(record):
+    """Pull the AM/FM service and call sign out of the record's profile URLs.
+
+    The service ('am' or 'fm') is what lets the frontend link to the station's
+    public file on the FCC site (/{service}-profile/{call sign}/...), since the
+    FCC blocks direct links to individual PDFs.
+    """
+    for value in (record.get('id'), record.get('station_url'), record.get('url')):
         if not value:
             continue
         match = re.search(r'/(am|fm)-profile/([A-Z0-9-]+)/', value)
         if match:
-            return match.group(2)
-    return None
+            return match.group(2), match.group(1)
+    return None, None
 
 
 def categorize_record(title):
@@ -111,13 +115,13 @@ def build():
 
     for record in load_raw_records():
         title = record.get('title', '')
-        url = record.get('url')
         updated = record.get('updated')
         if not updated:
             continue
 
         record_type, path, office, sponsor = categorize_record(title)
-        station = record.get('station') or extract_station_from_url(url, record.get('id'))
+        extracted_station, service = extract_station_and_service(record)
+        station = record.get('station') or extracted_station
         sponsor_normalized = normalize_sponsor(sponsor, record_type)
         state = record.get('state')
         city = record.get('city')
@@ -126,8 +130,6 @@ def build():
             offices.add(office)
         if state:
             states.add(state)
-
-        doc = url[len(PDF_URL_PREFIX):] if url and url.startswith(PDF_URL_PREFIX) else url
 
         row = [
             updated[:10],
@@ -138,7 +140,7 @@ def build():
             sponsor_normalized,
             record_type,
             path,
-            doc,
+            service,
         ]
         by_year[updated[:4]].append(row)
 

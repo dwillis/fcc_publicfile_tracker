@@ -30,8 +30,9 @@ output, regenerated on every run, and not tracked in git.
 build step, no framework, no CDN dependency. It loads one year's shard by
 default (or all years, on request), and lets you filter by state, office
 type, and a text search, sort any column, page through results, and export
-the current filter as a CSV. Every row links to the original PDF on
-`publicfiles.fcc.gov`.
+the current filter as a CSV. Every row links to the station's political
+files on `publicfiles.fcc.gov` (the FCC blocks direct links to individual
+PDFs, so you browse to the document from there using the row's folder path).
 
 Office and sponsor names are exactly what station staff typed into the FCC
 public file system, so expect inconsistency — this is an exploration tool

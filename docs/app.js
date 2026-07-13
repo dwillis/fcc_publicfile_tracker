@@ -1,6 +1,6 @@
 /* FCC Public File Tracker — exploratory filings table. No dependencies. */
 
-const PDF_URL_PREFIX = 'https://publicfiles.fcc.gov/api/manager/download/';
+const FCC_PROFILE_PREFIX = 'https://publicfiles.fcc.gov/';
 const PAGE_SIZE = 100;
 
 const TYPE_LABELS = {
@@ -35,9 +35,13 @@ function escapeHtml(value) {
     .replace(/"/g, '&quot;');
 }
 
-function buildPdfUrl(doc) {
-  if (!doc) return null;
-  return doc.startsWith('http') ? doc : PDF_URL_PREFIX + doc;
+/* The FCC blocks direct links to individual PDFs, so link to the station's
+   political files (or its public file home for non-political rows) instead. */
+function buildStationUrl(service, station, type) {
+  if (!service || !station) return null;
+  const base = `${FCC_PROFILE_PREFIX}${service}-profile/${station}`;
+  const political = type === 'political_ad' || type === 'political_matters';
+  return political ? `${base}/political-files` : base;
 }
 
 function debounce(fn, delay) {
@@ -62,7 +66,7 @@ async function loadYear(year) {
   if (state.yearCache.has(year)) return state.yearCache.get(year);
 
   if (year === 'all') {
-    setStatus('Loading all years — this pulls every shard, ~20MB total...');
+    setStatus('Loading all years — this pulls every shard, ~12MB total...');
     const years = state.manifest.years.map((y) => y.year);
     const cols = state.manifest.years.length ? await ensureCols() : [];
     const rows = [];
@@ -158,7 +162,7 @@ function renderTable() {
 
   els.tbody.innerHTML = pageRows.map((r) => {
     const location = [r[iCity], r[iState]].filter(Boolean).join(', ');
-    const pdfUrl = buildPdfUrl(r[cols.indexOf('doc')]);
+    const stationUrl = buildStationUrl(r[cols.indexOf('service')], r[iStation], r[iType]);
     const pathTitle = escapeHtml(r[iPath] || '');
     return `<tr>
       <td>${escapeHtml(r[iDate])}</td>
@@ -167,7 +171,7 @@ function renderTable() {
       <td>${escapeHtml(r[iOffice])}</td>
       <td title="${pathTitle}">${escapeHtml(r[iSponsor])}</td>
       <td>${escapeHtml(TYPE_LABELS[r[iType]] || r[iType])}</td>
-      <td>${pdfUrl ? `<a href="${escapeHtml(pdfUrl)}" target="_blank" rel="noopener">View PDF ↗</a>` : ''}</td>
+      <td>${stationUrl ? `<a href="${escapeHtml(stationUrl)}" target="_blank" rel="noopener">Station filings ↗</a>` : ''}</td>
     </tr>`;
   }).join('');
 }
@@ -186,8 +190,8 @@ function exportCsv() {
   if (!rows || !rows.length) return;
 
   const { iDate, iStation, iState, iCity, iOffice, iSponsor, iType, iPath } = indices;
-  const docIdx = cols.indexOf('doc');
-  const header = ['Date', 'Station', 'State', 'City', 'Office', 'Sponsor', 'Type', 'Folder path', 'PDF URL'];
+  const serviceIdx = cols.indexOf('service');
+  const header = ['Date', 'Station', 'State', 'City', 'Office', 'Sponsor', 'Type', 'Folder path', 'Station filings URL'];
 
   const csvEscape = (value) => {
     const s = value == null ? '' : String(value);
@@ -198,7 +202,7 @@ function exportCsv() {
   rows.forEach((r) => {
     lines.push([
       r[iDate], r[iStation], r[iState], r[iCity], r[iOffice], r[iSponsor],
-      TYPE_LABELS[r[iType]] || r[iType], r[iPath], buildPdfUrl(r[docIdx]),
+      TYPE_LABELS[r[iType]] || r[iType], r[iPath], buildStationUrl(r[serviceIdx], r[iStation], r[iType]),
     ].map(csvEscape).join(','));
   });
 
