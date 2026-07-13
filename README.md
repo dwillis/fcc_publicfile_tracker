@@ -37,7 +37,11 @@ PDFs, so you browse to the document from there using the row's folder path).
 Office and sponsor names are exactly what station staff typed into the FCC
 public file system, so expect inconsistency — this is an exploration tool
 for finding filings and reading the underlying documents, not a polished
-analysis.
+analysis. Each row is an upload event from a station's RSS feed: the date
+is when the file was uploaded, while the folder path carries the
+political-file year it was filed under, which can be an earlier year
+(stations backfile old documents). Stations also sometimes move or delete
+files after uploading, so a row can outlive the document it announced.
 
 To run it locally: `python -m http.server -d docs`, then open
 `http://localhost:8000/`. You'll need `docs/data/` populated first — see

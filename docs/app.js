@@ -163,14 +163,14 @@ function renderTable() {
   els.tbody.innerHTML = pageRows.map((r) => {
     const location = [r[iCity], r[iState]].filter(Boolean).join(', ');
     const stationUrl = buildStationUrl(r[cols.indexOf('service')], r[iStation], r[iType]);
-    const pathTitle = escapeHtml(r[iPath] || '');
     return `<tr>
       <td>${escapeHtml(r[iDate])}</td>
       <td>${escapeHtml(r[iStation])}</td>
       <td>${escapeHtml(location)}</td>
       <td>${escapeHtml(r[iOffice])}</td>
-      <td title="${pathTitle}">${escapeHtml(r[iSponsor])}</td>
+      <td>${escapeHtml(r[iSponsor])}</td>
       <td>${escapeHtml(TYPE_LABELS[r[iType]] || r[iType])}</td>
+      <td class="path">${escapeHtml(r[iPath])}</td>
       <td>${stationUrl ? `<a href="${escapeHtml(stationUrl)}" target="_blank" rel="noopener">Station filings ↗</a>` : ''}</td>
     </tr>`;
   }).join('');

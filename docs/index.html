@@ -100,6 +100,7 @@
   th.sort-asc::after { content: " \25B2"; }
   th.sort-desc::after { content: " \25BC"; }
   tbody tr:hover { background: var(--bg-alt); }
+  td.path { color: var(--muted); font-size: 12px; }
   a { color: var(--link); }
   .pagination { display: flex; gap: 8px; align-items: center; justify-content: center; margin: 14px 0; }
   .table-wrap { overflow-x: auto; }
@@ -109,10 +110,13 @@
   <h1>FCC Public File Tracker</h1>
   <p class="subtitle">
     A working list of documents filed to FCC radio public files at ~880 urban-format stations.
-    Sponsor and office names come straight from the folder names station staff typed when
-    uploading &mdash; expect typos, abbreviations, and inconsistent naming. The FCC blocks
-    direct links to individual PDFs, so "Station filings" opens the station's political files
-    on the FCC's site, where the folder path shown in the Sponsor tooltip leads to the document.
+    Each row is an upload event from a station's RSS feed: the date is when the file was
+    uploaded, and the folder is where it was filed &mdash; the folder's year can differ from
+    the upload date (stations backfile old documents), and stations sometimes move or delete
+    files after uploading. Sponsor and office names come straight from the folder names station
+    staff typed &mdash; expect typos, abbreviations, and inconsistent naming. The FCC blocks
+    direct links to individual PDFs, so "Station filings" opens the station's filings on the
+    FCC's site; follow the row's folder path from there.
   </p>
   <p class="generated" id="generated"></p>
 
@@ -157,6 +161,7 @@
           <th data-col="office">Office</th>
           <th data-col="sponsor">Sponsor</th>
           <th data-col="type">Type</th>
+          <th data-col="path">Folder</th>
           <th>FCC filings</th>
         </tr>
       </thead>
